@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,700i');
+
+body {
+	margin: 0;
+	display: flex;
+	font-family: 'Josefin Sans', sans-serif;
+	width: 100vw;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+/*	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;*/
+}
+
+/*Line Animation*/
+
+.line-container{
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.line {
+	/*z-index: -2;*/
+	width: 0.51vw;
+	background: black;
+}
+
+.top {
+	height: 40vh;
+	transform-origin: top;
+	margin-left: 32.31vw;
+	animation: lineMoveTop 8s linear;
+}
+.btm {
+	/*z-index: 2;*/
+	height: 60vh;
+	transform-origin: bottom;
+	margin-left: 65.61vw;
+	animation: lineMoveBtm 8s linear;
+}
+
+@keyframes lineMoveTop {
+	0%{
+		transform: translate(17.69vw,0) scaleY(0);
+	}
+	20%{
+		transform: translate(17.69vw,0) scaleY(1);
+	}
+	30%{
+		transform: translate(17.69vw,0);
+	}
+	60%{
+		transform: translate(0,0);
+	}
+	100%{
+		transform: translate(0,0);
+	}
+}
+
+@keyframes lineMoveBtm {
+	0%{
+		transform: translate(-15.61vw,0) scaleY(0);
+	}
+	20%{
+		transform: translate(-15.61vw,0) scaleY(1);
+	}
+	30%{
+		transform: translate(-15.61vw,0);
+	}
+	60%{
+		transform: translate(0,0)
+	}
+	100%{
+		transform: translate(0,0)
+	}
+}
+
+/*Hero Content*/
+
+.hero{
+	height: 100vh;
+	transition: linear 400ms;
+	/*transform: translateZ(0)*/
+	background: rgb(128,127,89);
+	background: linear-gradient(52deg, rgba(128,127,89,1) 0%, rgba(255,255,255,1) 70%);
+}
+
+#hero-content{
+	text-align: center;
+	margin: 0 auto;
+	width: 100vw;
+	position: absolute;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	animation: logo 6s ease-in;
+}
+
+@keyframes logo {
+	0%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.logo {
+	font-weight: normal;
+	font-size: 5.2vw;
+}
+
+#enter {
+	text-decoration: none;
+	padding-top: 7px;
+	font-size: 3vw;
+	color: grey;
+}
+
+
+/*Nav Bar*/
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: white;
+	width: 100vw;
+	position: absolute;
+	animation: nav 9s linear;
+}
+
+nav a{
+	font-size: 20px;
+	height: 100%;
+	padding: 10px 10px;
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+	transition: ease-in 300ms;
+	animation: navLoad 9.2s linear;
+}
+
+
+nav a:hover {
+	background-color: grey;
+	color: white;
+}
+
+#space{
+	flex-grow: 0.5;
+}
+
+@keyframes nav{
+	0% {
+		/*visibility: hidden;*/
+		height: 0px;
+	}
+	90% {
+		/*visibility: hidden;*/
+		height: 0px;
+	}
+	95% {
+		/*visibility: visible;*/
+		height: 40px;
+	}
+}
+@keyframes navLoad{
+	0% {
+		color: transparent;
+	}
+	90% {
+		color: transparent;
+	}
+	100% {
+		color: black;
+	}
+
+}
+
+/*Sections*/
+
+section {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*transform: translateZ(-1px) scale(2);*/
+}
+
+/*About Section*/
+
+#About{
+	padding: 20vh 0;
+	background: rgb(44,88,116);
+	background: linear-gradient(180deg, rgba(44,88,116,1) 0%, rgba(84,185,255,1) 100%);
+}
+
+#Portfolio{
+	padding: 20vh 0;
+	background: rgb(44,88,116);
+	background: linear-gradient(180deg, rgba(84,185,255,1) 0%, rgba(44,88,116,1) 100%);
+}
