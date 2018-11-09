@@ -1,15 +1,13 @@
-// use a boolean var to check if the element is already shrinked
-// var heroShrunk = false,
-// 	hero = $(".hero");
+$(".container").hide();
 
-// $(window).on('scroll', function() {
-//   if ($(this).scrollTop() > 1){
-//     // add class only once
-//     if(!heroShrunk) {
-// 		$(hero).addClass("shrunk");
-// 	    // $(".line-container").hide();
-// 	    // $("#enter").hide();
-// 	    $("#minHero").show();
-//     }
-//   }
-// });
+$("#hero-content").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+    function() {
+    $(".hero").addClass("minHero");
+    $(".container").addClass("showContent");
+    $(".container").show();
+  });
+
+$(".hero").one('webkitTransitionEnd otransitionend msTransitionEnd transitionend',   
+    function() {
+    $(".hero").hide();
+  });

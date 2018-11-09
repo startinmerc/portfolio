@@ -3,45 +3,90 @@
 <head>
 	<title>Strange Industries</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="ghostStyle.css">
 	<script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
+	<!-- Call up fontAwesome -->
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+  	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+  	crossorigin="anonymous">
 </head>
 <body>
-<nav>
-	<a href="#">Strange Industries</a>
-	<span id="space"></span>
-	<a href="#">About</a>
-	<a href="#">Portfolio</a>
-	<a href="#">Contact</a>
-</nav>
-<div class="container">
 
-	<section class="hero">
-		<div class="line-container">
-			<div class="line top"></div>
-			<!-- <div id="hero-content">
-				<h1><span class="logo">Strange Industries</span></h1>
-				<p href="#" id="enter">Web Design</p>
-			</div> -->
-			<div class="line btm"></div>
-		</div>
-		<div id="hero-content">
-			<h1><span class="logo">Strange Industries</span></h1>
-			<p href="#" id="enter">Web Design</p>
-		</div>
-	</section>
-	<section id="About">
-		<h1>Hello</h1>
-		<p>BLARGTAEHYRJWSHTGbdtsnhyriojoitjiopwj6j950j4etpnv593-jv50-3jr9ipj49359-	4ydo</p>
-	</section>
-	<section id="Portfolio">
-		<h1>Portfolio</h1>
-		<p>BLARGTAEHYRJWSHTGbdtsnhyriojoitjiopwj6j950j4etpnv593-jv50-3jr9ipj49359-	4ydo</p>
-	</section>
-
+<div class="hero">
+	<div class="line-container">
+		<div class="line top"></div>
+		<div class="line btm"></div>
+	</div>
+	<div class="hero-content">
+		<h1><span id="hero-main">Strange Industries</span></h1>
+		<p id="hero-sub">Web Design</p>
+	</div>
 </div>
+<div class="container">
+	<nav>
+		<a href="#">Strange Industries</a>
+		<span id="space"></span>
+		<a href="#About">About</a>
+		<a href="#Portfolio">Portfolio</a>
+		<a href="#Contact">Contact</a>
+	</nav>
+
+	<section id="About">
+		<div class="divider divider-top"></div>
+		<div class="sectionText">
+			<h1>Hello.</h1>
+			<p>I am a front end developer.</p>
+			<p>I don't know what I'm doing.</p>
+		</div>
+		<div class="sectionFeature">
+			<div class="ghost-container">
+				<div class="ghost">
+					<div class="body-top">
+						<div class="eyes">
+								<div class="eye eye-left"></div>
+								<div class="eye eye-right"></div>
+							</div>
+						</div>
+					<div class="body-low">
+					</div>
+					<div class="skirt"></div>
+				</div>
+				<div class="shadow"></div>
+			</div>
+		</div>
+	</section>
+	<div class="divider divider-bottom"></div>
+	<section id="Portfolio">
+		<div class="divider divider-top"></div>
+		<h1>Portfolio</h1>
+		<div class="portfolio-container">
+			<div class="portfolio-entry">
+				<div class="title">YelpCamp</div>
+			</div>
+			<div class="portfolio-entry">
+				<div class="title">Strange Industries Holding Site</div>
+			</div>
+			<div class="portfolio-entry">
+				<div class="title">Warble</div>
+			</div>
+		</div>
+	</section>
+	<div class="divider divider-bottom"></div>
+	<section id="Contact">
+		<div class="divider divider-top"></div>
+		<h1>Let's talk.</h1>
+		<p>startinmerc@gmail.com</p>
+	</section>
+	<div class="footer">
+		<h1>STRANGE INDUSTRIES 2018</h1>
+		<a href="https://github.com/startinmerc" class="fab fa-github"></a>
+		<a href="https://www.linkedin.com/in/martynstirk/" class="fab fa-linkedin"></a>
+		<a href="https://codepen.io/startinmerc/" class="fab fa-codepen"></a>
+	</div>
+</div><!-- container -->
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
