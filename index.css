@@ -213,12 +213,12 @@ nav a:hover {
 }
 
 #About .sectionText {
-	text-indent: 300px;
+	text-indent: 17vw;
 }
 
 #About .sectionFeature {
 	margin-left: auto;
-	margin-right: 300px;
+	margin-right: 17vw;
 }
 
 /*Portfolio*/
@@ -235,6 +235,7 @@ nav a:hover {
 .portfolio-container{
 	display: flex;
 	align-content: center;
+	flex-wrap: wrap;
 	margin: 0 auto;
 }
 
@@ -269,11 +270,11 @@ nav a:hover {
 
 #Contact h1 {
 	text-align: right;
-	margin-right: 300px;
+	margin-right: 17vw;
 }
 #Contact p {
 	text-align: right;
-	margin-right: 300px;
+	margin-right: 17vw;
 }
 
 /*Footer*/
