@@ -1,6 +1,6 @@
 $(".container").hide();
 
-$("#hero-content").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+$(".hero-content").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
     function() {
     $(".hero").addClass("minHero");
     $(".container").addClass("showContent");

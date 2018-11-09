@@ -104,7 +104,7 @@ h1 {
 	text-decoration: none;
 	padding-top: 7px;
 	font-size: 3vw;
-	color: grey;
+	color: #2C302E;
 }
 
 .hero-content{
@@ -195,7 +195,7 @@ nav a{
 
 
 nav a:hover {
-	background-color: grey;
+	background-color: #2C302E;
 	color: white;
 }
 
@@ -286,11 +286,14 @@ nav a:hover {
 
 .footer a {
 	font-size: 3em;
-	padding: 0 30px;
+	margin: 0 30px;
 	text-decoration: none;
 	color: #2C302E;
+	transition: 250ms ease-in;
 }
 
 .footer a:hover {
 	color: white;
+	text-shadow: 0 0 10px white;
+	/*box-shadow: 10px 5px 5px red;*/
 }
