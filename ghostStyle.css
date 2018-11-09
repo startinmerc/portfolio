@@ -1,0 +1,75 @@
+.ghost-container {
+	width: 120px;
+	transform-origin: center;
+}
+
+.ghost {
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	width: 120px;
+	animation: ghost-y 2s ease-in-out infinite;
+}
+
+.body-top {
+	background-color: white;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+}
+
+.body-low {
+	background-color: white;
+	height: 120px;
+	width: 120px;
+	border-radius: 30%;
+	margin: -90px 0;
+	z-index: -1;
+}
+
+.skirt {
+	background-color: white;
+	height: 33px;
+	width: 65px;
+	border-radius: 20px;
+	align-self: flex-start;
+	margin-top: 57px;
+	margin-left: 75px;
+}
+
+.eyes {
+	display: flex;
+	flex-direction: row;
+	margin-top: 35px;
+}
+
+.eye {
+	border: 5px solid black;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	margin: 5px;
+	z-index: 100;
+}
+
+.shadow {
+	height: 10px;
+	width: 60px;
+	background-color: grey;
+	border-radius: 50%;
+	margin-left: 30px;
+	transform-origin: center;
+	animation: shadow 2s ease-in-out infinite
+}
+
+@keyframes shadow {
+	0% {transform: scale(0.5);}
+	50% {transform: scale(1);}
+	100% {transform: scale(0.5);}
+}
+
+@keyframes ghost-y {
+	0% {transform: translate(0,-10px)}
+	50% {transform: translate(0,10px)}
+	100% {transform: translate(0,-10px)}
+}
