@@ -2,7 +2,6 @@
 
 body {
 	margin: 0;
-	display: flex;
 	font-family: 'Josefin Sans', sans-serif;
 	color: #2C302E;
 	display: flex;
@@ -134,7 +133,8 @@ h1 {
 /*Sections*/
 
 section {
-	margin: 30vh 0;
+	height: 100%;
+	margin: 16% 0;
 	position: relative;
 	display: inline-block;
 	padding: 2em 1em 5em 1em;
@@ -181,6 +181,7 @@ nav {
 	background-color: white;
 	width: 100%;
 	padding: 0 auto;
+	/*position: absolute;*/
 }
 
 nav a{
@@ -296,5 +297,18 @@ nav a:hover {
 .footer a:hover {
 	color: white;
 	text-shadow: 0 0 10px white;
-	/*box-shadow: 10px 5px 5px red;*/
+}
+
+/*RESPONSIVE - TABLET*/
+@media screen and (max-width: 1024px) {
+	.line-container {
+		flex-direction: row;
+	}
+	.top {
+		height: 100vh;
+	}
+	.btm {
+		height: 100vh;
+		margin-left: 335.6px;
+	}
 }

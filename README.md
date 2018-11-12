@@ -18,9 +18,10 @@
 #To make responsive:
 	tablet (1024):
 		change margins to vw (could do as standard) - done as standard
-		intro animation lines height change
+		intro animation lines height change - done
 	mobile (400):
-		all section content to center
+		change intro animation - done
+		all section content to center - started. harder than I thought.
 		navbar to single line
 		about to stacked - smaller ghost? static?
 		portfolio stacked
