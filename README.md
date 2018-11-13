@@ -14,8 +14,10 @@
 =========startinmerc@gmail.com=======
 =====================================
 
+#To do:
+	Convert lines to svgs? Big job. Learn SVG.
 
-#To make responsive:
+#To make responsive: // Postponed pending design changes
 	tablet (1024):
 		change margins to vw (could do as standard) - done as standard
 		intro animation lines height change - done

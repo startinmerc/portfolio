@@ -1,13 +1,13 @@
-$(".container").hide();
+// $(".container").hide();
 
-$(".hero-content").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+$(".hero-3").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
     function() {
-    $(".hero").addClass("minHero");
+    // $(".hero").addClass("minHero");
     $(".container").addClass("showContent");
-    $(".container").show();
+    // $(".container").show();
   });
 
 $(".hero").one('webkitTransitionEnd otransitionend msTransitionEnd transitionend',   
     function() {
-    $(".hero").hide();
+    // $(".hero").hide();
   });

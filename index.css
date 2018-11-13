@@ -28,28 +28,26 @@ h1 {
 .top {
 	height: 40vh;
 	transform-origin: top;
-	margin-left: 32.31vw;
-	animation: lineMoveTop 8s linear;
+	margin-left: 31.78vw;
+	animation: lineMoveTop 3000ms linear;
 }
 .btm {
 	height: 60vh;
 	transform-origin: bottom;
-	margin-left: 65.61vw;
-	animation: lineMoveBtm 8s linear;
+	margin-left: 65.03vw;
+	/*transform: translateX(vw);*/
+	animation: lineMoveBtm 3000ms linear;
 }
 
 @keyframes lineMoveTop {
 	0%{
-		transform: translate(17.69vw,0) scaleY(0);
+		transform: translateX(17.08vw) scaleY(0);
 	}
-	20%{
-		transform: translate(17.69vw,0) scaleY(1);
+	33%{
+		transform: translateX(17.08vw) scaleY(1);
 	}
-	30%{
-		transform: translate(17.69vw,0);
-	}
-	60%{
-		transform: translate(0,0);
+	50%{
+		transform: translateX(17.08vw);
 	}
 	100%{
 		transform: translate(0,0);
@@ -58,16 +56,13 @@ h1 {
 
 @keyframes lineMoveBtm {
 	0%{
-		transform: translate(-15.61vw,0) scaleY(0);
+		transform: translateX(-16.2vw) scaleY(0);
 	}
-	20%{
-		transform: translate(-15.61vw,0) scaleY(1);
+	33%{
+		transform: translateX(-16.2vw) scaleY(1);
 	}
-	30%{
-		transform: translate(-15.61vw,0);
-	}
-	60%{
-		transform: translate(0,0)
+	50%{
+		transform: translateX(-16.2vw);
 	}
 	100%{
 		transform: translate(0,0)
@@ -77,14 +72,14 @@ h1 {
 /*Hero Content*/
 
 .hero{
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
 	transition: linear 800ms;
 	background: rgb(128,127,89);
-	background: linear-gradient(52deg, rgba(128,127,89,1) 0%, rgba(255,255,255,1) 70%);
+	background: linear-gradient(52deg, rgba(128,127,89,1) 0%, #FFF 70%);
 }
 
 .minHero {
@@ -109,14 +104,27 @@ h1 {
 .hero-content{
 	text-align: center;
 	margin: 0 auto;
-	width: 100vw;
+	width: 100%;
 	position: absolute;
 	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	animation: logo 6s ease-in;
+	/*animation: logo 6s ease-in;*/
 }
+
+.hero-1 {
+	animation: logo 1500ms ease-in;
+}
+
+.hero-2 {
+	animation: logo 3700ms ease-in;
+}
+
+.hero-3 {
+	animation: logo 5000ms ease-in;
+}
+
 
 @keyframes logo {
 	0%{
@@ -174,6 +182,7 @@ section:after {
 /*NAVBAR*/
 
 nav {
+	top: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -181,7 +190,8 @@ nav {
 	background-color: white;
 	width: 100%;
 	padding: 0 auto;
-	/*position: absolute;*/
+	position: sticky;
+	z-index: 2;
 }
 
 nav a{
