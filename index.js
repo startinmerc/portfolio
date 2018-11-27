@@ -1,13 +1,18 @@
-// $(".container").hide();
+var letters = "Strange Industries",
+	els = Array.from(document.querySelectorAll(".letter")),
+	heroSub = document.querySelector("#hero-sub"),
+	prompt = document.querySelector(".prompt"),
+	scroll = document.documentElement.scrollTop;
 
-$(".hero-3").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
-    function() {
-    // $(".hero").addClass("minHero");
-    $(".container").addClass("showContent");
-    // $(".container").show();
-  });
+for(let i = 0; i<letters.length; i++){
+	let num = Math.floor(Math.random()*2500);
+	els[i].style.animationDelay = num + 'ms';
+	els[i].append(letters[i]);
+	els[i].addEventListener("animationend", function(){
+		els[i].classList.add("visible");
+	});
+}
 
-$(".hero").one('webkitTransitionEnd otransitionend msTransitionEnd transitionend',   
-    function() {
-    // $(".hero").hide();
-  });
+heroSub.addEventListener("animationend", function(){
+	prompt.style.opacity = 1;
+});

@@ -4,31 +4,38 @@
 	<title>Strange Industries</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="ghostStyle.css">
-	<!-- <link rel="stylesheet" type="text/css" href="mobStyle.css"> -->
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+
 	<!-- Call up fontAwesome -->
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
   	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
   	crossorigin="anonymous">
 </head>
 <body>
-
-<div class="hero">
-	<div class="line-container">
-		<div class="line top"></div>
-		<div class="line btm"></div>
+	<div class="hero">
+			<h1 id="hero-main">
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<hr>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+				<span class="letter"></span>
+			</h1>
+			<p id="hero-sub">Design Agency</p>
+			<a class="prompt far fa-arrow-alt-circle-down" href="#About"></a>
 	</div>
-	<div class="hero-content">
-		<h1 id="hero-main">
-			<span class="hero-3">S</span><span class="hero-2">t</span><span class="hero-3">range
-			</span><span class="hero-1">I</span><span class="hero-3">ndustr</span><span class="hero-2">i</span><span class="hero-3">es</span>
-		</h1>
-		<p id="hero-sub" class="hero-3">Web Design</p>
-	</div>
-</div>
 
 <div class="container">
 
@@ -41,48 +48,62 @@
 	</nav>
 
 	<section id="About">
-
 		<div class="sectionText">
-			<h1>Hello.</h1>
-			<p>I am a front end developer.</p>
+			<h2>Hello.</h2>
+			<p>I am a front end developer and audio designer.</p>
 			<p>I enjoy building websites from scratch, and integrating CSS animation to create a clean, simple design.</p>
 		</div>
-
 		<div class="sectionFeature">
 			<div class="ghost-container">
 				<div class="ghost">
-					<div class="body-top">
-						<div class="eyes">
-								<div class="eye eye-left"></div>
-								<div class="eye eye-right"></div>
-							</div>
-						</div>
-					<div class="body-low">
+					<div class="body">
+						<div class="eyes"></div>
 					</div>
-					<div class="skirt"></div>
 				</div>
 				<div class="shadow"></div>
 			</div>
 		</div>
-
 	</section>
 
 	<section id="Portfolio">
-
 		<div class="sectionText">
-			<h1>Portfolio</h1>
+			<h2>Portfolio</h2>
 			<p>A selection of my recent projects</p>
 		</div>
-
 		<div class="portfolio-container sectionFeature">
 			<div class="portfolio-entry">
-				<div class="title">YelpCamp</div>
+				<div class="entry-title">YelpCamp</div>
+				<div class="entry-blurb">
+					<p>Built through the Web Developer Bootcamp,
+					this is a full stack yelp-style campground site.</p>
+					<p><strong>Utilises Node, MongoDB, Boostrap & Passport.</strong></p>
+					<a href="https://www.floating-bayou-66425.herokuapp.com/" 
+					class="fas fa-globe"
+					alt="Visit Website"></a>
+					<a href="https://github.com/startinmerc/yelp_camp" class="fab fa-github"
+					alt="Visit Repository"></a>
+				</div>
 			</div>
 			<div class="portfolio-entry">
-				<div class="title">Strange Industries Holding Site</div>
+				<div class="entry-title">Strange Industries<br>
+				Holding Site</div>
+				<div class="entry-blurb">
+					<p>A fictional holding company and its afilliated websites.
+					</p>
+					<p><strong>Utilises Node, MongoDB, Boostrap, Javascript & API calls.</strong></p>
+					<a href="http://www.strangeindustries.co.uk/" 
+					class="fas fa-globe"
+					alt="Visit Website"></a>
+					<a href="https://github.com/startinmerc/strange-industries" class="fab fa-github"></a>
+				</div>
 			</div>
 			<div class="portfolio-entry">
-				<div class="title">Warble</div>
+				<div class="entry-title">You Don't Belong Here</div>
+				<div class="entry-blurb">
+					<p>Demonstration page for my CSS skills. Created for a fictional game.</p>
+					<p><strong>Utilises CSS & SASS</strong></p>
+					<a href="https://github.com/startinmerc/ydbh" class="fab fa-github"></a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -90,13 +111,13 @@
 	<section id="Contact">
 
 		<div class="sectionText">
-			<h1>Let's talk.</h1>
+			<h2>Let's talk.</h2>
 			<p>startinmerc@gmail.com</p>
 		</div>
-
 	</section>
+
 	<div class="footer">
-		<h1>STRANGE INDUSTRIES 2018</h1>
+		<h2>STRANGE INDUSTRIES 2018</h2>
 		<a href="https://github.com/startinmerc" class="fab fa-github"></a>
 		<a href="https://www.linkedin.com/in/martynstirk/" class="fab fa-linkedin"></a>
 		<a href="https://codepen.io/startinmerc/" class="fab fa-codepen"></a>
