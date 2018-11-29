@@ -42,6 +42,14 @@ a:hover {
 	text-shadow: 0 0 10px #EDEBE9;
 }
 
+.allContent {
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 /*Hero Content*/
 
 .hero{
@@ -55,7 +63,8 @@ a:hover {
 	background: linear-gradient(52deg, #8B8A88 0%, #EDEBE9 80%);
 	text-align: center;
 	margin: 0 auto;
-	position: absolute;
+
+	transform: translateZ(-1px) scale(2);
 }
 
 #hero-main {
@@ -84,7 +93,7 @@ a:hover {
 	padding-top: 7px;
 	font-size: 3em;
 	color: #2C302E;
-	animation: logo 4100ms ease-in
+	animation: logo 4100ms ease-in;
 }
 
 .prompt {
@@ -107,26 +116,31 @@ a:hover {
 /*Sections*/
 
 section {
-	height: 100%;
-	margin: 20% 0;
-	padding: 2% 0;
+	height: 100vh;
 	position: relative;
 	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-section:after {
+.sectionContent {
+	/**/
+}
+
+.sectionContent:after {
 	content: '';
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	-webkit-transform-origin: center;
 	-ms-transform-origin: center;
 	transform-origin: center;
 	-webkit-transform: skewY(2deg);
 	-ms-transform: skewY(2deg);
-	transform: skewY(2deg) translateY(-5%);
+	transform: skewY(2deg) translateY(-50%);
 	z-index: -1;
 
 	background: #8B8A88;
@@ -134,9 +148,12 @@ section:after {
 }
 
 .container {
-	margin-top: 100vh;
 	background: #8B8A88;
 	background: linear-gradient(52deg, #8B8A88 0%, #EDEBE9 80%);
+
+	position: relative;
+	/*display: block;*/
+	z-index: 1;
 }
 
 
@@ -186,7 +203,7 @@ nav a:first-child:hover {
 
 /*About Section*/
 
-#About {
+#About .sectionContent {
 	display: flex;
 	flex-direction: row;
 	align-content: space-around;
@@ -204,7 +221,7 @@ nav a:first-child:hover {
 
 /*Portfolio*/
 
-#Portfolio {
+#Portfolio .sectionContent {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -213,10 +230,9 @@ nav a:first-child:hover {
 	padding-bottom: 100px;
 }
 
-.portfolio-container{
+#Portfolio .sectionFeature {
 	display: flex;
 	align-content: center;
-	/*flex-wrap: wrap;*/
 	margin: 0 auto;
 }
 
@@ -272,27 +288,16 @@ nav a:first-child:hover {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	/*padding-bottom: 50px;*/
 }
 
-#Contact h2 {
-	text-align: right;
-	margin-right: 17vw;
-}
-#Contact p {
+#Contact .sectionText {
 	text-align: right;
 	margin-right: 17vw;
 }
 
-/*Footer*/
-
-.footer {
-	text-align: center;
-	background: #8B8A88;
-	padding: 40px 0;
-	box-shadow: 0 0px 10px 1px #8B8A88;
+#Contact a {
+	margin: 10px 0 0 30px;
 }
 
-.footer a {
-	margin: 0 30px;
-}
+/*Responsive*/
+
