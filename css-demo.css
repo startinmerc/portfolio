@@ -11,10 +11,16 @@ body {
 }
 
 .main-container {
-	height: 100vh;
+	height: 200vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
+
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .container {
@@ -24,7 +30,7 @@ body {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow: hidden;
-	height: 100vh;
+	height: 200vh;
 	width: 100vw;
 }
 
@@ -33,34 +39,36 @@ body {
 	flex-direction: column;
 	background-color: #FDE74C;
 	z-index: -50;
+	transform: translateZ(-1px) scale(2);
 }
 
-.pole {
-	position: absolute;
-	bottom: 8%;
-	left: 25%;
-	width: 50px;
-	height: 70%;
-	background-color: #2E282A;
-	z-index: -49;
-}
-
-.pole:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 2px;
-	box-shadow: 0 0 10px white
-}
-
-.buildings {
+.buildings-container {
 	height: inherit;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
 	justify-content: flex-end;
+}
+
+.building {
+	border-left: 2px solid white;
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 3px;
+}
+
+.window {
+	height: 10%;
+	width: 20%;
+	margin: 10% 10% 5% 10%;
+	background-color: black;
+}
+
+.window.light {
+	background-color: blue;
 }
 
 .building-1 {
@@ -70,65 +78,61 @@ body {
 	z-index: -2;
 	height: 70%;
 	width: 390px;
-	background-color: #3a3535;
-	border-left: 2px solid white;
-	border-top: 2px solid white;
-	border-right: 2px solid white;
-	border-radius: 3px;
+	background-color: #252323;
 }
 
 .building-2 {
 	position: absolute;
 	bottom: 9vh;
 	right: 14vw;
-	z-index: -2;
+	z-index: -3;
 	height: 55%;
 	width: 330px;
 	background-color: #332f2f;
-	border-top: 2px solid white;
-	border-left: 2px solid white;
-	border-radius: 3px;
 }
 
 .building-3 {
 	height: 90%;
-	background-color: #252323;
 	width: 220px;
 	align-self: flex-end;
-	border-top: 2px solid white;
-	border-left: 2px solid white;
+	background-color: #252323;
 }
 
-.building-3:before {
-	content: '';
-	width: 30px;
-	height: 30px;
-	background-color: inherit;
-	border-radius: 50% 0 0 50%;
+.building-4 {
 	position: absolute;
-	margin-left: -30px;
-	margin-top: 30px;
-	border-top: 2px solid white;
-	border-left: 2px solid white;
-	border-bottom: 2px solid white;
+	bottom: 9vh;
+	right: 56vw;
+	z-index: -3;
+	height: 65%;
+	width: 630px;
+	border-radius: 30%;
+	background-color: #585454;
 }
 
-.building-3:after {
-	content: '';
-	background-color: inherit;
-	height: 50px;
-	width: 50px;
+.building-5 {
 	position: absolute;
-	margin-top: -20px;
-	margin-left: -15px;
-	border-top: 2px solid white;
-	border-left: 2px solid white;
-	border-right: 2px solid white;
+	bottom: 9vh;
+	right: 39vw;
+	z-index: -3;
+	height: 79%;
+	width: 370px;
+	transform: skewY(6deg);
+	background-color: #332f2f;
+}
+
+.building-6 {
+	position: absolute;
+	bottom: 9vh;
+	right: 56vw;
+	z-index: -1;
+	height: 55%;
+	width: 900px;
+	background-color: #252323;
 }
 
 .ground {
 	height: 10%;
-	background-color: rgba(84,71,48,1);
+	background-color: #3a3535;
 }
 
 .features {
@@ -232,10 +236,17 @@ body {
 	padding: 20px;
 	border: 15px solid #17BEBB;
 	background: #E7EB90;
+	background: linear-gradient(90deg, #e7eb90 50%, #ccd07d 100%);
 	box-shadow: -10px -10px 0px #2E282A;
 	transform: skewY(-5deg);
 	width: 80%;
 	border-radius: 3px;
+	animation: title 2s linear infinite;
+}
+
+@keyframes title {
+	0% {color: #2E282A; text-shadow: 0 0 20px #2E282A;}
+	50% {color: #CD5334; text-shadow: 0 0 20px #CD5334;}
 }
 
 .title:hover {
@@ -250,6 +261,7 @@ body {
 	font-size: 1.5em;
 	border: 5px solid #2E282A;
 	background: #E7EB90;
+	background: linear-gradient(90deg, #e7eb90 50%, #ccd07d 100%);
 	padding: 0 5px;
 	box-shadow: -2px -2px 0px #2C202E;
 	text-transform: uppercase;
