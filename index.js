@@ -1,11 +1,13 @@
 var letters = "Strange Industries",
 	els = Array.from(document.querySelectorAll(".letter")),
-	heroSub = document.querySelector("#hero-sub"),
+	heroSub = document.querySelector(".hero-sub"),
 	prompt = document.querySelector(".prompt"),
 	hero = document.querySelector(".hero"),
 	brand = document.querySelector(".brand"),
 	container = document.querySelector(".container"),
-	lines = Array.from(document.querySelectorAll(".line"));
+	lines = Array.from(document.querySelectorAll(".line")),
+	sections = Array.from(document.querySelectorAll("section")),
+	links = Array.from(document.querySelector("nav").querySelectorAll("a"));
 
 for(let i = 0; i<letters.length; i++){
 	letterRandomize(i);
@@ -14,6 +16,34 @@ for(let i = 0; i<letters.length; i++){
 	}
 }
 
+links.forEach(function(link){
+	link.addEventListener("click", function(){
+	if(link.text=="About" && sections[0].classList.contains("sectionShown") == false){
+		sections[0].classList.add("sectionShown");
+		sections[1].classList.add("sectionHidden");
+		sections[2].classList.add("sectionHidden");
+		sections[0].classList.remove("sectionHidden");
+		sections[1].classList.remove("sectionShown");
+		sections[2].classList.remove("sectionShown");
+	}
+	if(link.text=="Portfolio" && sections[1].classList.contains("sectionShown") == false){
+		sections[1].classList.add("sectionShown");
+		sections[0].classList.add("sectionHidden");
+		sections[2].classList.add("sectionHidden");
+		sections[1].classList.remove("sectionHidden");
+		sections[0].classList.remove("sectionShown");
+		sections[2].classList.remove("sectionShown");
+	}
+	if(link.text=="Contact" && sections[2].classList.contains("sectionShown") == false){
+		sections[2].classList.add("sectionShown");
+		sections[0].classList.add("sectionHidden");
+		sections[1].classList.add("sectionHidden");
+		sections[2].classList.remove("sectionHidden");
+		sections[0].classList.remove("sectionShown");
+		sections[1].classList.remove("sectionShown");
+	}
+	})
+})
 
 heroSub.addEventListener("animationend", function(){
 	prompt.style.opacity = 1;
@@ -21,12 +51,18 @@ heroSub.addEventListener("animationend", function(){
 
 prompt.addEventListener("click", function(){
 	// hero.style.height = "0vh";
-	hero.classList.toggle("hidden")
+	hero.classList.toggle("heroHidden");
+	hero.classList.toggle("heroShown");
+	container.classList.toggle("containerHidden");
+	container.classList.toggle("containerShown");
 })
 
 brand.addEventListener("click", function(){
 	// hero.style.height = "100vh";
-	hero.classList.toggle("hidden")
+	hero.classList.toggle("heroHidden");
+	hero.classList.toggle("heroShown");
+	container.classList.toggle("containerHidden");
+	container.classList.toggle("containerShown");
 })
 
 

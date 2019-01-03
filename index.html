@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="allContent">
-	<div class="hero">
+	<div class="hero heroShown">
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
@@ -46,11 +46,11 @@
 				<span class="letter"></span>
 				<span class="letter"></span>
 			</h1>
-			<p id="hero-sub">Audio and Web Design</p>
+			<p class="hero-sub">Audio and Web Design</p>
 			<a class="prompt far fa-arrow-alt-circle-down" href="#"></a>
 	</div>
 
-	<div class="container">
+	<div class="container containerHidden">
 
 		<nav>
 			<a href="#" class="brand">Strange Industries</a>
@@ -60,12 +60,13 @@
 			<a href="#Contact">Contact</a>
 		</nav>
 
-		<section id="About">
+		<section id="About" class="sectionShown">
 			<div class="sectionContent">
 				<div class="sectionText">
 					<h2>Hello.</h2>
 					<p>I am a front end developer and audio designer.</p>
 					<p>I enjoy building websites from scratch, and integrating CSS animation to create a clean, simple design.</p>
+					<p>I left a career in Bookselling in 2018 to become a self-taught developer, learning through Udemy, edX and other online resources.</p>
 				</div>
 				<div class="sectionFeature">
 					<div class="ghost-container">
@@ -80,7 +81,7 @@
 			</div>
 		</section>
 
-		<section id="Portfolio">
+		<section id="Portfolio" class="sectionHidden">
 			<div class="sectionContent">
 				<div class="sectionText">
 					<h2>Portfolio</h2>
@@ -125,7 +126,7 @@
 			</div>
 		</section>
 
-		<section id="Contact">
+		<section id="Contact" class="sectionHidden">
 			<div class="sectionContent">
 				<div class="sectionText">
 					<h2>Let's talk.</h2>
