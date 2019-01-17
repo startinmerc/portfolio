@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"sec",
+				"sections"
+			],
+			[
+				"an",
+				"animationend"
+			],
+			[
+				"a",
+				"addEventListener"
+			],
+			[
+				"secti",
+				"sections"
+			],
+			[
+				"se",
+				"sections"
+			],
+			[
+				"section",
+				"sectionHidden"
+			],
+			[
+				"querySelect",
+				"querySelectorAll"
+			],
+			[
+				"sectionS",
+				"sectionShown"
+			],
+			[
+				"r",
+				"remove"
+			],
+			[
+				"t",
+				"toggle"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
 				"sc",
 				"scale"
 			],
@@ -18,10 +66,6 @@
 			[
 				"in",
 				"inline\tdisplay"
-			],
-			[
-				"an",
-				"animationDelay"
 			],
 			[
 				"le",
@@ -80,10 +124,6 @@
 				"background-color\tproperty"
 			],
 			[
-				"co",
-				"contain\tbackground-size"
-			],
-			[
 				"u",
 				"url()\tbackground-image"
 			],
@@ -130,10 +170,6 @@
 			[
 				"sect",
 				"sectionContent"
-			],
-			[
-				"a",
-				"auto\theight"
 			],
 			[
 				"num",
@@ -196,10 +232,6 @@
 				"style\tTag"
 			],
 			[
-				"di",
-				"div\tTag"
-			],
-			[
 				"bt",
 				"btn-danger"
 			],
@@ -260,16 +292,8 @@
 				"font"
 			],
 			[
-				"t",
-				"title\tAttr"
-			],
-			[
 				"mi",
 				"minlength\tAttr"
-			],
-			[
-				"se",
-				"select\tTag"
 			],
 			[
 				"re",
@@ -283,7 +307,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4631,
+				"buffer_size": 4867,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -292,7 +316,7 @@
 			"file": "index.css",
 			"settings":
 			{
-				"buffer_size": 7171,
+				"buffer_size": 8043,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -301,7 +325,16 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 1400,
+				"buffer_size": 3067,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1699,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -421,6 +454,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"width",
+			"toggle",
+			"sectionHidden",
+			"add",
+			"Shown",
+			"1",
+			"lines",
+			"visible",
+			"hero",
+			"brand",
 			"logo",
 			"randomize",
 			"z-",
@@ -464,15 +507,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4631,
+						"buffer_size": 4867,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1703,
-								1703
+								4330,
+								4330
 							]
 						],
 						"settings":
@@ -481,10 +524,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -499,15 +542,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7171,
+						"buffer_size": 8043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6694,
-								6694
+								1713,
+								1713
 							]
 						],
 						"settings":
@@ -516,16 +559,16 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4615.2,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -534,15 +577,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1400,
+						"buffer_size": 3067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								939,
-								939
+								2711,
+								2711
 							]
 						],
 						"settings":
@@ -551,10 +594,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 990.4,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1501,
+								1501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 295.2,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -595,7 +667,7 @@
 		[
 			0.0,
 			0.260751546224,
-			0.660264485677,
+			0.53891031901,
 			1.0
 		],
 		"rows":
@@ -643,7 +715,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 2,
 	"settings":
 	{
 	},

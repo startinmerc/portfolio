@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
 
+:root {
+	--light-shades: #EDEBE9;
+	--light-accent: #8B8A88;
+	--main-color: #D90F0F;
+	--dark-accent: #5893CE;
+	--dark-shades: #2C302E;
+
+	--gradient-lighten: linear-gradient(900deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
+	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
+}
+
 /*
 light shades:	EDEBE9	(white)
 Use this color as the background for your dark-on-light designs, or the text color of an inverted design.
@@ -23,14 +34,14 @@ Use as the text color for dark-on-light designs, or as the background for invert
 body {
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
-	color: #2C302E;
+	color: var(--dark-shades);
 	display: flex;
 	flex-direction: column;
 }
 
 h2 {
 	font-size: 2em;
-	color: #D90F0F;
+	color: var(--main-color);
 }
 
 hr {
@@ -38,7 +49,7 @@ hr {
 	width: 50%;
 	height: 3px;
 	border: none;
-	background-color: #D90F0F;
+	background-color: var(--main-color);
 	animation: hrShow 1800ms ease-in;
 }
 
@@ -51,29 +62,20 @@ a {
 	font-size: 3em;
 	transition: 400ms all;
 	text-decoration: none;
-	color: #2C302E;
+	color: var(--dark-shades);
 }
 
 a:hover {
-	color: #EDEBE9;
-	text-shadow: 0 0 10px #EDEBE9;
+	color: var(--light-shades);
+	text-shadow: 0 0 10px var(--light-shades);
 }
 
 p {
 	font-family: Comfortaa;
 }
 
-.allContent {
-/*	perspective: 1px;
-	transform-style: preserve-3d;
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: scroll;*/
-}
-
 .heroHidden {
 	height: 0vh;
-	/*visibility: hidden;*/
 }
 
 .heroShown {
@@ -82,12 +84,10 @@ p {
 
 .containerHidden {
 	height: 0%;
-	/*visibility: hidden;*/
 }
 
 .containerShown {
 	height: 100%;
-	/*visibility: visible;*/
 }
 
 .sectionHidden {
@@ -95,10 +95,33 @@ p {
 	display: none;
 }
 
+.sectionHidden .sectionContent:after {
+	animation: sH 400ms ease-in-out;
+}
+
+@keyframes sH {
+	0%{height: 100%};
+	100%{height: 0%};
+}
+
 .sectionShown {
 	height: 100vh;
 	display: flex;
 }
+
+.sectionShown .sectionContent:after {
+	animation: sS 400ms ease-in-out;
+}
+
+.sectionShown .sectionText, .sectionFeature {
+	animation: subAnimation 400ms linear;
+}
+
+@keyframes sS {
+	0%{height: 0%};
+	100%{height: 100%};
+}
+
 /*Hero Content*/
 
 .hero{
@@ -108,8 +131,8 @@ p {
 	justify-content: center;
 	/*height: 100vh;*/
 	transition: all linear 800ms;
-	background: #8B8A88;
-	background: linear-gradient(52deg, #8B8A88 0%, #EDEBE9 80%);
+	background: var(--light-shades);
+	background: var(--gradient-darken);
 	text-align: center;
 	margin: 0 auto;
 	/*transform: translateZ(-1px) scale(2);*/
@@ -124,14 +147,14 @@ p {
 }
 
 .letter {
-	color: #2C302E;
+	color: var(--dark-shades);
 	opacity: 0;
 	animation: letter 800ms ease-in;
 }
 
 .line {
 	height: 50vh;
-	background-color: #8B8A88;
+	background-color: var(--light-shades);
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -142,22 +165,22 @@ p {
 
 @keyframes line {
 	0% {transform: translateY(-50vh) scaleY(1);
-		box-shadow: 0 0px 10px 5px #8B8A88;
+		box-shadow: 0 0px 5px 5px var(--light-shades);
 	}
 	50% {transform: translateY(50vh) scaleY(1);
-		box-shadow: 0 0px 10px 1px #8B8A88;
+		box-shadow: 0 0px 5px 1px var(--light-shades);
 	}
 	75% {transform: translateY(50vh) scaleY(0);
-		box-shadow: 0 0px 0px 0px #8B8A88;
+		box-shadow: 0 0px 0px 0px var(--light-shades);
 	}
 	100% {transform: translateY(50vh) scaleY(0);
-		box-shadow: 0 0px 0px 0px #8B8A88;
+		box-shadow: 0 0px 0px 0px var(--light-shades);
 	}
 }
 
 @keyframes letter {
-	0% {opacity: 0; text-shadow: 0 0 5px #2C302E;}
-	80% {opacity: 0.8; text-shadow: 0 0 5px #2C302E;}
+	0% {opacity: 0; text-shadow: 0 0 5px var(--dark-shades);}
+	80% {opacity: 0.8; text-shadow: 0 0 5px var(--dark-shades);}
 	100% {opacity: 1; text-shadow: none;}
 }
 
@@ -170,15 +193,16 @@ p {
 	padding-top: 7px;
 	font-family: Comfortaa;
 	font-size: 3em;
-	color: #2C302E;
+	color: var(--dark-shades);
 	animation: subAnimation 4100ms ease-in;
 	letter-spacing: -1px;
 	z-index: 1;
 }
 
 .prompt {
+	margin: 0 auto;
 	opacity: 0;
-	padding-bottom: auto;
+	/*padding-bottom: auto;*/
 	z-index: 1;
 }
 
@@ -202,36 +226,36 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-color: #EDEBE9;
+	background-color: var(--light-shades);
 	width: 100%;
 	padding: 0 auto;
 	position: absolute;
 	z-index: 10;
-	box-shadow: 0 0px 5px 1px #2C302E;
+	box-shadow: 0 0px 5px 1px var(--dark-shades);
 }
 
 nav a{
 	font-size: 20px;
 	height: 100%;
 	padding: 10px 10px;
-	color: #2C302E;
+	color: var(--dark-shades);
 }
 
 
 nav a:hover {
-	background-color: #2C302E;
-	color: #EDEBE9;
+	background-color: var(--dark-shades);
+	color: var(--light-shades);
 	text-shadow: none;
 }
 
 .brand {
 	font-weight: bold;
-	color: #D90F0F;
+	color: var(--main-color);
 }
 
 .brand:hover {
-	background-color: #D90F0F;
-	color: #EDEBE9;
+	background-color: var(--main-color);
+	color: var(--light-shades);
 }
 
 #space{
@@ -253,6 +277,7 @@ section {
 
 .sectionContent {
 	/**/
+	display: flex;
 }
 
 .sectionContent:after {
@@ -261,20 +286,26 @@ section {
 	top: 50%;
 	left: 0;
 	width: 100%;
-	height: 50%;
+	height: 65%;
 	transform-origin: center;
 	transform: skewY(2deg) translateY(-50%);
 	z-index: -1;
-	background: #5893CE;
-	box-shadow: 0 0px 10px 1px #8B8A88;
+	background: var(--dark-accent);
+	background-image: var(--gradient-lighten);
+	/*box-shadow: 0 0px 10px 1px var(--light-shades);*/
+	transition: all 800ms linear;
 }
 
 .container {
 	transition: all linear 800ms;
-	background: #8B8A88;
-	background: linear-gradient(52deg, #8B8A88 0%, #EDEBE9 80%);
+	background: var(--light-shades);
+	background-image: var(--gradient-darken);
 	position: relative;
 	z-index: 1;
+}
+
+.sectionHidden .sectionContent:after {
+	width: 0%;
 }
 
 /*About Section*/
@@ -287,7 +318,9 @@ section {
 }
 
 #About .sectionText {
+	margin-top: -4rem;
 	margin-left: 17vw;
+	width: 54%;
 }
 
 #About .sectionFeature {
@@ -297,12 +330,16 @@ section {
 
 /*Portfolio*/
 
+#Portfolio {
+	justify-content: flex-start;
+}
+
 #Portfolio .sectionContent {
+	padding-top: 20vh;
 	text-align: center;
-	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	padding-bottom: 100px;
+	justify-content: flex-start;
 }
 
 #Portfolio .sectionFeature {
@@ -314,14 +351,18 @@ section {
 .portfolio-entry {
 	height: 250px;
 	width: 250px;
-	/*border: 4px solid #EDEBE9;*/
-	background-color: #EDEBE9;
-	background: linear-gradient(0deg, #8B8A88 0%, #EDEBE9 70%);
+	background-color: var(--light-shades);
 	border-radius: 20px;
 	margin: 10px;
-	transition-duration: 250ms;
+	transition: all 250ms;
+	/*transition-duration: 250ms;*/
 	overflow: hidden;
-	color: #EDEBE9;
+	color: var(--light-shades);
+	text-align: center;
+}
+
+.portfolio-entry i {
+	color: white;
 }
 
 .port-yelpcamp {
@@ -329,8 +370,8 @@ section {
 	background-size: cover;
 }
 
-.port-strangeindustries {
-	background-image: url(https://source.unsplash.com/uDkyP-U9JH4);
+.port-maison {
+	background-image: url(https://source.unsplash.com/KfMKGzgWVSY);
 	background-size: cover;
 }
 
@@ -391,6 +432,7 @@ section {
 #Contact .sectionText {
 	text-align: right;
 	margin-right: 17vw;
+	margin-left: auto;
 }
 
 #Contact a {
@@ -429,11 +471,11 @@ section {
 
 @media screen and (max-width: 600px) {
 	.allContent {
-		perspective: none;
-		transform-style: initial;
+		/*perspective: none;*/
+		/*transform-style: initial;*/
 	}
 	.hero {
-		transform: translateZ(0), scale(1);
+		/*transform: translateZ(0), scale(1);*/
 	}
 	.letter {
 		margin: 0 -15px;
@@ -444,6 +486,7 @@ section {
 	}
 
 	#About .sectionText {
+		width: 90%;
 		margin: 0 auto;
 		text-align: center;
 	}
@@ -453,17 +496,23 @@ section {
 	}
 
 	.portfolio-entry {
-		height: 250px;
+		height: 10vh;
+		width: 90vw;
 	}
 
-	.entry-title {
+	.portfolio-entry:hover {
+		width: 90vw;
+		height: 30vh;
+	}
+
+/*	.entry-title {
 		margin-top: 5%;
-	}
+	}*/
 
-	.entry-blurb {
+	/*.entry-blurb {
 		opacity: 1;
 		transform: translateY(0);
-	}
+	}*/
 
 	#Contact .sectionText {
 		text-align: center;

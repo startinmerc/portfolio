@@ -1,3 +1,4 @@
+```
 =====================================
 =STRANGE INDUSTRIES DESIGN SITE 2019=
 =====================================
@@ -13,7 +14,7 @@
 =====================================
 =========startinmerc@gmail.com=======
 =====================================
-
+```
 
 #To make responsive: // Postponed pending design changes
 	tablet (1024):
@@ -25,14 +26,18 @@
 		portfolio stacked - done
 
 #redesign!
-	change colors - hero looks good but doesn't work for page
-	load elements only when visible
+	change colors, hero looks good but doesn't work for page
+	load elements only when visible - nah
 	portfolio - expand items when hovered & shrink others - done
-		-how to do on mobile? - done
-	split background into before & after elements to fix sixing?
-	animate hero background - 
-		audio inspired wave lines?
-		random lines - done
+		-how to do on mobile? carousel?
+	split background into before & after elements to fix sixing? - nah
+	animate hero background - random lines - done
+	changed to 1-page style with JS navigation - done
+		*delay display: hidden to after animation
+	sort out flex display of sections - done with margins
+
+
+
 
 #CSS Demo
 	make background parallaxed - done, ish
@@ -40,7 +45,7 @@
 	minimise ghost using before & after elements - done
 	make bigger to demo parallax layers!
 		more buildings - done
-		assign buildings to z-layers (remove z-index?)
+		assign buildings to z-layers (remove z-index?) - done, z-based layers
 
 absolute-sticky
 	text-container

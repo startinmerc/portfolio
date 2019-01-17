@@ -42,15 +42,15 @@ links.forEach(function(link){
 		sections[0].classList.remove("sectionShown");
 		sections[1].classList.remove("sectionShown");
 	}
-	})
+	});
 })
+
 
 heroSub.addEventListener("animationend", function(){
 	prompt.style.opacity = 1;
 });
 
 prompt.addEventListener("click", function(){
-	// hero.style.height = "0vh";
 	hero.classList.toggle("heroHidden");
 	hero.classList.toggle("heroShown");
 	container.classList.toggle("containerHidden");
@@ -58,7 +58,6 @@ prompt.addEventListener("click", function(){
 })
 
 brand.addEventListener("click", function(){
-	// hero.style.height = "100vh";
 	hero.classList.toggle("heroHidden");
 	hero.classList.toggle("heroShown");
 	container.classList.toggle("containerHidden");
