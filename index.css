@@ -59,16 +59,29 @@ hr {
 }
 
 a {
+	text-decoration: none;
 	font-size: 3em;
 	transition: 400ms all;
-	text-decoration: none;
+}
+
+.linkDark {
 	color: var(--dark-shades);
 }
 
-a:hover {
+.linkDark:hover {
 	color: var(--light-shades);
 	text-shadow: 0 0 10px var(--light-shades);
 }
+
+.linkLight {
+	color: var(--light-shades);
+}
+
+.linkLight:hover {
+	color: var(--light-shades);
+	text-shadow: 0 0 10px var(--light-shades);
+}
+
 
 p {
 	font-family: Comfortaa;
@@ -129,13 +142,11 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/*height: 100vh;*/
 	transition: all linear 800ms;
 	background: var(--light-shades);
 	background: var(--gradient-darken);
 	text-align: center;
 	margin: 0 auto;
-	/*transform: translateZ(-1px) scale(2);*/
 	left: 0;
 	top: 0;
 }
@@ -266,17 +277,14 @@ nav a:hover {
 /*Sections*/
 
 section {
-	/*height: 100vh;*/
 	position: relative;
 	z-index: 2;
-	/*display: flex;*/
 	flex-direction: column;
 	justify-content: center;
 	transition: all 800ms linear;
 }
 
 .sectionContent {
-	/**/
 	display: flex;
 }
 
@@ -292,7 +300,6 @@ section {
 	z-index: -1;
 	background: var(--dark-accent);
 	background-image: var(--gradient-lighten);
-	/*box-shadow: 0 0px 10px 1px var(--light-shades);*/
 	transition: all 800ms linear;
 }
 
@@ -351,33 +358,26 @@ section {
 .portfolio-entry {
 	height: 250px;
 	width: 250px;
-	background-color: var(--light-shades);
+	background-color: var(--dark-shades);
 	border-radius: 20px;
 	margin: 10px;
 	transition: all 250ms;
-	/*transition-duration: 250ms;*/
 	overflow: hidden;
 	color: var(--light-shades);
 	text-align: center;
+
+	position: relative;
 }
 
-.portfolio-entry i {
-	color: white;
-}
-
-.port-yelpcamp {
-	background-image: url(https://source.unsplash.com/1yOkW4UwYbA);
-	background-size: cover;
-}
-
-.port-maison {
-	background-image: url(https://source.unsplash.com/KfMKGzgWVSY);
-	background-size: cover;
-}
-
-.port-ydbh {
-	background-image: url(https://source.unsplash.com/2p1HOcpi14U);
-	background-size: cover;
+.portfolio-entry img  {
+	box-sizing: border-box;
+	vertical-align: top;
+	width: 500px;
+	height: auto;
+	transition: all 120ms;
+	position: absolute;
+	transform: translateX(-50%);
+	border-radius: 20px;
 }
 
 .entry-title{
@@ -404,6 +404,11 @@ section {
 	height: 300px;
 }
 
+.portfolio-entry:hover img {
+	filter: grayscale(50%);
+	opacity: 0.3;
+}
+
 .portfolio-entry:hover .entry-title {
 	margin-top: 10%;
 	font-size: 1.3em;
@@ -424,7 +429,6 @@ section {
 /*Contact*/
 
 #Contact {
-	/*display: flex;*/
 	flex-direction: column;
 	flex-wrap: wrap;
 }
@@ -470,13 +474,7 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-	.allContent {
-		/*perspective: none;*/
-		/*transform-style: initial;*/
-	}
-	.hero {
-		/*transform: translateZ(0), scale(1);*/
-	}
+
 	.letter {
 		margin: 0 -15px;
 	}
@@ -504,15 +502,6 @@ section {
 		width: 90vw;
 		height: 30vh;
 	}
-
-/*	.entry-title {
-		margin-top: 5%;
-	}*/
-
-	/*.entry-blurb {
-		opacity: 1;
-		transform: translateY(0);
-	}*/
 
 	#Contact .sectionText {
 		text-align: center;
