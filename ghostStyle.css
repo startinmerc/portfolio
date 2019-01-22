@@ -9,6 +9,7 @@
 }
 
 .body:before {
+	/*Top*/
 	content: "";
 	position: absolute;
 	background-color: #EDEBE9;
@@ -28,6 +29,7 @@
 }
 
 .body:after {
+	/*Tail*/
 	content: "";
 	position: absolute;
 	background-color: #EDEBE9;
@@ -40,6 +42,7 @@
 }
 
 .eyes {
+	/*Left*/
 	border: 5px solid #2C302E;
 	position: absolute;
 	height: 20px;
@@ -51,6 +54,7 @@
 }
 
 .eyes:after {
+	/*Right*/
 	content: "";
 	border: 5px solid #2C302E;
 	position: absolute;

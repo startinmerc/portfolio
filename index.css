@@ -318,7 +318,6 @@ section {
 /*About Section*/
 
 #About .sectionContent {
-	display: flex;
 	flex-direction: row;
 	align-content: space-around;
 	flex-wrap: wrap;
@@ -428,8 +427,9 @@ section {
 }
 /*Contact*/
 
-#Contact {
-	flex-direction: column;
+#Contact .sectionContent {
+	flex-direction: row-reverse;
+	align-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -437,6 +437,20 @@ section {
 	text-align: right;
 	margin-right: 17vw;
 	margin-left: auto;
+	width: 54%;
+}
+
+#Contact .sectionFeature {
+	margin-left: 17vw;
+	margin-right: auto;
+}
+
+#Contact .body:after {
+	margin-left: -20px;
+}
+
+#Contact .eyes {
+	margin-left: 50px;
 }
 
 #Contact a {
