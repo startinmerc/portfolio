@@ -37,7 +37,8 @@
 * changed to 1-page style with JS navigation - *done*
   * delay display: hidden to after animation __to do__
 * sort out flex display of sections - *done with margins*
-* added utility classes = *done*
+* added utility classes - *done*
+* SVGIZE hero (if beneficial?)
 
 #### CSS Demo
 * make background parallaxed - *done*
