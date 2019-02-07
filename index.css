@@ -30,6 +30,10 @@ dark shades:	2C302E	(black)
 Use as the text color for dark-on-light designs, or as the background for inverted designs.
 */
 
+html {
+  font-size: calc(0.6em + 1vw);
+}
+
 
 body {
 	margin: 0;
@@ -40,27 +44,27 @@ body {
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 2rem;
 	color: var(--main-color);
 }
 
 hr {
-	/*visibility: hidden;*/
-	width: 50%;
+	width: 100%;
 	height: 3px;
 	border: none;
 	background-color: var(--main-color);
-	animation: hrShow 1800ms ease-in;
+	transform-origin: center;
+	animation: hrShow 1800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes hrShow {
-	0% {width: 0%}
-	100% {width: 50%}
+	0% {transform: scaleX(0)}
+	100% {transform: scaleX(1)}
 }
 
 a {
 	text-decoration: none;
-	font-size: 3em;
+	font-size: 3rem;
 	transition: 400ms all;
 }
 
@@ -85,7 +89,10 @@ a {
 
 p {
 	font-family: Comfortaa;
+	font-size: 0.8rem;
 }
+
+/*Helper Classes*/
 
 .heroHidden {
 	height: 0vh;
@@ -127,7 +134,7 @@ p {
 }
 
 .sectionShown .sectionText, .sectionFeature {
-	animation: subAnimation 400ms linear;
+	animation: subAnimation 450ms linear;
 }
 
 @keyframes sS {
@@ -137,30 +144,23 @@ p {
 
 /*Hero Content*/
 
-.hero{
+#hero{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	transition: all linear 800ms;
 	background: var(--light-shades);
 	background: var(--gradient-darken);
-	text-align: center;
 	margin: 0 auto;
-	left: 0;
+	text-align: center;
+}
+
+.background {
+	position: absolute;
 	top: 0;
-}
-
-#hero-main {
-	font-weight: normal;
-	font-size: 5.2em;
-	z-index: 1;
-}
-
-.letter {
-	color: var(--dark-shades);
-	opacity: 0;
-	animation: letter 800ms ease-in;
+	left: 0;
 }
 
 .line {
@@ -169,7 +169,6 @@ p {
 	top: 0;
 	left: 0;
 	position: absolute;
-	z-index: 0;
 	transform-origin: bottom;
 	animation: line 10s linear infinite;
 }
@@ -189,6 +188,19 @@ p {
 	}
 }
 
+#hero-title {
+	font-weight: normal;
+	font-size: 5.2em;
+	z-index: 1;
+	margin: 0 0 5vh 0;
+}
+
+.letter {
+	color: var(--dark-shades);
+	opacity: 0;
+	animation: letter 800ms ease-in;
+}
+
 @keyframes letter {
 	0% {opacity: 0; text-shadow: 0 0 5px var(--dark-shades);}
 	80% {opacity: 0.8; text-shadow: 0 0 5px var(--dark-shades);}
@@ -200,21 +212,19 @@ p {
 }
 
 .hero-sub {
-	text-decoration: none;
-	padding-top: 7px;
-	font-family: Comfortaa;
 	font-size: 3em;
 	color: var(--dark-shades);
 	animation: subAnimation 4100ms ease-in;
 	letter-spacing: -1px;
 	z-index: 1;
+	margin: 0 0 5vh 0;
 }
 
 .prompt {
-	margin: 0 auto;
+	margin: 0 0 5vh 0;
 	opacity: 0;
-	/*padding-bottom: auto;*/
 	z-index: 1;
+	font-size: 4rem;
 }
 
 @keyframes subAnimation {
@@ -246,7 +256,7 @@ nav {
 }
 
 nav a{
-	font-size: 20px;
+	font-size: 1.2rem;
 	height: 100%;
 	padding: 10px 10px;
 	color: var(--dark-shades);
@@ -276,20 +286,27 @@ nav a:hover {
 
 /*Sections*/
 
-section {
+.container {
+	transition: all linear 800ms;
+	background: var(--light-shades);
+	background-image: var(--gradient-darken);
 	position: relative;
+	z-index: 1;
+}
+
+section {
 	z-index: 2;
 	flex-direction: column;
-	justify-content: center;
 	transition: all 800ms linear;
 }
 
 .sectionContent {
 	display: flex;
+	width: 100vw;
 }
 
-.sectionContent:after {
-	content: '';
+.sectionContent::after {
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -303,35 +320,24 @@ section {
 	transition: all 800ms linear;
 }
 
-.container {
-	transition: all linear 800ms;
-	background: var(--light-shades);
-	background-image: var(--gradient-darken);
-	position: relative;
-	z-index: 1;
-}
-
 .sectionHidden .sectionContent:after {
 	width: 0%;
 }
 
 /*About Section*/
 
+#About {
+	justify-content: center;
+}
+
 #About .sectionContent {
 	flex-direction: row;
-	align-content: space-around;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #About .sectionText {
-	margin-top: -4rem;
-	margin-left: 17vw;
+	margin-right: 5vw;
 	width: 54%;
-}
-
-#About .sectionFeature {
-	margin-left: auto;
-	margin-right: 17vw;
 }
 
 /*Portfolio*/
@@ -341,7 +347,7 @@ section {
 }
 
 #Portfolio .sectionContent {
-	padding-top: 20vh;
+	padding-top: 10vh;
 	text-align: center;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -350,8 +356,7 @@ section {
 
 #Portfolio .sectionFeature {
 	display: flex;
-	align-content: center;
-	margin: 0 auto;
+	justify-content: center;
 }
 
 .portfolio-entry {
@@ -423,26 +428,31 @@ section {
 }
 
 #Portfolio .sectionContent:after {
-	height: 70%;
+	height: 80%;
 }
 /*Contact*/
 
+#Contact {
+	justify-content: center;
+}
+
 #Contact .sectionContent {
 	flex-direction: row-reverse;
-	align-content: space-around;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #Contact .sectionText {
 	text-align: right;
-	margin-right: 17vw;
-	margin-left: auto;
+	margin-left: 4vw;
 	width: 54%;
 }
 
-#Contact .sectionFeature {
-	margin-left: 17vw;
-	margin-right: auto;
+#Contact .sectionText a {
+	font-size: 2.5rem;
+}
+
+#Contact .sectionText h2 {
+	margin-bottom: 0;
 }
 
 #Contact .body:after {
@@ -458,9 +468,10 @@ section {
 }
 
 /*Responsive*/
-@media screen and (max-width: 1024px) {
-	#About .sectionText {
-		width: 50%;
+/*@media screen and (max-width: 800px) {
+
+	#About {
+		font-size: 30rem;
 	}
 
 	#Portfolio .sectionContent {
@@ -485,9 +496,9 @@ section {
 	.portfolio-entry:hover, .portfolio-entry:active {
 		height: 250px;
 	}
-}
+}*/
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
 
 	.letter {
 		margin: 0 -15px;
@@ -525,4 +536,4 @@ section {
 	#Contact a {
 		margin: 10px 30px 0 30px;
 	}
-}
+}*/

@@ -1,8 +1,8 @@
-var letters = "Strange Industries",
+var letters = "StrangeIndustries",
 	els = Array.from(document.querySelectorAll(".letter")),
 	heroSub = document.querySelector(".hero-sub"),
 	prompt = document.querySelector(".prompt"),
-	hero = document.querySelector(".hero"),
+	hero = document.querySelector("#hero"),
 	brand = document.querySelector(".brand"),
 	container = document.querySelector(".container"),
 	lines = Array.from(document.querySelectorAll(".line")),
@@ -11,9 +11,6 @@ var letters = "Strange Industries",
 
 for(let i = 0; i<letters.length; i++){
 	letterRandomize(i);
-	if (i===letters.length/2) {
-		document.querySelector("hr").classList.add("hrVisible");
-	}
 }
 
 links.forEach(function(link){
