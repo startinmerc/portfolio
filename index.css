@@ -31,7 +31,7 @@ Use as the text color for dark-on-light designs, or as the background for invert
 */
 
 html {
-  font-size: calc(0.6em + 1vw);
+  font-size: calc(0.5em + 1vw);
 }
 
 
@@ -324,6 +324,53 @@ section {
 	width: 0%;
 }
 
+/*Ghost*/
+
+.body-top, .body-low, .tail {
+	fill: var(--light-shades);
+	animation: ghost-y 2s ease-in-out infinite;
+}
+
+.eye {
+	fill: none;
+	stroke: var(--dark-shades);
+	stroke-width: 5;
+	animation: ghost-blink 4s ease-in-out infinite;
+}
+
+.shadow {
+	fill: var(--dark-shades);
+	stroke: none;
+	animation: shadow 2s ease-in-out infinite
+}
+
+@keyframes shadow {
+	0% {rx: 15; ry: 2.5;}
+	50% {rx: 30; ry: 5;}
+	100% {rx: 15; ry: 2.5;}
+}
+
+@keyframes ghost-y {
+	0% {transform: translate(0,-10px)}
+	50% {transform: translate(0,10px)}
+	100% {transform: translate(0,-10px)}
+}
+
+@keyframes ghost-blink {
+	0% {transform: translate(0,-10px); rY: 12.5;}
+	8% {rY: 12.5;}
+	10% {rY: 0;}
+	12% {rY: 12.5;}
+	18% {rY: 12.5;}
+	20% {rY: 0;}
+	22% {rY: 12.5;}
+	25% {transform: translate(0,10px);}
+	50% {transform: translate(0,-10px);}
+	75% {transform: translate(0,10px);}
+	100% {transform: translate(0,-10px); rY: 12.5;}
+}
+
+
 /*About Section*/
 
 #About {
@@ -339,6 +386,7 @@ section {
 	margin-right: 5vw;
 	width: 54%;
 }
+
 
 /*Portfolio*/
 
@@ -376,8 +424,8 @@ section {
 .portfolio-entry img  {
 	box-sizing: border-box;
 	vertical-align: top;
-	width: 500px;
-	height: auto;
+	width: auto;
+	height: 500px;
 	transition: all 120ms;
 	position: absolute;
 	transform: translateX(-50%);
@@ -404,8 +452,7 @@ section {
 }
 
 .portfolio-entry:hover {
-	width: 500px;
-	height: 300px;
+	height: 500px;
 }
 
 .portfolio-entry:hover img {
@@ -415,7 +462,6 @@ section {
 
 .portfolio-entry:hover .entry-title {
 	margin-top: 10%;
-	font-size: 1.3em;
 }
 
 .portfolio-entry:hover .entry-blurb {
