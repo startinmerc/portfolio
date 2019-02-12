@@ -4,7 +4,6 @@
 	<title>Strange Industries</title>
 	<link rel="icon" type="image/png" href="imgs/icon.ico" />
 	<link rel="stylesheet" type="text/css" href="index.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="ghostStyle.css" /> -->
 
 	<!-- Call up fontAwesome -->
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
@@ -13,7 +12,7 @@
 </head>
 <body>
 <div class="allContent">
-	<div id="hero" class="heroShown">
+	<div id="hero" class="full-height">
 		<div class="background">
 			<div class="line"></div>
 			<div class="line"></div>
@@ -48,21 +47,21 @@
 			<span class="letter"></span>
 			<span class="letter"></span>
 		</h1>
-		<p class="hero-sub">Audio and Web Design</p>
+		<h3 class="hero-sub">Audio and Web Design</h3>
 		<a class="prompt far fa-arrow-alt-circle-down linkDark" href="#"></a>
 	</div>
 
-	<div class="container containerHidden">
+	<div class="container">
 
 		<nav>
-			<a href="#" class="brand">Strange Industries</a>
-			<span id="space"></span>
+			<a href="#">Strange Industries</a>
+			<span></span>
 			<a href="#About">About</a>
 			<a href="#Portfolio">Portfolio</a>
 			<a href="#Contact">Contact</a>
 		</nav>
 
-		<section id="About" class="sectionShown">
+		<section id="About" class="sectionShown full-height">
 			<div class="sectionContent">
 				<div class="sectionText">
 					<h2>Hello.</h2>
@@ -101,45 +100,46 @@
 					<h2>Portfolio</h2>
 					<p>A selection of my recent projects</p>
 				</div>
+				<div class="sectionFeature">
+					<div class="portfolio-entry">
+						<img src="https://source.unsplash.com/1yOkW4UwYbA">
+						<div class="entry-title">YelpCamp</div>
+						<div class="entry-blurb">
+							<p>Built through the Web Developer Bootcamp,
+							this is a full stack yelp-style campground site.</p>
+							<p><strong>Utilises Node, MongoDB, Bootstrap & Passport.</strong></p>
+							<a href="https://www.floating-bayou-66425.herokuapp.com/" 
+							class="fas fa-globe linkLight"
+							alt="Visit Website"></a>
+							<a href="https://github.com/startinmerc/yelp_camp" class="fab fa-github linkLight"
+							alt="Visit Repository"></a>
+						</div>
+					</div>
+					<div class="portfolio-entry port-maison">
+						<img src="https://source.unsplash.com/KfMKGzgWVSY">
+						<div class="entry-title">la maison de<br />la vallee<br></div>
+						<div class="entry-blurb">
+							<p>A site built on customised Bootstrap 4 for a French guesthouse.
+							</p>
+							<p><strong>Utilises Bootstrap 4 & Node.</strong></p>
+							<a href="" 
+							class="fas fa-globe linkLight"
+							alt="Visit Website"></a>
+							<a href="https://github.com/startinmerc/strange-industries" class="fab fa-github linkLight"></a>
+						</div>
+					</div>
+					<div class="portfolio-entry port-ydbh">
+						<img src="https://source.unsplash.com/2p1HOcpi14U">
+						<div class="entry-title">You Don't<br />Belong Here</div>
+						<div class="entry-blurb">
+							<p>Demonstration page for my CSS skills.</p>
+							<p><strong>Utilises CSS & SASS</strong></p>
+							<a href="https://github.com/startinmerc/ydbh" class="fab fa-github linkLight"></a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="sectionFeature">
-				<div class="portfolio-entry">
-					<img src="https://source.unsplash.com/1yOkW4UwYbA">
-					<div class="entry-title">YelpCamp</div>
-					<div class="entry-blurb">
-						<p>Built through the Web Developer Bootcamp,
-						this is a full stack yelp-style campground site.</p>
-						<p><strong>Utilises Node, MongoDB, Bootstrap & Passport.</strong></p>
-						<a href="https://www.floating-bayou-66425.herokuapp.com/" 
-						class="fas fa-globe linkLight"
-						alt="Visit Website"></a>
-						<a href="https://github.com/startinmerc/yelp_camp" class="fab fa-github linkLight"
-						alt="Visit Repository"></a>
-					</div>
-				</div>
-				<div class="portfolio-entry port-maison">
-					<img src="https://source.unsplash.com/KfMKGzgWVSY">
-					<div class="entry-title">la maison de<br />la vallee<br></div>
-					<div class="entry-blurb">
-						<p>A site built on customised Bootstrap 4 for a French guesthouse.
-						</p>
-						<p><strong>Utilises Bootstrap 4 & Node.</strong></p>
-						<a href="" 
-						class="fas fa-globe linkLight"
-						alt="Visit Website"></a>
-						<a href="https://github.com/startinmerc/strange-industries" class="fab fa-github linkLight"></a>
-					</div>
-				</div>
-				<div class="portfolio-entry port-ydbh">
-					<img src="https://source.unsplash.com/2p1HOcpi14U">
-					<div class="entry-title">You Don't<br />Belong Here</div>
-					<div class="entry-blurb">
-						<p>Demonstration page for my CSS skills.</p>
-						<p><strong>Utilises CSS & SASS</strong></p>
-						<a href="https://github.com/startinmerc/ydbh" class="fab fa-github linkLight"></a>
-					</div>
-				</div>
-			</div>
+
 		</section>
 
 		<section id="Contact" class="sectionHidden">
@@ -173,7 +173,7 @@
 
 						<ellipse class="eye" cx="119" cy="55" rx="12.5" ry="12.5"/>
 
-						<ellipse class="shadow" cx="65" cy="180" rx="30" ry="5" />	
+						<ellipse class="shadow" cx="75" cy="180" rx="30" ry="5" />	
 					</svg>
 			</div>
 			</div>
@@ -181,6 +181,7 @@
 
 	</div><!-- container -->
 </div><!-- allContent -->
+
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
