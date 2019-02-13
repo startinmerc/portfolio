@@ -20,9 +20,9 @@
 ```
 
 #### Redesign 2019!
-* change colors, hero looks good but doesn't work for page - __to do__
+* Sort out the bloody colours! - __to do__
 * load elements only when visible - __to do__
 * portfolio to pages - __to do__
 * delay display: hidden to after animation __to do__
-* SVGIZE hero (if beneficial?)
+* Make a better hero - __to do__
 * PADDING! - max-width __to do__
