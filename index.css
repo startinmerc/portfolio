@@ -195,7 +195,7 @@ p {
 #hero::after {
 	content: "";
 	position: absolute;
-	width: 100vw;
+	width: 100%;
 	transform-origin: center;
 	left: 0;
 	transform: skewY(2deg) translateY(-50%);
@@ -320,7 +320,7 @@ section {
 section::after {
 	content: "";
 	position: absolute;
-	width: 100vw;
+	width: 100%;
 	transform-origin: center;
 	left: 0;
 	transform: skewY(2deg) translateY(-50%);
