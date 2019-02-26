@@ -20,9 +20,14 @@
 ```
 
 #### Redesign 2019!
-* Sort out the bloody colours! - __to do__
-* load elements only when visible - __to do__
-* portfolio to pages - __to do__
-* delay display: hidden to after animation __to do__
-* Make a better hero - __to do__
-* PADDING! - max-width __to do__
+* Sort out the bloody colours!
+* load elements only when visible
+* portfolio to pages
+* delay display: hidden to after animation
+* Make a better hero
+ * 3D mouse responsive hero title movement
+ * Static
+* Ghost to sticky
+ * Change props for sections
+ * Move props in horizontally (join to scrolling?)
+* Revert back to non-JS navigation
