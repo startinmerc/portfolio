@@ -16,6 +16,7 @@
 <div id="hero">
 	<svg class="svg-left">
 		<circle cx="205" cy="205" r="200"/>
+		<g class="grid-group">
 		<ellipse id="e1a" cx="205" cy="205" rx="200" ry="200" />		
 		<ellipse id="e1b" cx="205" cy="205" rx="200" ry="200" />		
 		<ellipse id="e1c" cx="205" cy="205" rx="200" ry="200" />		
@@ -25,10 +26,12 @@
 		<path d="M 20 277 L 390 277"/>
 		<path d="M 60 342 L 350 342"/>
 		<path d="M 205 5 L 205 405"/>
+		</g>
 	</svg>
 	<svg class="svg-right">
-		<path d="M 0 5 L 0 405"/>
 		<circle cx="0" cy="205" r="200"/>
+		<g class="grid-group">
+		<path d="M 0 5 L 0 405"/>
 		<ellipse id="e1d" cx="0" cy="205" rx="0" ry="200" />		
 		<ellipse id="e1e" cx="0" cy="205" rx="0" ry="200" />		
 		<ellipse id="e1f" cx="0" cy="205" rx="0" ry="200" />		
@@ -37,8 +40,9 @@
 		<path d="M 0 205 L 200 205"/>
 		<path d="M 0 277 L 185 277"/>
 		<path d="M 0 342 L 145 342"/>
+	</g>
 		</svg>
-	<h1 id="hero-title">
+	<h1 id="hero-title" data-tilt>
 		<span class="letter"></span>
 		<span class="letter"></span>
 		<span class="letter"></span>
@@ -219,6 +223,7 @@
 
 </div><!-- container -->
 
+<script type="text/javascript" src="../../Libraries/vanilla-tilt.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

@@ -23,11 +23,9 @@
 * Sort out the bloody colours!
 * load elements only when visible
 * portfolio to pages
-* delay display: hidden to after animation
-* Make a better hero
- * 3D mouse responsive hero title movement
- * Static
+* Hero
+ * Either draw lines in sync, or fade in (fade in done)
+ * pass parameters to tilt.js
 * Ghost to sticky
  * Change props for sections
  * Move props in horizontally (join to scrolling?)
-* Revert back to non-JS navigation

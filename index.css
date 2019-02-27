@@ -9,8 +9,14 @@
 	--dark-accent: #5893CE;
 	--dark-shades: #2C302E;
 
-	--gradient-lighten: linear-gradient(900deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
+	--gradient-lighten: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
 	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
+
+	--black: #0C090D;
+	--white: #F2F1EA;
+	--blue: #5893CE;
+	--yellow: #FFE74C;
+	--red: #FF5964;
 }
 
 /*
@@ -107,7 +113,8 @@ p {
 	justify-content: center;
 	align-items: center;
 	transition: all linear 800ms;
-	background: var(--light-shades);
+	/*background: var(--light-shades);*/
+	background: var(--yellow);
 	background: var(--gradient-darken);
 	margin: 0 auto;
 	text-align: center;
@@ -176,6 +183,15 @@ p {
 	stroke-width: 5;
 }
 
+.grid-group {
+	animation: fadeIn 3s linear forwards;
+}
+
+@keyframes fadeIn {
+	0%{opacity: 0}
+	66%{opacity: 0}
+	100%{opacity: 1}
+}
 
 #e1a {animation: e1a 3s 0s linear infinite;}
 #e1b {animation: e1b 3s 1s linear infinite;}
@@ -191,6 +207,26 @@ p {
 @keyframes e1e {0%   {rx: 0}	100% {rx: 200}}
 @keyframes e1f {0%   {rx: 0}	100% {rx: 200}}
 
+.svg-left circle {
+	animation: drawCircleLeft 2s linear forwards;
+	stroke-dasharray: 628px;
+	stroke-dashoffset: 314px;
+}
+
+@keyframes drawCircleLeft {
+	0%{stroke-dashoffset: 314px;}
+	100%{stroke-dashoffset: 942px;}
+}
+
+.svg-right circle {
+	animation: drawCircleRight 2s linear forwards;
+	stroke-dasharray: 628px;
+}
+
+@keyframes drawCircleRight {
+	0%{stroke-dashoffset: -314px;}
+	100%{stroke-dashoffset: -942px;}
+}
 
 #hero::after {
 	content: "";
