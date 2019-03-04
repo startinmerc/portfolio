@@ -163,10 +163,17 @@ p {
 
 
 #hero svg {
-	height: 410px;
+	height: 0px;
 	width: 205px;
 	position: absolute;
 	top: 13.5%;
+	animation: glo 3s linear forwards;
+}
+
+@keyframes glo {
+	to {
+		height: 410px;
+	}
 }
 
 .svg-left {
@@ -183,15 +190,16 @@ p {
 	stroke-width: 5;
 }
 
-.grid-group {
-	animation: fadeIn 3s linear forwards;
+/*.ellipse-group {
+	opacity: 0;
+	animation: fadeIn 1s 2s linear forwards;
 }
 
 @keyframes fadeIn {
-	0%{opacity: 0}
-	66%{opacity: 0}
-	100%{opacity: 1}
-}
+	to {
+		opacity: 1;
+	}
+}*/
 
 #e1a {animation: e1a 3s 0s linear infinite;}
 #e1b {animation: e1b 3s 1s linear infinite;}
@@ -207,7 +215,7 @@ p {
 @keyframes e1e {0%   {rx: 0}	100% {rx: 200}}
 @keyframes e1f {0%   {rx: 0}	100% {rx: 200}}
 
-.svg-left circle {
+/*.svg-left circle {
 	animation: drawCircleLeft 2s linear forwards;
 	stroke-dasharray: 628px;
 	stroke-dashoffset: 314px;
@@ -226,7 +234,7 @@ p {
 @keyframes drawCircleRight {
 	0%{stroke-dashoffset: -314px;}
 	100%{stroke-dashoffset: -942px;}
-}
+}*/
 
 #hero::after {
 	content: "";
