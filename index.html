@@ -70,13 +70,20 @@
 
 <div class="container">
 
-	<nav>
-		<a href="#">Strange Industries</a>
-		<span></span>
-		<a href="#About">About</a>
-		<a href="#Portfolio">Portfolio</a>
-		<a href="#Contact">Contact</a>
-	</nav>
+<nav role="navigation">
+  <ul>
+    <li id="brand"><a href="#">Strange Industries</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" aria-haspopup="true">Portfolio</a>
+      <ul class="dropdown" aria-label="submenu">
+        <li><a href="#">Websites</a></li>
+        <li><a href="#">CSS Work</a></li>
+        <li><a href="#">Audio Design</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
 	<section id="About">
 		<div class="sectionContent">

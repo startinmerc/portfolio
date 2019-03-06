@@ -255,41 +255,86 @@ p {
 /*NAVBAR*/
 
 nav {
-	top: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	background-color: var(--light-shades);
-	width: 100%;
-	position: sticky;
-	box-shadow: 0 0px 5px 1px var(--dark-shades);
-	z-index: 2;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-shades);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0px 5px 1px var(--dark-shades);
+  z-index: 2;
 }
 
 nav a {
-	font-size: 2rem;
-	height: 100%;
-	padding: 10px 10px;
-	color: var(--dark-shades);
+  text-decoration: none;
+  font-size: 1.8rem;
 }
 
-nav a:hover {
-	background-color: var(--dark-shades);
-	color: var(--light-shades);
-	text-shadow: none;
+nav ul {
+  background: var(--light-shades);
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
-nav a:first-of-type {
-	font-weight: bold;
-	color: var(--main-color);
+nav li {
+  color: var(--dark-shades);
+  background: var(--light-shades);
+  display: block;
+  float: left;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
 }
-nav a:first-of-type:hover {
-	background-color: var(--main-color);
-	color: var(--light-shades);
+  
+nav li a {
+  color: inherit;
 }
 
-nav span {
-	flex-grow: 0.5;
+nav li:hover,
+nav li:focus-within {
+    background-color: var(--dark-shades);
+    color: var(--light-shades);
+    cursor: pointer;
+}
+
+nav li:focus-within a {
+  outline: none;
+}
+
+nav ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+  display: none;
+}
+
+nav ul li:hover > ul,
+nav ul li:focus-within > ul,
+nav ul li ul:hover,
+nav ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+nav ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+#brand {
+  color: var(--main-color);
+  margin-right: 40vw;
+}
+
+#brand:hover,
+#brand:focus-within {
+  color: var(--light-shades);
+  background-color: var(--main-color);
 }
 
 /*Ghost*/
