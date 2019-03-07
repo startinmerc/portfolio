@@ -22,7 +22,10 @@
 #### Redesign 2019!
 * Sort out the bloody colours!
 * load elements only when visible
-* portfolio to pages
+* portfolio
+ * make js-navigable
+  * hide non-relevant
+  * shuffle others to fill gaps (beast of a project)
 * Hero
  * Either draw lines in sync, or fade in (fade in done)
  * pass parameters to tilt.js
