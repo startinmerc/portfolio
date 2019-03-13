@@ -21,10 +21,9 @@
 
 #### Redesign 2019!
 * Sort out the bloody colours!
-* load elements only when visible
 * portfolio
- * make js-navigable
-  * hide non-relevant
+ * make js-navigable *to refactor*
+  * hide non-relevant _done_
   * shuffle others to fill gaps (beast of a project)
 * Hero
  * Either draw lines in sync, or fade in (fade in done)
