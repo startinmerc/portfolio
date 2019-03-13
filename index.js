@@ -4,7 +4,7 @@ var letters = "StrangeIndustries",
 var sitesBtn = document.querySelector("#btn-show-sites"),
 	cssBtn = document.querySelector("#btn-show-css"),
 	audioBtn = document.querySelector("#btn-show-audio"),
-	allBtn = document.querySelector("#btn-show-all");
+	allBtn = document.querySelector("#btn-show-all"),
 	portEntries = document.querySelectorAll(".portfolio-entry");
 
 
