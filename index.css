@@ -174,7 +174,7 @@ p {
 
 
 
-#hero svg {
+.svg-left, .svg-right {
 	height: 0px;
 	width: 205px;
 	position: absolute;
@@ -451,7 +451,7 @@ section::after {
 /*Portfolio*/
 
 #Portfolio::after {
-	height: 90vh;
+	height: 100vh;
 	top: 152vh;
 }
 
@@ -469,8 +469,8 @@ section::after {
 	font-family: inherit;
 	font-size: inherit;
 	border-radius: 20px;
-	padding: 10px;
-	width: 8rem;
+	padding: 0px 10px;
+	width: 9rem;
 	border: 3px solid var(--light-shades);
 	transition: all 200ms linear;
 }
