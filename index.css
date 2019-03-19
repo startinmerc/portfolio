@@ -175,11 +175,12 @@ p {
 
 
 .svg-left, .svg-right {
-	height: 0px;
+	/*height: 0px;*/
+	height: 410px;
 	width: 205px;
 	position: absolute;
 	top: 13.5%;
-	animation: glo 3s linear forwards;
+	/*animation: glo 3s linear forwards;*/
 }
 
 @keyframes glo {
@@ -227,7 +228,7 @@ p {
 @keyframes e1e {0%   {rx: 0}	100% {rx: 200}}
 @keyframes e1f {0%   {rx: 0}	100% {rx: 200}}
 
-/*.svg-left circle {
+.svg-left circle {
 	animation: drawCircleLeft 2s linear forwards;
 	stroke-dasharray: 628px;
 	stroke-dashoffset: 314px;
@@ -245,8 +246,17 @@ p {
 
 @keyframes drawCircleRight {
 	0%{stroke-dashoffset: -314px;}
-	100%{stroke-dashoffset: -942px;}
-}*/
+	100%{stroke-dashoffset: 314px;}
+}
+
+.h-1 {animation: hA 100ms 0333ms linear forwards; transform: scaleX(0); transform-origin: center;}
+.h-2 {animation: hA 100ms 0666ms linear forwards; transform: scaleX(0); transform-origin: center;}
+.h-3 {animation: hA 100ms 1000ms linear forwards; transform: scaleX(0); transform-origin: center;}
+.h-4 {animation: hA 100ms 1333ms linear forwards; transform: scaleX(0); transform-origin: center;}
+.h-5 {animation: hA 100ms 1666ms linear forwards; transform: scaleX(0); transform-origin: center;}
+
+@keyframes hA {to{transform: scaleX(1);}}
+
 
 #hero::after {
 	content: "";
