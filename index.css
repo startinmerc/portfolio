@@ -49,6 +49,7 @@ body {
 	color: var(--dark-shades);
 	display: flex;
 	flex-direction: column;
+	scroll-padding-top: 50px; /* height of sticky header */
 }
 
 h2 {
