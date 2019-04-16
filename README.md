@@ -27,7 +27,7 @@
   * shuffle others to fill gaps (beast of a project)
 * Hero
  * Either draw lines in sync, or fade in (fade in done)
- * pass parameters to tilt.js
+ * align hr and svg line
 * Ghost to sticky
  * Change props for sections
  * Move props in horizontally (join to scrolling?)
