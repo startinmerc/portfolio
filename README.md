@@ -26,7 +26,8 @@
   * hide non-relevant _done_
   * shuffle others to fill gaps (beast of a project)
 * Hero
- * Either draw lines in sync, or fade in (fade in done)
+ * Change viewbox so svg lines can be drawn
+  * right svg to share code with left using viewbox
  * align hr and svg line
 * Ghost to sticky
  * Change props for sections
