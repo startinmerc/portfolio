@@ -1,6 +1,3 @@
-# PORTFOLIO!
-
-
 ```
 =====================================
 =STRANGE INDUSTRIES DESIGN SITE 2019=
@@ -19,16 +16,18 @@
 =====================================
 ```
 
-#### Redesign 2019!
-* Sort out the bloody colours!
-* portfolio
- * make js-navigable *to refactor*
-  * hide non-relevant _done_
-  * shuffle others to fill gaps (beast of a project)
-* Hero
- * Change viewbox so svg lines can be drawn
-  * right svg to share code with left using viewbox
- * align hr and svg line
-* Ghost to sticky
- * Change props for sections
- * Move props in horizontally (join to scrolling?)
+##Portfolio
+* Refactor js navigation
+* Redesign for responsive project numbers
+* Better writeup on projects - use READMEs!
+
+##Hero
+* Change to GSAP
+* Can sides share code? Using viewbox to clip?
+* Align hr and svg line
+
+##Navbar
+* Put links in div & use space-between
+
+##About
+* Change ghost animations to GSAP
