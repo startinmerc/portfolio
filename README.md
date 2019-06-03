@@ -16,18 +16,18 @@
 =====================================
 ```
 
-##Portfolio
+## Portfolio
 - [ ] Refactor js navigation
 - [ ] Redesign for responsive project numbers
 - [ ] Better writeup on projects - use READMEs!
 
-##Hero
+## Hero
 - [ ] Change to GSAP
 - [ ] Can sides share code? Using viewbox to clip?
 - [ ] Align hr and svg line
 
-##Navbar
+## Navbar
 - [x] Put links in div & use space-between
 
-##About
+## About
 - [ ] Change ghost animations to GSAP
