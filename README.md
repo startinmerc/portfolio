@@ -17,17 +17,17 @@
 ```
 
 ##Portfolio
-* Refactor js navigation
-* Redesign for responsive project numbers
-* Better writeup on projects - use READMEs!
+- [ ] Refactor js navigation
+- [ ] Redesign for responsive project numbers
+- [ ] Better writeup on projects - use READMEs!
 
 ##Hero
-* Change to GSAP
-* Can sides share code? Using viewbox to clip?
-* Align hr and svg line
+- [ ] Change to GSAP
+- [ ] Can sides share code? Using viewbox to clip?
+- [ ] Align hr and svg line
 
 ##Navbar
-* Put links in div & use space-between
+- [x] Put links in div & use space-between
 
 ##About
-* Change ghost animations to GSAP
+- [ ] Change ghost animations to GSAP
