@@ -1,7 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,700i');*/
-/*@import url('https://fonts.googleapis.com/css?family=Comfortaa');*/
-
-
 :root {
 	--light-shades: #EDEBE9;
 	--light-accent: #8B8A88;
@@ -11,36 +7,13 @@
 
 	--gradient-lighten: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
 	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
-
-	--black: #0C090D;
-	--white: #F2F1EA;
-	--blue: #5893CE;
-	--yellow: #FFE74C;
-	--red: #FF5964;
 }
-
-/*
-light shades:	EDEBE9	(white)
-Use this color as the background for your dark-on-light designs, or the text color of an inverted design.
-
-light accent:	8B8A88	(grey)
-Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
-
-main color:		D90F0F	(red)
-This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity.
-
-dark accent:	5893CE	(blue)
-Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
-
-dark shades:	2C302E	(black)
-Use as the text color for dark-on-light designs, or as the background for inverted designs.
-*/
 
 /*Global Styling*/
 
-html {
-  /*font-size: calc(0.5em + 1vw);*/
-}
+/*html {
+  font-size: calc(0.5em + 1vw);
+}*/
 
 
 body {
@@ -125,13 +98,10 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/*transition: all linear 800ms;*/
-	/*background: var(--light-shades);*/
 	background: var(--yellow);
 	background: var(--gradient-darken);
 	margin: 0 auto;
 	text-align: center;
-
 	height: 100vh;
 	position: sticky;
 	top: 0;
@@ -176,12 +146,10 @@ p {
 
 
 .svg-left, .svg-right {
-	/*height: 0px;*/
 	height: 410px;
 	width: 205px;
 	position: absolute;
 	top: 13.5%;
-	/*animation: glo 3s linear forwards;*/
 }
 
 @keyframes glo {
@@ -280,10 +248,11 @@ p {
 nav {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 90%;
+  padding: 0 5%;
   background-color: var(--light-shades);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0 0px 5px 1px var(--dark-shades);
   z-index: 2;
 }
@@ -351,7 +320,7 @@ nav ul li ul li {
 
 #brand {
   color: var(--main-color);
-  margin-right: 40vw;
+  /*margin-right: 40vw;*/
 }
 
 #brand:hover,
