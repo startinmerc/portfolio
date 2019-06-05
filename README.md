@@ -31,3 +31,12 @@
 
 ## About
 - [ ] Change ghost animations to GSAP
+
+## Responsive design
+- [ ] Define break point
+- [ ] Minimise hero animations
+- [ ] Font size
+- [ ] Collapse navbar
+- [ ] Reduce padding
+- [ ] Portfolio to single file
+- [ ] Minimise ghost floating?
