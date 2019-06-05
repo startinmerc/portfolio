@@ -520,6 +520,9 @@ section::after {
 	transition: all 340ms 500ms ease-in-out;
 }
 
+.entry-blurb p {
+	margin-top: 0;
+}
 
 .portfolio-entry:hover img {
 	filter: grayscale(50%);
