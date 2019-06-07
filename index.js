@@ -11,9 +11,7 @@ function letterRandomize(i) {
 	els[i].append(letters[i]);
 }
 
-var letters = "StrangeIndustries",
-	els = Array.from(document.querySelectorAll(".letter"));
-
+// Portfolio Logic
 var portNavLinks = document.querySelectorAll("a[href='#Portfolio']"),
 	portBtns = document.querySelectorAll("#Portfolio button"),
 	portEntries = document.querySelectorAll(".portfolio-entry");
@@ -26,7 +24,7 @@ for (var i = portBtns.length - 1; i >= 0; i--) {
 }
 
 function showall() {
-	portEntries.forEach(function(entry){
+	portEntries.forEach((entry) => {
 		entry.classList.remove("hidden");
 	});
 	portBtns[0].classList.add("button-active");
@@ -36,7 +34,7 @@ function showall() {
 }
 
 function showsites() {
-	portEntries.forEach(function(entry){
+	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("sites")) {
 			entry.classList.add("hidden");
 		} else {
@@ -50,7 +48,7 @@ function showsites() {
 }
 
 function showcss() {
-	portEntries.forEach(function(entry){
+	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("css")) {
 			entry.classList.add("hidden")
 		} else {
@@ -64,7 +62,7 @@ function showcss() {
 }
 
 function showaudio() {
-	portEntries.forEach(function(entry){
+	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("audio")) {
 			entry.classList.add("hidden")
 		} else {
