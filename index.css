@@ -9,20 +9,12 @@
 	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
 }
 
-/*Global Styling*/
-
-/*html {
-  font-size: calc(0.5em + 1vw);
-}*/
-
-
 body {
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	color: var(--dark-shades);
 	display: flex;
 	flex-direction: column;
-	scroll-padding-top: 50px; /* height of sticky header */
 }
 
 h2 {
@@ -569,4 +561,106 @@ section::after {
 #Contact a {
 	font-size: 2.5rem;
 	margin: 10px 0 0 30px;
+}
+
+/*Tablet Breakpoint*/
+
+@media(max-width: 768px){
+	/*Hero Styling*/
+
+	#hero-title {
+		font-size: 3.5rem;
+	}
+
+	#hero::after {
+		top: 40.5%;
+		height: 420px;
+	}
+
+	.hero-sub {
+		font-size: 2rem;
+		margin: 0 0 10vh 0;
+	}
+
+	/*Nav Styling*/
+
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	/*Section Styling*/
+
+	section {
+		min-height: calc(100vh - 97px);
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#About .sectionContent, #Contact .sectionContent {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	section::after {
+		display: none;
+	}
+
+	.sectionContent {
+		flex-wrap: wrap;
+		background-color: var(--dark-accent);
+		width: 100%;
+		min-height: 60vh
+	}
+
+	.body-top, .body-low, .tail, .shadow {
+		animation: none;
+	}
+
+	.eye {
+		animation: ghost-blink-mobile 4s ease-in-out infinite;
+	}
+
+	@keyframes ghost-blink-mobile {
+		0% {rY: 12.5;}
+		8% {rY: 12.5;}
+		10% {rY: 0;}
+		12% {rY: 12.5;}
+		18% {rY: 12.5;}
+		20% {rY: 0;}
+		22% {rY: 12.5;}
+		100% {rY: 12.5;}
+	}
+
+	#About .sectionText {
+		width: 80%;
+		text-align: center;
+	}
+
+	#Portfolio {
+		height: auto;
+	}
+
+	#Portfolio .sectionFeature {
+		height: 810px;
+	}
+
+	#Contact .sectionText {
+		width: 80%;
+		text-align: center;
+	}
+
+	#Contact a {
+	    margin: 10px 30px;
+	}
+
+}
+
+/*Mobile Breakpoint for Hero*/
+@media(max-width: 425px){
+	.svg-left, .svg-right {
+		/*Resize? Hide? Replace with single static SVG?*/
+	}
 }
