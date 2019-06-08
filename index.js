@@ -1,4 +1,4 @@
-var letters = "StrangeIndustries",
+const letters = "StrangeIndustries",
 	els = Array.from(document.querySelectorAll(".letter"));
 
 for(let i = 0; i<letters.length; i++){
@@ -12,10 +12,10 @@ function letterRandomize(i) {
 }
 
 // Portfolio Logic
-var portNavLinks = document.querySelectorAll("a[href='#Portfolio']"),
-	portBtns = document.querySelectorAll("#Portfolio button"),
+const portNavLinks = document.querySelectorAll("a[href='#portfolio']"),
+	portBtns = document.querySelectorAll("#portfolio button"),
 	portEntries = document.querySelectorAll(".portfolio-entry");
-	portUpdates = [showall,showsites,showcss,showaudio]
+	portUpdates = [showAll,showSites,showCss,showAudio]
 
 // ALL, SITES, CSS, AUDIO
 for (var i = portBtns.length - 1; i >= 0; i--) {
@@ -23,7 +23,7 @@ for (var i = portBtns.length - 1; i >= 0; i--) {
 	portNavLinks[i].addEventListener('click', portUpdates[i]);
 }
 
-function showall() {
+function showAll() {
 	portEntries.forEach((entry) => {
 		entry.classList.remove("hidden");
 	});
@@ -33,7 +33,7 @@ function showall() {
 	portBtns[3].classList.remove("button-active");
 }
 
-function showsites() {
+function showSites() {
 	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("sites")) {
 			entry.classList.add("hidden");
@@ -47,7 +47,7 @@ function showsites() {
 	portBtns[3].classList.remove("button-active");
 }
 
-function showcss() {
+function showCss() {
 	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("css")) {
 			entry.classList.add("hidden")
@@ -61,7 +61,7 @@ function showcss() {
 	portBtns[3].classList.remove("button-active");
 }
 
-function showaudio() {
+function showAudio() {
 	portEntries.forEach((entry) => {
 		if (!entry.classList.contains("audio")) {
 			entry.classList.add("hidden")
