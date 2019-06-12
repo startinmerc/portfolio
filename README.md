@@ -18,8 +18,9 @@
 
 ## Portfolio
 - [ ] Refactor js navigation
-- [ ] Redesign for dynamic project numbers
-- [ ] Better writeup on projects - use READMEs!
+- [ ] Change nav from subject to single portfolio entry
+- [ ] Add expanded description to each project
+- [ ] Codepen preview?
 
 ## Hero
 - [ ] Change to GSAP
@@ -33,10 +34,10 @@
 - [ ] Change ghost animations to GSAP
 
 ## Responsive design
-- [ ] Define break point
-- [ ] Minimise hero animations
-- [ ] Font size
-- [ ] Collapse navbar
-- [ ] Reduce padding
+- [x] Define break point
+- [x] Minimise hero animations
+- [x] Font size
+- [x] Collapse navbar
+- [x] Reduce padding
 - [ ] Portfolio to single file
-- [ ] Minimise ghost floating?
+- [x] Minimise ghost floating?
