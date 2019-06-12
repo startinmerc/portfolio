@@ -426,7 +426,7 @@ section::after {
 /*portfolio*/
 
 #portfolio::after {
-	height: 100vh;
+	height: 80vh;
 	top: 152vh;
 }
 
@@ -473,8 +473,6 @@ section::after {
 }
 
 .portfolio-entry {
-	height: 250px;
-	width: 250px;
 	background-color: var(--black);
 	border-radius: 20px;
 	margin: 10px;
@@ -482,17 +480,42 @@ section::after {
 	color: var(--light-grey);
 	text-align: center;
 	position: relative;
+	transition: height, width 150ms ease-in;
+}
+
+.min {
+	height: 250px;
+	width: 250px;
+}
+
+.max {
+	height: 500px;
+	width: 800px;
 }
 
 .portfolio-entry img  {
 	box-sizing: border-box;
 	vertical-align: top;
-	width: auto;
-	height: 250px;
 	transition: filter, opacity 150ms ease-in;
 	position: absolute;
 	transform: translateX(-50%);
 	border-radius: 20px;
+}
+
+.min img {
+	width: auto;
+	height: 100%;
+}
+
+.max img {
+	filter: grayscale(50%);
+	opacity: 0.1;
+	width: 100%;
+	height: auto;
+}
+
+.portfolio-entry a {
+	margin: 10% 0;
 }
 
 .entry-title {
@@ -506,11 +529,17 @@ section::after {
 	transition: transform, margin-top 340ms 500ms ease-in-out;
 }
 
+.min .entry-title {
+	margin-top: 125px;
+}
+
+.max .entry-title {
+	margin-top: 2.5rem;
+}
+
 .entry-blurb {
 	margin-left: 5%;
 	margin-right: 5%;
-	opacity: 0;
-	transform: translateY(100%);
 	transition: transform 340ms 500ms ease-in-out;
 }
 
@@ -523,22 +552,38 @@ section::after {
 	height: 3rem;
 }
 
-.portfolio-entry:hover img {
-	filter: grayscale(50%);
-	opacity: 0.3;
+.min .entry-blurb {
+	opacity: 0;
+	transform: translateY(100%);
 }
 
-.portfolio-entry:hover .entry-title {
-	margin-top: 2.5rem;
-}
-
-.portfolio-entry:hover .entry-blurb {
+.max .entry-blurb {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.portfolio-entry a {
-	margin: 10% 0;
+.min:hover img {
+	filter: grayscale(50%);
+	opacity: 0.1;
+}
+
+.min:hover .entry-title {
+	margin-top: 2.5rem;
+}
+
+.min:hover .entry-blurb {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.min .max-content {
+	visibility: hidden;
+	display: none;
+}
+
+.max .max-content {
+	visibility: visible;
+	display: inherit;
 }
 
 /*contact*/

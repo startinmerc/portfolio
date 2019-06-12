@@ -124,59 +124,94 @@
 		<div class="section-content">
 			<div class="section-text">
 				<h2>Portfolio</h2>
-				<button id="btn-show-all" class="button-active"><p>All</p></button>
-				<button id="btn-show-codepen"><p>Codepen</p></button>
-				<button id="btn-show-estates"><p>Strange Estates</p></button>
-				<button id="btn-show-maison"><p>Maison Vallee</p></button>
+				<button class="button-active"><p>All</p></button>
+				<button><p>Codepen</p></button>
+				<button><p>Maison Vallee</p></button>
+				<button><p>Strange Estates</p></button>
 			</div>
 			<div class="section-feature">
-				<div class="portfolio-entry" id="codepen">
+				<div class="portfolio-entry min" id="codepen">
 					<img src="https://source.unsplash.com/cvBBO4PzWPg" alt="">
 					<div class="entry-title">Codepen</div>
 					<div class="entry-blurb">
-						<p>Extensive portfolio of mainly CSS projects</p>
+						<p>Extensive portfolio of small projects</p>
+						<div class="max-content">
+							<p>
+								I use Codepen extensively for small projects and development of site components. The ease of integration with libraries & preprocessors make it an ideal playground for me to try new ideas.
+							</p>
+							<p>
+								Pens use JavaScript libraries such as GSAP, Anime.js, Matter.js & jQuery, CSS preprocessor SASS, HTML preprocessor PUG.
+							</p>
+							<p>
+								Also contains API projects with AJAX, JSON & AXIOS, and CSS illustrations & animations.
+							</p>
+						</div>
 						<p><strong>Utilises JS libraries, CSS, HTML & CSS preprocessors</strong></p>
-						<a href="">
+						<a href="#portfolio" class="min-max-toggle">
 							<button>Show Details</button>
 						</a>
 						<a href="https://codepen.io/startinmerc/" target="_blank">
-							<button >Visit Website</button>
+							<button>Visit Website</button>
 						</a>
 					</div>
 				</div>
-				<div class="portfolio-entry" id="estates">
+				<div class="portfolio-entry min" id="estates">
 					<img src="https://source.unsplash.com/KfMKGzgWVSY" alt="">
 					<div class="entry-title">la maison de<br />la vallee<br></div>
 					<div class="entry-blurb">
-						<p>A site for a French guesthouse.
+						<p>
+							A site for a French guesthouse.
 						</p>
+						<div class="max-content">
+							<p>
+								A simple one-page site built on Bootstrap 4 to practice using various newer Bootstrap components and a custom contact form.
+							</p>
+						</div>
 						<p><strong>Utilises Bootstrap 4 & Node.</strong></p>
-						<a href="">
+						<a href="#portfolio" class="min-max-toggle">
 							<button>Show Details</button>
 						</a>
 						<a href="https://www.strangeindustries.co.uk/maison-vallee/" target="_blank">
 							<button >Visit Website</button>
 						</a>
-<!-- 						<a href="https://github.com/startinmerc/maison-vallee" target="_blank">
-							<button>View Source</button>
-						</a> -->
+						<a class="max-content" href="https://github.com/startinmerc/maison-vallee" target="_blank">
+							<button>View Source on Github</button>
+						</a>
 					</div>
 				</div>
-				<div class="portfolio-entry" id="estates">
+				<div class="portfolio-entry min" id="estates">
 					<img src="https://source.unsplash.com/IUkADtlFbK0" alt="">
 					<div class="entry-title">Strange<br/>Estates</div>
 					<div class="entry-blurb">
-						<p>Full-stack RESTful site<br/></p>
+						<p>
+							Full-stack RESTful site
+						</p>
+						<div class="max-content">
+							<p>
+								An extensive full stack real estate website with listings, users, admins and comments databases. This is a constantly ongoing project, evolving as I learn new skills and add new features.
+							</p>
+							<p>
+								I enjoy letting my imagination run riot with this site, creating a fictional shady lettings agency specialising in short-term lettings for abandoned structures, for suspiciously high prices...
+							</p>
+							<p>
+								The front end is built on Bootstrap, with color pallette and styling changes to reflect a darker theme. The landing page contains JavaScript GSAP animation, and features are shown/hidden as appropriate for levels of users.
+							<p>
+								The back end is built on Node.js, using NPMs such as Express for routing, Passport for user authentification, Mongoose for Mongo integration, Body Parser for passing parameters and Dotenv for hidden variables.
+							</p>
+							<p>
+								The site contains fully RESTful routes for listings and comments, and partial routing on users and admins.
+							</p>
+						</div>
 						<p><strong>Utilises Node, Express, RESTful routing</strong></p>
-						<a href="">
+						<a href="#portfolio" class="min-max-toggle">
 							<button>Show Details</button>
 						</a>
 						<a href="https://floating-shore-92463.herokuapp.com/" target="_blank">
 							<button >Visit Website</button>
 						</a>
-<!-- 						<a href="https://github.com/startinmerc/strange-estates" target="_blank">
-							<button>View Source</button>
-						</a> -->
+						<a class="max-content" href="https://github.com/startinmerc/strange-estates" target="_blank">
+							<button>View Source on Github</button>
+						</a>
 					</div>
 				</div>
 			</div>
