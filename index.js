@@ -28,9 +28,9 @@ btns[0].addEventListener("click", showAll);
 
 function showAll() {
 	pjts.forEach((project)=>{
+		project.style.display = "initial";
 		project.classList.remove("max");
 		project.classList.add("min");
-		project.style.display = "initial";
 		project.querySelector(".min-max-toggle button").innerText = "Show Details";
 	});
 	btns[0].classList.add("button-active");
@@ -51,8 +51,8 @@ pjts[0].querySelector(".min-max-toggle").addEventListener("click", (button)=>{
 
 function showFirst() {
 	if(pjts[0].classList.contains("min")){
-		pjts[0].classList.remove("min");
 		pjts[0].style.display = "initial";
+		pjts[0].classList.remove("min");
 		pjts[0].classList.add("max");
 		btns[1].classList.add("button-active");
 		btns[0].classList.remove("button-active");
@@ -77,8 +77,8 @@ pjts[1].querySelector(".min-max-toggle").addEventListener("click", (button)=>{
 
 function showSecond() {
 	if(pjts[1].classList.contains("min")){
-		pjts[1].classList.remove("min");
 		pjts[1].style.display = "initial";
+		pjts[1].classList.remove("min");
 		pjts[1].classList.add("max");
 		btns[2].classList.add("button-active");
 		btns[0].classList.remove("button-active");
@@ -103,8 +103,8 @@ pjts[2].querySelector(".min-max-toggle").addEventListener("click", (button)=>{
 
 function showThird() {
 	if(pjts[2].classList.contains("min")){
-		pjts[2].classList.remove("min");
 		pjts[2].style.display = "initial";
+		pjts[2].classList.remove("min");
 		pjts[2].classList.add("max");
 		btns[3].classList.add("button-active");
 		btns[0].classList.remove("button-active");
