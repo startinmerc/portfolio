@@ -490,13 +490,13 @@ section::after {
 
 .max {
 	height: 500px;
-	width: 800px;
+	width: 790px;
 }
 
 .portfolio-entry img  {
 	box-sizing: border-box;
 	vertical-align: top;
-	transition: filter, opacity 150ms ease-in;
+	transition: filter, opacity, transform 150ms ease-in;
 	position: absolute;
 	transform: translateX(-50%);
 	border-radius: 20px;
@@ -530,11 +530,13 @@ section::after {
 }
 
 .min .entry-title {
-	margin-top: 125px;
+	margin: 125px auto 0 auto;
+	width: 65%;
 }
 
 .max .entry-title {
-	margin-top: 2.5rem;
+	margin: 2.5rem 0 0 0;
+	width: 100%;
 }
 
 .entry-blurb {
@@ -583,7 +585,17 @@ section::after {
 
 .max .max-content {
 	visibility: visible;
-	display: inherit;
+	display: initial;
+}
+
+.max .min-content {
+	visibility: hidden;
+	display: none;
+}
+
+.min .min-content {
+	visibility: visible;
+	display: initial;
 }
 
 /*contact*/
