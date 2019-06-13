@@ -598,6 +598,26 @@ section::after {
 	display: initial;
 }
 
+.max-content {
+	text-align: left;
+}
+
+.entry-buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.min button {
+	width: 100px;
+}
+
+.entry-buttons a {
+	margin: 0;
+}
+
+.max button {
+	width: 165px;
+}
 /*contact*/
 
 #contact::after {
