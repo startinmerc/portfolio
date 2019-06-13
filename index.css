@@ -450,7 +450,7 @@ section::after {
 	transition: color, border, background-color 200ms ease-in;
 }
 
-#portfolio button:hover {
+#portfolio button:hover, #portfolio button:focus-within {
 	border: 3px solid var(--black);
 }
 
@@ -604,6 +604,7 @@ section::after {
 
 .entry-buttons {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
@@ -730,6 +731,12 @@ section::after {
 
 	#portfolio button {
 		margin: 3px;
+	}
+
+	.max {
+		width: 300px;
+		height: 80vh;
+		overflow: scroll;
 	}
 
 	#contact .section-text {
