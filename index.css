@@ -11,10 +11,14 @@
 
 body {
 	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Comfortaa', sans-serif;
 	color: var(--black);
 	display: flex;
 	flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Josefin Sans", sans-serif;
 }
 
 h2 {
@@ -47,7 +51,7 @@ button {
 	color: var(--black);
 	background-color: var(--light-grey);
 	border: none;
-	font-family: inherit;
+	font-family: "Josefin Sans", sans-serif;
 	font-size: inherit;
 	border-radius: 20px;
 	padding: 0px 10px;
@@ -83,7 +87,6 @@ button:active {
 
 
 p {
-	font-family: Comfortaa;
 	font-size: 1rem;
 }
 
@@ -271,6 +274,7 @@ nav {
   justify-content: space-between;
   box-shadow: 0 0px 5px 1px var(--black);
   z-index: 2;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 nav a {
@@ -515,6 +519,10 @@ section::after {
 	text-align: left;
 }
 
+.entry-blurb li {
+	font-size: 1.1rem;
+}
+
 .entry-blurb p {
 	margin-top: 0;
 }
@@ -535,7 +543,7 @@ section::after {
 }
 
 .entry-buttons button {
-	width: 165px;
+	width: 195px;
 }
 
 
