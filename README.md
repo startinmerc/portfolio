@@ -20,8 +20,6 @@
 - [ ] Refactor js navigation
 - [x] Change nav from subject to single portfolio entry
 - [X] Add expanded description to each project
-- [ ] Codepen preview?
-- [ ] Smooth out transitions
 
 ## Hero
 - [ ] Change to GSAP
