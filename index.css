@@ -43,6 +43,27 @@ a {
 	transition-duration: 400ms;
 }
 
+button {
+	color: var(--black);
+	background-color: var(--light-grey);
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	border-radius: 20px;
+	padding: 0px 10px;
+	border: 3px solid var(--light-grey);
+	transition: color, border, background-color 200ms ease-in;
+}
+
+button:hover, button:focus-within {
+	border: 3px solid var(--black);
+}
+
+button:active {
+	background-color: var(--red);
+	color: var(--light-grey);
+}
+
 .link-dark {
 	color: var(--black);
 }
@@ -289,30 +310,6 @@ nav li:focus-within a {
   outline: none;
 }
 
-nav ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  margin-top: 10px;
-  left: 0;
-  display: none;
-}
-
-nav ul li:hover > ul,
-nav ul li:focus-within > ul,
-nav ul li ul:hover,
-nav ul li ul:focus {
-   visibility: visible;
-   opacity: 1;
-   display: block;
-}
-
-nav ul li ul li {
-  clear: both;
-  width: 100%;
-}
-
 #brand {
   color: var(--red);
   /*margin-right: 40vw;*/
@@ -437,28 +434,6 @@ section::after {
 	justify-content: flex-start;
 }
 
-#portfolio button {
-	color: var(--black);
-	background-color: var(--light-grey);
-	border: none;
-	font-family: inherit;
-	font-size: inherit;
-	border-radius: 20px;
-	padding: 0px 10px;
-	/*width: 9rem;*/
-	border: 3px solid var(--light-grey);
-	transition: color, border, background-color 200ms ease-in;
-}
-
-#portfolio button:hover, #portfolio button:focus-within {
-	border: 3px solid var(--black);
-}
-
-#portfolio button:active {
-	background-color: var(--red);
-	color: var(--light-grey);
-}
-
 #portfolio .button-active {
 	background-color: var(--red);
 	color: var(--light-grey);
@@ -480,18 +455,31 @@ section::after {
 	color: var(--light-grey);
 	text-align: center;
 	position: relative;
-	transition: height, width 150ms ease-in;
+	height: 500px;
+	width: 790px;
+	transform-origin: top;
 }
 
 .min {
-	height: 250px;
-	width: 250px;
+	animation: toMin 100ms ease-out forwards;
+}
+
+@keyframes toMin {
+	to {
+		opacity: 0;
+	}
 }
 
 .max {
-	height: 500px;
-	width: 790px;
+	animation: toMax 100ms ease-out forwards;
 }
+
+@keyframes toMax {
+	to {
+		opacity: 1;
+	}
+}
+
 
 .portfolio-entry img  {
 	box-sizing: border-box;
@@ -500,18 +488,11 @@ section::after {
 	position: absolute;
 	transform: translateX(-50%);
 	border-radius: 20px;
-}
-
-.min img {
-	width: auto;
-	height: 100%;
-}
-
-.max img {
 	filter: grayscale(50%);
 	opacity: 0.1;
 	width: 100%;
 	height: auto;
+	z-index: -1;
 }
 
 .portfolio-entry a {
@@ -521,28 +502,17 @@ section::after {
 .entry-title {
 	font-size: 1.3rem;
 	margin-top: 125px;
-	margin-left: 1%;
-	margin-right: 1%;
 	font-weight: bold;
 	text-transform: uppercase;
 	transform: translateY(-50%);
-	transition: transform, margin-top 340ms 500ms ease-in-out;
-}
-
-.min .entry-title {
-	margin: 125px auto 0 auto;
-	width: 65%;
-}
-
-.max .entry-title {
-	margin: 2.5rem 0 0 0;
+	margin: 2.5rem auto 0 auto;
 	width: 100%;
 }
 
 .entry-blurb {
 	margin-left: 5%;
 	margin-right: 5%;
-	transition: transform 340ms 500ms ease-in-out;
+	text-align: left;
 }
 
 .entry-blurb p {
@@ -554,71 +524,21 @@ section::after {
 	height: 3rem;
 }
 
-.min .entry-blurb {
-	opacity: 0;
-	transform: translateY(100%);
-}
-
-.max .entry-blurb {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-.min:hover img {
-	filter: grayscale(50%);
-	opacity: 0.1;
-}
-
-.min:hover .entry-title {
-	margin-top: 2.5rem;
-}
-
-.min:hover .entry-blurb {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-.min .max-content {
-	visibility: hidden;
-	display: none;
-}
-
-.max .max-content {
-	visibility: visible;
-	display: initial;
-}
-
-.max .min-content {
-	visibility: hidden;
-	display: none;
-}
-
-.min .min-content {
-	visibility: visible;
-	display: initial;
-}
-
-.max-content {
-	text-align: left;
-}
-
 .entry-buttons {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.min button {
-	width: 100px;
-}
-
 .entry-buttons a {
 	margin: 0;
 }
 
-.max button {
+.entry-buttons button {
 	width: 165px;
 }
+
+
 /*contact*/
 
 #contact::after {
