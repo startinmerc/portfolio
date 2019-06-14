@@ -1,4 +1,4 @@
-const dev = true;
+const dev = false;
 
 // =========================HERO TITLE ANIMATION=========================
 
@@ -11,12 +11,12 @@ if (dev) {
 	for(let i = 0; i<letters.length; i++){
 		letterRandomize(i);
 	}
-}
 
-function letterRandomize(i) {
-	let num = Math.floor(Math.random()*2000);
-	els[i].style.animationDelay = num + 'ms';
-	els[i].append(letters[i]);
+	function letterRandomize(i) {
+		let num = Math.floor(Math.random()*2000);
+		els[i].style.animationDelay = num + 'ms';
+		els[i].append(letters[i]);
+	}
 }
 
 // ========================PORTFOLIO NAVIGATION========================
@@ -25,6 +25,8 @@ const btns = document.querySelectorAll(".section-text button");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
 btns[0].addEventListener("click", showFirst);
+
+showFirst();
 
 function showFirst() {
 	toMax(pjts[0]);
