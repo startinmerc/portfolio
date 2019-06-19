@@ -421,25 +421,22 @@ section {
 }
 
 #about .section-text {
-	width: 54%;
+	width: 76%;
 }
 
-.img-container {
-    height: 200px;
-    width: 200px;
-    border: 10px solid var(--white);
-    border-radius: 50%;
-    overflow: hidden;
-    /*transform: translateY(-50px);*/
-}
-
-.img-container img {
+.circle {
 	height: 200px;
 	width: 200px;
-	transform: scale(1.5);
-	transform-origin: center;
+	border: 10px solid var(--white);
+	border-radius: 50%;
+	background-color: var(--black);
+	background: url(imgs/helsinki-sm.jpg) center / contain;
+	background-size: 150%;
+	margin: -40px -10px 0px 15px;
+	float: right;
+	-webkit-shape-outside: circle();
+	shape-outside: circle();
 }
-
 
 /*portfolio*/
 
@@ -651,7 +648,10 @@ section {
 
 	#about .section-text {
 		width: 80%;
-		text-align: center;
+	}
+
+	.circle {
+		margin: -35px -15px 0px 20px;
 	}
 
 	.img-container {
