@@ -25,12 +25,14 @@
 - [ ] Change to GSAP
 - [ ] Can sides share code? Using viewbox to clip?
 - [x] Align hr and svg line
+- [x] Change prompt (remove fontAwesome)
 
 ## Navbar
 - [x] Put links in div & use space-between
 
 ## About
 - [ ] Change ghost animations to GSAP
+- [x] Change links to buttons (remove fontAwesome)
 
 ## Responsive design
 - [x] Define break point
@@ -38,5 +40,4 @@
 - [x] Font size
 - [x] Collapse navbar
 - [x] Reduce padding
-- [ ] Portfolio to single file
 - [x] Minimise ghost floating?
