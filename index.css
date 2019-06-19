@@ -618,13 +618,7 @@ section {
 		justify-content: center;
 	}
 
-	#about .section-content, #contact .section-content {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	section::after {
+	.section-content::after {
 		display: none;
 	}
 
@@ -632,7 +626,8 @@ section {
 		flex-wrap: wrap;
 		background-color: var(--blue);
 		width: 100%;
-		min-height: 60vh
+		border-top: 10px solid var(--white);
+		border-bottom: 10px solid var(--white);
 	}
 
 	.body-top, .body-low, .tail, .shadow {
@@ -659,12 +654,17 @@ section {
 		text-align: center;
 	}
 
+	.img-container {
+		transform: translateY(0px);
+		margin-bottom: 1rem;
+	}
+
 	#portfolio {
 		height: auto;
 	}
 
 	#portfolio .section-feature {
-		height: 810px;
+		height: auto;
 	}
 
 	#portfolio button {
@@ -672,27 +672,34 @@ section {
 	}
 
 	.max {
-		width: 300px;
-		height: 80vh;
-		overflow: scroll;
+		width: 80vw;
+		/*height: 75vh;*/
+		overflow-x: scroll;
 	}
 
 	#contact .section-text {
 		width: 80%;
 		text-align: center;
 	}
-
-	#contact a {
-	    margin: 10px 30px;
-	}
-
 }
 
-/*Mobile Breakpoint for Hero*/
+/*Mobile Breakpoint*/
 @media(max-width: 425px){
 	#hero {
 		overflow: hidden;
-		/*Resize? Hide? Replace with single static SVG?*/
+	}
+
+	#e1a, #e1d {animation: none; rx: 66;}
+	#e1b, #e1e {animation: none; rx: 132;}
+	#e1c, #e1f {animation: none; rx: 200;}
+
+	.letter {
+		letter-spacing: -15px;
+	}
+
+	section {
+		height: auto;
+		margin: 10% 0;
 	}
 
 	nav ul:nth-of-type(2){
@@ -703,4 +710,10 @@ section {
 	nav ul li {
 		padding: 5px;
 	}
+
+	.max {
+		width: 300px;
+		height: auto;
+	}
+
 }
