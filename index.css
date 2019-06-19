@@ -186,7 +186,7 @@ p {
 }
 
 #hero path, circle, ellipse {
-	stroke: var(--light-grey);
+	stroke: var(--white);
 	fill: transparent;
 	stroke-width: 5;
 }
@@ -269,7 +269,7 @@ nav {
   top: 0;
   width: 90%;
   padding: 0 5%;
-  background-color: var(--light-grey);
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0px 5px 1px var(--black);
@@ -585,9 +585,8 @@ section {
 	margin-bottom: 0;
 }
 
-#contact a {
-	font-size: 2.5rem;
-	margin: 10px 0 0 30px;
+#contact button:last-of-type {
+	margin-right: 0;
 }
 
 /*Tablet Breakpoint*/
