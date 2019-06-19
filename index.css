@@ -252,13 +252,13 @@ p {
 	width: 100%;
 	transform-origin: center;
 	left: 0;
-	transform: skewY(2deg) translateY(-50%);
+	transform: skewY(2deg) translateY(-50px);
 	z-index: -1;
 	opacity: 0.5;
 	background: var(--blue);
 	background-image: var(--gradient-lighten);
-	height: 60vh;
-	top: 40vh;
+	height: 510px;
+	top: 13.5%;
 }
 
 
@@ -388,32 +388,32 @@ section {
 	max-width: 1000px;
 	margin: 0 auto;
 	height: 100vh;
+	position: relative;
 }
 
 .section-content {
 	display: flex;
 	z-index: 1;
+	position: relative;
 }
 
-section::after {
+.section-content::after {
 	content: "";
 	position: absolute;
-	width: 100%;
+	width: 1000px;
+	height: 120%;
 	transform-origin: center;
-	left: 0;
-	transform: skewY(2deg) translateY(-50%);
-	margin-top: 52px;
-	z-index: 0;
-	background: var(--blue);
-	background-image: var(--gradient-lighten);
+	left: calc(((100vw - 1000px) / 2) * -1);
+	transform: skewY(2deg) translateY(-8%);
+	z-index: -1;
+	background: var( --blue);
+	background-image: var( --gradient-lighten);
+	padding-right: calc((100vw - 1000px) / 2);
+	padding-left: calc((100vw - 1000px) / 2);
+	opacity: 0.5;
 }
 
 /*about Section*/
-
-#about::after {
-	height: 60vh;
-	top: 50vh;
-}
 
 #about .section-content {
 	flex-direction: row;
@@ -566,14 +566,14 @@ section::after {
 
 /*contact*/
 
-#contact::after {
-	height: 50vh;
-	top: 250vh;
-}
-
 #contact .section-content {
 	flex-direction: row-reverse;
 	justify-content: center;
+}
+
+#contact .section-content::after {
+	height: 150%;
+    top: -15%;
 }
 
 #contact .section-text {
@@ -599,14 +599,8 @@ section::after {
 		font-size: 3.5rem;
 	}
 
-	#hero::after {
-		top: 40.5%;
-		height: 420px;
-	}
-
 	.hero-sub {
 		font-size: 2rem;
-		margin: 0 0 10vh 0;
 	}
 
 	/*Nav Styling*/
