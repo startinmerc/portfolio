@@ -1,5 +1,5 @@
 :root {
-	--light-grey: #EDEBE9;
+	--white: #EDEBE9;
 	--dark-grey: #8B8A88;
 	--red: #D90F0F;
 	--blue: #5893CE;
@@ -42,30 +42,29 @@ hr {
 
 a {
 	text-decoration: none;
-	/*font-size: 3rem;*/
 	transition-property: color text-shadow background-color;
 	transition-duration: 400ms;
 }
 
 button {
 	color: var(--black);
-	background-color: var(--light-grey);
-	border: none;
+	background-color: var(--white);
 	font-family: "Josefin Sans", sans-serif;
 	font-size: inherit;
 	border-radius: 20px;
-	padding: 0px 10px;
-	border: 3px solid var(--light-grey);
-	transition: color, border, background-color 200ms ease-in;
+	padding: 10px;
+	border: 3px solid var(--white);
+	transition: all 200ms ease-in;
+	margin: 10px;
 }
 
-button:hover, button:focus-within {
+button:hover, button:focus {
 	border: 3px solid var(--black);
 }
 
 button:active {
 	background-color: var(--red);
-	color: var(--light-grey);
+	color: var(--white);
 }
 
 .link-dark {
@@ -73,16 +72,16 @@ button:active {
 }
 
 .link-dark:hover {
-	color: var(--light-grey);
-	text-shadow: 0 0 10px var(--light-grey);
+	color: var(--white);
+	text-shadow: 0 0 10px var(--white);
 }
 
 .link-light {
-	color: var(--light-grey);
+	color: var(--white);
 }
 
 .link-light:hover {
-	text-shadow: 0 0 10px var(--light-grey);
+	text-shadow: 0 0 10px var(--white);
 }
 
 
@@ -284,7 +283,7 @@ nav a {
 }
 
 nav ul {
-  background: var(--light-grey);
+  background: var(--white);
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -292,7 +291,7 @@ nav ul {
 
 nav li {
   color: var(--black);
-  background: var(--light-grey);
+  background: var(--white);
   display: block;
   float: left;
   padding: 10px;
@@ -307,7 +306,7 @@ nav li a {
 nav li:hover,
 nav li:focus-within {
     background-color: var(--black);
-    color: var(--light-grey);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -322,14 +321,14 @@ nav li:focus-within a {
 
 #brand:hover,
 #brand:focus-within {
-  color: var(--light-grey);
+  color: var(--white);
   background-color: var(--red);
 }
 
 /*Ghost*/
 
 .body-top, .body-low, .tail {
-	fill: var(--light-grey);
+	fill: var(--white);
 	animation: ghost-y 2s ease-in-out infinite;
 }
 
@@ -376,9 +375,10 @@ nav li:focus-within a {
 /*Sections*/
 
 .container {
-	background: var(--light-grey);
+	background: var(--white);
 	background-image: var(--gradient-darken);
 	position: relative;
+	/*overflow-y: hidden;*/
 }
 
 section {
