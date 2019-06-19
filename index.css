@@ -424,13 +424,24 @@ section::after {
 	width: 54%;
 }
 
+.img-container {
+    height: 200px;
+    width: 200px;
+    border: 10px solid var(--white);
+    border-radius: 50%;
+    overflow: hidden;
+    /*transform: translateY(-50px);*/
+}
+
+.img-container img {
+	height: 200px;
+	width: 200px;
+	transform: scale(1.5);
+	transform-origin: center;
+}
+
 
 /*portfolio*/
-
-#portfolio::after {
-	height: 80vh;
-	top: 152vh;
-}
 
 #portfolio .section-content {
 	text-align: center;
@@ -439,10 +450,15 @@ section::after {
 	justify-content: flex-start;
 }
 
+#portfolio .section-content::after {
+	top: 10%;
+	height: 100%;
+}
+
 #portfolio .button-active {
 	background-color: var(--red);
-	color: var(--light-grey);
-	border: 3px solid var(--light-grey);
+	color: var(--white);
+	border: 3px solid var(--white);
 }
 
 #portfolio .section-feature {
@@ -457,7 +473,7 @@ section::after {
 	border-radius: 20px;
 	margin: 10px;
 	overflow: hidden;
-	color: var(--light-grey);
+	color: var(--white);
 	text-align: center;
 	position: relative;
 	height: 500px;
