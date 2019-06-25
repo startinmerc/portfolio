@@ -29,6 +29,8 @@ btns.forEach((btn,ind)=> {
 	btn.param = ind;
 });
 
+btns[0].click();
+
 function portClick(evt) {
 	clearAll();
 	btns[evt.target.param].classList.add("button-active");
