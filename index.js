@@ -24,40 +24,25 @@ if (dev) {
 const btns = document.querySelectorAll(".section-text button");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
-btns[0].addEventListener("click", showFirst);
+btns.forEach((btn,ind)=> {
+	btn.addEventListener("click", portClick, false);
+	btn.param = ind;
+});
 
-showFirst();
-
-function showFirst() {
-	toMax(pjts[0]);
-	btns[0].classList.add("button-active");
-	btns[1].classList.remove("button-active");
-	btns[2].classList.remove("button-active");
-	toMin(pjts[1]);
-	toMin(pjts[2]);
+function portClick(evt) {
+	clearAll();
+	btns[evt.target.param].classList.add("button-active");
+	toMax(pjts[evt.target.param]);
 }
 
-btns[1].addEventListener("click", showSecond);
-
-function showSecond() {
-	toMax(pjts[1]);
-	btns[1].classList.add("button-active");
-	btns[0].classList.remove("button-active");
-	btns[2].classList.remove("button-active");
-	toMin(pjts[0]);
-	toMin(pjts[2]);
-};
-
-btns[2].addEventListener("click", showThird);
-
-function showThird() {
-	toMax(pjts[2]);
-	btns[2].classList.add("button-active");
-	btns[0].classList.remove("button-active");
-	btns[1].classList.remove("button-active");
-	toMin(pjts[0]);
-	toMin(pjts[1]);
-};
+function clearAll() {
+	btns.forEach((v,i)=>{
+		v.classList.remove("button-active");
+	});
+	pjts.forEach((v,i)=>{
+		toMin(v);
+	});
+}
 
 function toMin(project) {
 	project.classList.remove("max");

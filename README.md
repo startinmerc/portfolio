@@ -17,7 +17,7 @@
 ```
 
 ## Portfolio
-- [ ] Refactor js navigation
+- [x] Refactor js navigation
 - [x] Change nav from subject to single portfolio entry
 - [X] Add expanded description to each project
 
