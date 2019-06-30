@@ -20,10 +20,12 @@
 - [x] Refactor js navigation
 - [x] Change nav from subject to single portfolio entry
 - [X] Add expanded description to each project
+- [ ] Add this site to portfolio
 
 ## Hero
 - [ ] Change to GSAP
 - [ ] Can sides share code? Using viewbox to clip?
+- [ ] Add event listener to pause animation if not visible
 - [x] Align hr and svg line
 - [x] Change prompt (remove fontAwesome)
 
