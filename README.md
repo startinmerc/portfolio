@@ -20,7 +20,7 @@
 - [x] Refactor js navigation
 - [x] Change nav from subject to single portfolio entry
 - [X] Add expanded description to each project
-- [ ] Add this site to portfolio
+- [X] Add this site to portfolio
 
 ## Hero
 - [ ] Change to GSAP
