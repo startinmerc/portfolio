@@ -1,22 +1,34 @@
-const dev = false;
-
 // =========================HERO TITLE ANIMATION=========================
 
-if (dev) {
-	document.querySelector("#hero").innerHTML = "";
-} else {
-	const letters = "StrangeIndustries",
-	els = Array.from(document.querySelectorAll(".letter"));
+const letters = Array.from(document.querySelectorAll(".letter"));
 
-	for(let i = 0; i<letters.length; i++){
-		letterRandomize(i);
-	}
+for(let i = 0; i<letters.length; i++){
+	letterRandomize(i);
+}
 
-	function letterRandomize(i) {
-		let num = Math.floor(Math.random()*2000);
-		els[i].style.animationDelay = num + 'ms';
-		els[i].append(letters[i]);
-	}
+function letterRandomize(i) {
+	let num = Math.floor(Math.random()*2000);
+	letters[i].style.animationDelay = num + 'ms';
+}
+
+// ==============Intersection Observer to pause animation==============
+
+let options = {threshold: 0.3},
+		ellipses = document.querySelectorAll("#hero ellipse"),
+		observer = createObserver(options);
+
+observer.observe(document.querySelector(".container"));
+
+function createObserver(options) {
+	return new IntersectionObserver((entries, observer)=>{
+		entries.forEach((entry)=>{
+			if (entry.isIntersecting) {
+				ellipses.forEach((v)=>{v.classList.add("paused")});
+			} else {
+				ellipses.forEach((v)=>{v.classList.remove("paused")});
+			}
+		});
+	}, options);
 }
 
 // ========================PORTFOLIO NAVIGATION========================
