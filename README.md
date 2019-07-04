@@ -15,31 +15,23 @@
 =========startinmerc@gmail.com=======
 =====================================
 ```
+# Strange Industries
 
-## Portfolio
-- [x] Refactor js navigation
-- [x] Change nav from subject to single portfolio entry
-- [X] Add expanded description to each project
-- [X] Add this site to portfolio
+## [Landing Page](https://www.strangeindustries.co.uk)
 
-## Hero
-- [ ] Change to GSAP
-- [ ] Can sides share code? Using viewbox to clip?
-- [ ] Add event listener to pause animation if not visible
-- [x] Align hr and svg line
-- [x] Change prompt (remove fontAwesome)
+#### A site built entirely from scratch using:
 
-## Navbar
-- [x] Put links in div & use space-between
+* CSS Animations
+* Inline SVG
+* JavaScript portfolio navigation
+* Pseudo element backgrounds
+* CSS Styling
+* Responsive styling using breakpoints
+* Intersection Observer
 
-## About
-- [ ] Change ghost animations to GSAP
-- [x] Change links to buttons (remove fontAwesome)
+My aim for this site was to code entirely myself with minimal dependencies.
+The hero section contains animation through CSS, manipulating both styles and SVG properties.
+As this can be CPU intensive, an intersection observer pauses animation when not visible, and is not animated at all on smaller devices.
+As with my other main project, [Strange Estates](https://github.com/startinmerc/strange-estates), the site will change as I learn and reflect my abilities as a developer.
 
-## Responsive design
-- [x] Define break point
-- [x] Minimise hero animations
-- [x] Font size
-- [x] Collapse navbar
-- [x] Reduce padding
-- [x] Minimise ghost floating?
+The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
