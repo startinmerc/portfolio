@@ -137,6 +137,7 @@ p {
 .letter {
 	color: var(--black);
 	opacity: 0;
+	text-shadow: 0 0 5px var(--black);
 	animation: focusIn 800ms ease-in forwards;
 }
 
@@ -238,11 +239,16 @@ p {
 	100%{stroke-dashoffset: 314px;}
 }
 
-.h-1 {animation: hA 100ms 0333ms linear forwards; transform: scaleX(0); transform-origin: center;}
-.h-2 {animation: hA 100ms 0666ms linear forwards; transform: scaleX(0); transform-origin: center;}
-.h-3 {animation: hA 100ms 1000ms linear forwards; transform: scaleX(0); transform-origin: center;}
-.h-4 {animation: hA 100ms 1333ms linear forwards; transform: scaleX(0); transform-origin: center;}
-.h-5 {animation: hA 100ms 1666ms linear forwards; transform: scaleX(0); transform-origin: center;}
+.horizontal {
+	transform: scaleX(0); 
+	transform-origin: center;
+}
+
+.h-1 {animation: hA 100ms 0333ms linear forwards;}
+.h-2 {animation: hA 100ms 0666ms linear forwards;}
+.h-3 {animation: hA 100ms 1000ms linear forwards;}
+.h-4 {animation: hA 100ms 1333ms linear forwards;}
+.h-5 {animation: hA 100ms 1666ms linear forwards;}
 
 @keyframes hA {to{transform: scaleX(1);}}
 
