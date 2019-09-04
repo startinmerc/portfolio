@@ -33,7 +33,7 @@ function createObserver(options) {
 
 // ========================PORTFOLIO NAVIGATION========================
 
-const btns = document.querySelectorAll(".section-text button");
+const btns = document.querySelectorAll("#portfolio .section-text button");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
 btns.forEach((btn,ind)=> {
