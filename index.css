@@ -589,6 +589,14 @@ section {
 	margin-bottom: 0;
 }
 
+#contact a {
+	color: var(--black);
+}
+
+#contact a:hover, #contact a:focus {
+	color: var(--white);
+}
+
 #contact button:last-of-type {
 	margin-right: 0;
 }
