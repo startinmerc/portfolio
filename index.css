@@ -146,12 +146,14 @@ p {
 	margin: 5vh 0;
 }
 
-.prompt {
+#prompt {
 	margin: 0 0 5vh 0;
 	opacity: 0;
 	font-size: 4rem;
 	transform: rotate(90deg);
 	animation: focusIn 400ms 2700ms ease-in forwards;
+	color: var(--black);
+	text-decoration: none;
 }
 
 @keyframes focusIn {
