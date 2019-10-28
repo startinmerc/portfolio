@@ -66,23 +66,21 @@ button:active {
 	color: var(--white);
 }
 
-.link-dark {
-	color: var(--black);
-}
-
-.link-dark:hover {
-	color: var(--white);
-	text-shadow: 0 0 10px var(--white);
-}
-
 .link-light {
 	color: var(--white);
 }
 
 .link-light:hover {
-	text-shadow: 0 0 10px var(--white);
+	color: var(--black);
 }
 
+.link-dark {
+	color: var(--black);
+}
+
+.link-dark:hover {
+	color: var(--black);
+}
 
 p {
 	font-size: 1rem;
