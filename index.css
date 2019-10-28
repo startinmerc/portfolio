@@ -518,10 +518,6 @@ section {
 	z-index: -1;
 }
 
-.portfolio-entry a {
-	margin: 10% 0;
-}
-
 .entry-title {
 	font-size: 1.3rem;
 	margin-top: 125px;
@@ -552,19 +548,12 @@ section {
 }
 
 .entry-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	text-align: center;
 }
-
-.entry-buttons a {
-	margin: 0;
-}
-
-.entry-buttons button {
-	width: 195px;
-}
-
 
 /*contact*/
 
