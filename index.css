@@ -41,8 +41,6 @@ hr {
 }
 
 a {
-	text-decoration: none;
-	transition-property: color text-shadow background-color;
 	transition-duration: 400ms;
 }
 
