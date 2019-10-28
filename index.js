@@ -69,3 +69,15 @@ function toMax(project) {
 	project.classList.remove("min");
 	project.classList.add("max")
 }
+
+// ============================LINK STYLING============================
+
+
+document.querySelectorAll('.link-light, .link-dark').forEach((a)=>{
+	a.onmouseenter = function() {
+		this.style.boxShadow = `${this.offsetWidth}px 0 inset var(--white)`;
+	}
+	a.onmouseleave = function() {
+		this.style.boxShadow = `0px 0 inset var(--white)`;
+	}
+});
