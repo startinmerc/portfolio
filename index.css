@@ -156,6 +156,10 @@ p {
 	text-decoration: none;
 }
 
+#prompt:hover {
+	color: var(--white);
+}
+
 @keyframes focusIn {
 	0% {opacity: 0; text-shadow: 0 0 5px var(--black);}
 	80% {opacity: 0.8; text-shadow: 0 0 5px var(--black);}
