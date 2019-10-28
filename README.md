@@ -35,3 +35,10 @@ As this can be CPU intensive, an intersection observer pauses animation when not
 As with my other main project, [Strange Estates](https://github.com/startinmerc/strange-estates), the site will change as I learn and reflect my abilities as a developer.
 
 The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
+
+Things to do:
+* Refactor JS to document.ready
+* Change hero animations to GSAP
+* Make hero letter animation looping
+* Sections need more pop - like comic captions maybe?
+* Add box-shadow to about image in red
