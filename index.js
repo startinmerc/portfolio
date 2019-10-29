@@ -13,23 +13,29 @@ function letterRandomize(i) {
 
 // ==============Intersection Observer to pause animation==============
 
-let options = {threshold: 0.3},
+if (
+	"IntersectionObserver" in window &&
+	"IntersectionObserverEntry" in window &&
+	"intersectionRatio" in window.IntersectionObserverEntry.prototype
+) {
+		let options = {threshold: 0.3},
 		ellipses = document.querySelectorAll("#hero ellipse"),
 		observer = createObserver(options);
 
-observer.observe(document.querySelector(".container"));
+		observer.observe(document.querySelector(".container"));
 
-function createObserver(options) {
-	return new IntersectionObserver((entries, observer)=>{
-		entries.forEach((entry)=>{
-			if (entry.isIntersecting) {
-				ellipses.forEach((v)=>{v.classList.add("paused")});
-			} else {
-				ellipses.forEach((v)=>{v.classList.remove("paused")});
-			}
-		});
-	}, options);
-}
+		function createObserver(options) {
+			return new IntersectionObserver((entries, observer)=>{
+				entries.forEach((entry)=>{
+					if (entry.isIntersecting) {
+						ellipses.forEach((v)=>{v.classList.add("paused")});
+					} else {
+						ellipses.forEach((v)=>{v.classList.remove("paused")});
+					}
+				});
+			}, options);
+		}
+	};
 
 // ========================PORTFOLIO NAVIGATION========================
 
