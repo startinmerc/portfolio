@@ -220,8 +220,8 @@ p {
 .svg-right ellipse:nth-of-type(2) {animation: eR 3s 1s linear infinite;}
 .svg-right ellipse:nth-of-type(3) {animation: eR 3s 2s linear infinite;}
 
-@keyframes eL {0%   {rx: 200}	100% {rx: 0}}
-@keyframes eR {0%   {rx: 0}	100% {rx: 200}}
+@keyframes eL {0%   {rx: 200px}	100% {rx: 0px}}
+@keyframes eR {0%   {rx: 0px}	100% {rx: 200px}}
 
 .svg-left circle {
 	animation: drawCircleLeft 2s linear forwards;
@@ -358,9 +358,9 @@ nav li:focus-within a {
 }
 
 @keyframes shadow {
-	0% {rx: 15; ry: 2.5;}
-	50% {rx: 30; ry: 5;}
-	100% {rx: 15; ry: 2.5;}
+	0% {rx: 15px; ry: 2.5px;}
+	50% {rx: 30px; ry: 5px;}
+	100% {rx: 15px; ry: 2.5px;}
 }
 
 @keyframes ghost-y {
@@ -370,17 +370,17 @@ nav li:focus-within a {
 }
 
 @keyframes ghost-blink {
-	0% {transform: translate(0,-10px); rY: 12.5;}
-	8% {rY: 12.5;}
-	10% {rY: 0;}
-	12% {rY: 12.5;}
-	18% {rY: 12.5;}
-	20% {rY: 0;}
-	22% {rY: 12.5;}
+	0% {transform: translate(0,-10px); rY: 12.5px;}
+	8% {rY: 12.5px;}
+	10% {rY: 0px;}
+	12% {rY: 12.5px;}
+	18% {rY: 12.5px;}
+	20% {rY: 0px;}
+	22% {rY: 12.5px;}
 	25% {transform: translate(0,10px);}
 	50% {transform: translate(0,-10px);}
 	75% {transform: translate(0,10px);}
-	100% {transform: translate(0,-10px); rY: 12.5;}
+	100% {transform: translate(0,-10px); rY: 12.5px;}
 }
 
 
