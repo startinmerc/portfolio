@@ -81,13 +81,13 @@ function toMax(project) {
 
 document.querySelectorAll('.link-light, .link-dark').forEach((a)=>{
 	a.onmouseenter = function() {
-		this.style.boxShadow = `${this.offsetWidth}px 0 inset var(--white)`;
-		this.style.webkitBoxShadow = `${this.offsetWidth}px 0 inset var(--white)`;
-		this.style.mozBoxShadow = `${this.offsetWidth}px 0 inset var(--white)`;
+		this.style.boxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
+		this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
+		this.style.mozBoxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
 	}
 	a.onmouseleave = function() {
-		this.style.boxShadow = `0px 0 inset var(--white)`;
-		this.style.webkitBoxShadow = `0px 0 inset var(--white)`;
-		this.style.mozBoxShadow = `0px 0 inset var(--white)`;
+		this.style.boxShadow = `0px 0 inset #EDEBE9`;
+		this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
+		this.style.mozBoxShadow = `0px 0 inset #EDEBE9`;
 	}
 });
