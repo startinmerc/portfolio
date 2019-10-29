@@ -447,6 +447,7 @@ section {
 	float: right;
 	-webkit-shape-outside: circle();
 	shape-outside: circle();
+	box-shadow: 20px 20px 0px 0px var(--red);
 }
 
 /*portfolio*/
