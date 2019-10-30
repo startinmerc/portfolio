@@ -24,6 +24,8 @@ function letterRandomize(i) {
 
 // ==============Intersection Observer to pause animation==============
 
+const ellipses = document.querySelectorAll("#hero ellipse");
+
 function checkAndAddObserver(){
 	if (
 	"IntersectionObserver" in window &&
@@ -31,7 +33,6 @@ function checkAndAddObserver(){
 	"intersectionRatio" in window.IntersectionObserverEntry.prototype
 ) {
 		let options = {threshold: 0.3},
-		ellipses = document.querySelectorAll("#hero ellipse"),
 		observer = createObserver(options);
 
 		observer.observe(document.querySelector(".container"));
