@@ -603,7 +603,7 @@ section {
 	/*Hero Styling*/
 
 	#hero-title {
-		font-size: 3.5rem;
+		font-size: 4.5rem;
 	}
 
 	.hero-sub {
@@ -620,22 +620,19 @@ section {
 	/*Section Styling*/
 
 	section {
-		min-height: calc(100vh - 97px);
+		/*min-height: calc(100vh - 97px);*/
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 	}
 
 	.section-content::after {
-		display: none;
+		width: 100%;
 	}
 
 	.section-content {
 		flex-wrap: wrap;
-		background-color: var(--blue);
-		width: 100%;
-		border-top: 10px solid var(--white);
-		border-bottom: 10px solid var(--white);
+		width: 90%;
 	}
 
 	.body-top, .body-low, .tail, .shadow {
@@ -674,6 +671,10 @@ section {
 		height: auto;
 	}
 
+	#portfolio .section-content {
+		padding-top: 10px;
+	}
+
 	#portfolio .section-feature {
 		height: auto;
 	}
@@ -683,9 +684,13 @@ section {
 	}
 
 	.max {
-		width: 80vw;
-		/*height: 75vh;*/
+		width: 100%;
 		overflow-x: scroll;
+	}
+
+	#contact .section-content::after {
+		height: 100%;
+		top: 8%;
 	}
 
 	#contact .section-text {
@@ -700,6 +705,10 @@ section {
 		overflow: hidden;
 	}
 
+	#hero-title {
+		font-size: 4rem;
+	}
+
 	#e1a, #e1d {animation: none; rx: 66;}
 	#e1b, #e1e {animation: none; rx: 132;}
 	#e1c, #e1f {animation: none; rx: 200;}
@@ -711,6 +720,17 @@ section {
 	section {
 		height: auto;
 		margin: 10% 0;
+		background-color: var(--section-blue);
+		border-top: 10px solid var(--white);
+		border-bottom: 10px solid var(--white);
+	}
+
+	.sectiion-content {
+		width: 100%;
+	}
+
+	.section-content::after {
+		display: none;
 	}
 
 	nav ul:nth-of-type(2){
@@ -722,9 +742,16 @@ section {
 		padding: 5px;
 	}
 
-	.max {
-		width: 300px;
-		height: auto;
+	#about {
+		margin-top: 200px;
 	}
 
+	.circle::before {
+		display: none;
+	}
+
+	.max {
+		/*width: 300px;*/
+		height: auto;
+	}
 }
