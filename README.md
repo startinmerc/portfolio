@@ -37,7 +37,6 @@ As with my other main project, [Strange Estates](https://github.com/startinmerc/
 The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
 
 Things to do:
-* Refactor JS to document.ready
 * Change hero animations to GSAP
 * Make hero letter animation looping
 * Parallax red shadow?

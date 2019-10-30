@@ -1,9 +1,20 @@
+window.onload = function(){
+	addLetterDelays();
+	checkAndAddObserver();
+	addButtonListeners();
+	addLinkHovers();
+	btns[0].click();
+}
+
+
 // =========================HERO TITLE ANIMATION=========================
 
 const letters = Array.from(document.querySelectorAll(".letter"));
 
-for(let i = 0; i<letters.length; i++){
-	letterRandomize(i);
+function addLetterDelays(){
+	for(let i = 0; i<letters.length; i++){
+		letterRandomize(i);
+	}
 }
 
 function letterRandomize(i) {
@@ -13,7 +24,8 @@ function letterRandomize(i) {
 
 // ==============Intersection Observer to pause animation==============
 
-if (
+function checkAndAddObserver(){
+	if (
 	"IntersectionObserver" in window &&
 	"IntersectionObserverEntry" in window &&
 	"intersectionRatio" in window.IntersectionObserverEntry.prototype
@@ -23,31 +35,32 @@ if (
 		observer = createObserver(options);
 
 		observer.observe(document.querySelector(".container"));
-
-		function createObserver(options) {
-			return new IntersectionObserver((entries, observer)=>{
-				entries.forEach((entry)=>{
-					if (entry.isIntersecting) {
-						ellipses.forEach((v)=>{v.classList.add("paused")});
-					} else {
-						ellipses.forEach((v)=>{v.classList.remove("paused")});
-					}
-				});
-			}, options);
-		}
 	};
+}
+
+function createObserver(options) {
+	return new IntersectionObserver((entries, observer)=>{
+		entries.forEach((entry)=>{
+			if (entry.isIntersecting) {
+				ellipses.forEach((v)=>{v.classList.add("paused")});
+			} else {
+				ellipses.forEach((v)=>{v.classList.remove("paused")});
+			}
+		});
+	}, options);
+}
 
 // ========================PORTFOLIO NAVIGATION========================
 
 const btns = document.querySelectorAll("#portfolio .section-text button");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
-btns.forEach((btn,ind)=> {
-	btn.addEventListener("click", portClick, false);
-	btn.param = ind;
-});
-
-btns[0].click();
+function addButtonListeners(){
+	btns.forEach((btn,ind)=> {
+		btn.addEventListener("click", portClick, false);
+		btn.param = ind;
+	});
+}
 
 function portClick(evt) {
 	clearAll();
@@ -78,16 +91,17 @@ function toMax(project) {
 
 // ============================LINK STYLING============================
 
-
-document.querySelectorAll('.link-light, .link-dark').forEach((a)=>{
-	a.onmouseenter = function() {
-		this.style.boxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
-		this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-		this.style.mozBoxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
-	}
-	a.onmouseleave = function() {
-		this.style.boxShadow = `0px 0 inset #EDEBE9`;
-		this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
-		this.style.mozBoxShadow = `0px 0 inset #EDEBE9`;
-	}
-});
+function addLinkHovers(){
+	document.querySelectorAll('.link-light, .link-dark').forEach((a)=>{
+		a.onmouseenter = function() {
+			this.style.boxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
+			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
+			this.style.mozBoxShadow = `${this.offsetWidth}px 0 inset #EDEBE9`;
+		}
+		a.onmouseleave = function() {
+			this.style.boxShadow = `0px 0 inset #EDEBE9`;
+			this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
+			this.style.mozBoxShadow = `0px 0 inset #EDEBE9`;
+		}
+	});
+}
