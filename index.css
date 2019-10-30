@@ -5,6 +5,9 @@
 	--blue: #5893CE;
 	--black: #050709;
 
+	--section-blue: #83acd5;
+	--section-red: #E35050;
+
 	--gradient-lighten: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
 	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
 }
@@ -396,7 +399,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	max-width: 1000px;
+	max-width: 900px;
 	margin: 0 auto;
 	height: 100vh;
 	position: relative;
@@ -411,17 +414,15 @@ section {
 .section-content::after {
 	content: "";
 	position: absolute;
-	width: 1000px;
+	width: 900px;
 	height: 120%;
 	transform-origin: center;
-	left: calc(((100vw - 1000px) / 2) * -1);
-	transform: skewY(2deg) translateY(-8%);
+	transform: skewY(2deg) translateY(-8%) translateX(-10px);
 	z-index: -1;
-	background: var( --blue);
+	background: var(--section-blue);
 	background-image: var( --gradient-lighten);
-	padding-right: calc((100vw - 1000px) / 2);
-	padding-left: calc((100vw - 1000px) / 2);
-	opacity: 0.7;
+	box-shadow: -20px -20px var(--section-red);
+	border: 10px solid black;
 }
 
 /*about Section*/
@@ -447,12 +448,25 @@ section {
 	float: right;
 	-webkit-shape-outside: circle();
 	shape-outside: circle();
-	box-shadow: 20px 20px 0px 0px var(--red);
+	position: relative;
+}
+
+.circle::before {
+	content: "";
+	height: 240px;
+	width: 240px;
+	position: absolute;
+	background-color: var(--section-red);
+	border-radius: 50%;
+	top: -30px;
+	left: -20px;
+	z-index: -1;
 }
 
 /*portfolio*/
 
 #portfolio .section-content {
+	padding-top: 20px;
 	text-align: center;
 	flex-direction: column;
 	flex-wrap: wrap;

@@ -40,5 +40,4 @@ Things to do:
 * Refactor JS to document.ready
 * Change hero animations to GSAP
 * Make hero letter animation looping
-* Sections need more pop - like comic captions maybe?
-* Add box-shadow to about image in red
+* Parallax red shadow?
