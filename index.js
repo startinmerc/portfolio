@@ -1,5 +1,5 @@
 window.onload = function(){
-	addLetterDelays();
+	replaceLetters();
 	checkAndAddObserver();
 	addButtonListeners();
 	addLinkHovers();
@@ -9,17 +9,25 @@ window.onload = function(){
 
 // =========================HERO TITLE ANIMATION=========================
 
-const letters = Array.from(document.querySelectorAll(".letter"));
+const arr = document.querySelector('#hero-title').innerText.split('')
 
-function addLetterDelays(){
-	for(let i = 0; i<letters.length; i++){
-		letterRandomize(i);
-	}
+function replaceLetters(){
+	document.querySelector('#hero-title').innerHTML = '';
+	arr.forEach((letter)=>{
+		if(!letter.match(/[a-z]/i)){
+			document.querySelector('#hero-title').innerHTML += ('<hr>')
+		} else {
+			document.querySelector('#hero-title').innerHTML += (generateLetter(letter))}
+		}
+	);
 }
 
-function letterRandomize(i) {
-	let num = Math.floor(Math.random()*2000);
-	letters[i].style.animationDelay = num + 'ms';
+function generateLetter(char){
+	return (
+		'<span class="letter" style="animation-delay: '
+		+ Math.floor(Math.random()*2000)
+		+ 'ms">'+char+' </span>'
+	)
 }
 
 // ==============Intersection Observer to pause animation==============
