@@ -714,7 +714,8 @@ section {
 	#e1c, #e1f {animation: none; rx: 200;}
 
 	.letter {
-		letter-spacing: -15px;
+		margin: 0 -8px;
+		display: inline-block;
 	}
 
 	section {
