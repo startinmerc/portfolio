@@ -50,6 +50,15 @@ TweenMax.to('.svg-left circle',2,{
 TweenMax.to('.svg-right circle',2,{
 	strokeDashoffset: '314px'
 })
+
+var horizontals = new TimelineLite();
+
+horizontals.fromTo('.h-1',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.3});
+horizontals.fromTo('.h-2',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+horizontals.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+horizontals.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+horizontals.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+
 // ==============Intersection Observer to pause animation==============
 
 const ellipses = document.querySelectorAll("#hero ellipse");
