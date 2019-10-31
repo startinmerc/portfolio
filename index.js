@@ -43,6 +43,13 @@ function generateLetter(char){
 	)
 }
 
+TweenMax.to('.svg-left circle',2,{
+	strokeDashoffset: '942px'
+})
+
+TweenMax.to('.svg-right circle',2,{
+	strokeDashoffset: '314px'
+})
 // ==============Intersection Observer to pause animation==============
 
 const ellipses = document.querySelectorAll("#hero ellipse");
