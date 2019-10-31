@@ -37,6 +37,14 @@ As with my other main project, [Strange Estates](https://github.com/startinmerc/
 The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
 
 Things to do:
-* Change hero animations to GSAP
-* Make hero letter animation looping
-* Parallax red shadow?
+* Parallax red shadow
+* CSS review
+	* Refactor classes, some not needed
+	* Look at compatibility/webpack fallbacks
+
+* GSAP
+ * Add GSAP to ghost animations
+ * Change ALL hero animations to tweens
+ * Combine hero animations in one timeline
+ * Choose a few random letters to loop
+ * Globe from [Codepen](https://codepen.io/startinmerc/pen/mddqWmJ)
