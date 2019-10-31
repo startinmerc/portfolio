@@ -64,9 +64,9 @@ function createObserver(options) {
 	return new IntersectionObserver((entries, observer)=>{
 		entries.forEach((entry)=>{
 			if (entry.isIntersecting) {
-				ellipses.forEach((v)=>{v.classList.add("paused")});
+				ellipses.forEach((v)=>{lettersTimeline.pause()});
 			} else {
-				ellipses.forEach((v)=>{v.classList.remove("paused")});
+				ellipses.forEach((v)=>{lettersTimeline.play()});
 			}
 		});
 	}, options);
