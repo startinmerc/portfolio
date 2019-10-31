@@ -10,6 +10,7 @@ window.onload = function(){
 // =========================HERO TITLE ANIMATION=========================
 
 const arr = document.querySelector('#hero-title').innerText.split('')
+var lettersTimeline = new TimelineLite();
 
 function replaceLetters(){
 	document.querySelector('#hero-title').innerHTML = '';
@@ -20,13 +21,25 @@ function replaceLetters(){
 			document.querySelector('#hero-title').innerHTML += (generateLetter(letter))}
 		}
 	);
+	tweenLetters();
+}
+
+function tweenLetters(){
+	document.querySelectorAll(".letter").forEach((letter)=>{
+		lettersTimeline.to(letter,(Math.random()*3)+0.5,
+			{
+				opacity: 1,
+				textShadow: '0px 0px 0px var(--black)',
+				delay: Math.random()*2,
+				ease: Power4.easeOut
+			}, 0
+		);
+	});
 }
 
 function generateLetter(char){
 	return (
-		'<span class="letter" style="animation-delay: '
-		+ Math.floor(Math.random()*2000)
-		+ 'ms">'+char+' </span>'
+		'<span class="letter">'+char+' </span>'
 	)
 }
 
