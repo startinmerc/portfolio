@@ -148,7 +148,7 @@ p {
 	color: var(--black);
 	opacity: 0;
 	animation: focusIn 400ms 2000ms ease-in forwards;
-	letter-spacing: -1px;
+	text-shadow: 0 0 5px var(--black);
 	margin: 5vh 0;
 }
 
@@ -157,6 +157,7 @@ p {
 	opacity: 0;
 	font-size: 4rem;
 	transform: rotate(90deg);
+	text-shadow: 0 0 5px var(--black);
 	animation: focusIn 400ms 2700ms ease-in forwards;
 	color: var(--black);
 	text-decoration: none;
@@ -167,7 +168,6 @@ p {
 }
 
 @keyframes focusIn {
-	0% {opacity: 0; text-shadow: 0 0 5px var(--black);}
 	80% {opacity: 0.8; text-shadow: 0 0 5px var(--black);}
 	100% {opacity: 1; text-shadow: none;}
 }
@@ -195,7 +195,7 @@ p {
 	transform: translateX(50%);
 }
 
-#hero path, circle, ellipse {
+#hero path,#hero circle,#hero ellipse {
 	stroke: var(--white);
 	fill: transparent;
 	stroke-width: 5;
