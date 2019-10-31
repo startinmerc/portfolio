@@ -43,6 +43,16 @@ function generateLetter(char){
 	)
 }
 
+// SVG
+
+document.querySelectorAll('.hero-ellipse').forEach((v,i)=>{
+	if(i<3){
+		TweenMax.fromTo(v,3,{attr:{rx: '200px'}},{attr:{rx: '0px'},repeat: -1,delay: i,ease:Linear.easeNone})
+	} else {
+		TweenMax.fromTo(v,3,{attr:{rx: '0px'}},{attr:{rx: '200px'},repeat: -1,delay: i-3,ease:Linear.easeNone})
+	}
+})
+
 TweenMax.to('.svg-left circle',2,{
 	strokeDashoffset: '942px'
 })
