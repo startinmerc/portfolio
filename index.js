@@ -40,15 +40,18 @@ function replaceLetters(){
 }
 
 function tweenLetters(){
-	var lettersTimeline = new TimelineLite();
+	const lettersTimeline = new TimelineLite();
 	document.querySelectorAll(".letter").forEach((letter)=>{
-		lettersTimeline.to(letter,(Math.random()*3)+0.5,
+		lettersTimeline.fromTo(letter,(Math.random()*3)+0.5,
+			{
+				opacity: 0
+			},
 			{
 				opacity: 1,
 				textShadow: '0px 0px 0px var(--black)',
 				delay: Math.random()*2,
 				ease: Power4.easeOut,
-				...getRepeat()
+				// ...getRepeat()
 			}, 0
 		);
 	});
