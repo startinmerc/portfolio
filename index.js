@@ -5,6 +5,7 @@ window.onload = function(){
 	addLinkHovers();
 	btns[0].click();
 	buildHeroTimeline();
+	buildGhostTimeline();
 }
 
 
@@ -98,6 +99,37 @@ function fadeIn(element){
 	fadeInSub.to(element,0.4,{opacity: 1},0);
 	fadeInSub.to(element,0.3,{textShadow: "none"},0);
 	return fadeInSub;
+}
+
+// GHOST
+
+const ghostTimeline = new TimelineLite();
+
+function buildGhostTimeline(){
+	ghostTimeline.add(getShadowTimeline(),0);
+	ghostTimeline.add(getBlinkTimeline(),0);
+	ghostTimeline.add(getFloatTimeline(),0);
+}
+
+function getShadowTimeline(){
+	let shadowTimeline = new TimelineLite();
+	shadowTimeline.to('.shadow',1,{attr: {rx: '30px', ry: '5px'}, repeat: -1, yoyo: true,ease: Power1.easeInOut})
+	return shadowTimeline;
+}
+
+function getBlinkTimeline(){
+	let tl = new TimelineMax({repeat: -1, repeatDelay: 2});
+	tl.to('.eye',0.18,{attr: {ry: '0px'}});
+	tl.to('.eye',0.18,{attr: {ry: '12.5px'}});
+	tl.to('.eye',0.18,{attr: {ry: '0px'}});
+	tl.to('.eye',0.18,{attr: {ry: '12.5px'}});
+	return tl;
+}
+
+function getFloatTimeline(timeline){
+	let tl = new TimelineLite();
+	tl.fromTo('#ghost',1,{y:'-10px'},{y:'10px',yoyo: true, repeat: -1,ease: Power1.easeInOut});
+	return tl;
 }
 
 // ==============Intersection Observer to pause animation==============
