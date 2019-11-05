@@ -69,6 +69,8 @@ horizontals.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scal
 horizontals.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
 horizontals.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
 
+TweenMax.to(".ellipse-group",1,{opacity: 1, delay: 2});
+
 var fadeInSub = new TimelineLite({delay: 2});
 
 fadeInSub.to('.hero-sub',0.4,{opacity: 1});

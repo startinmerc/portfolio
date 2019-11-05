@@ -189,16 +189,6 @@ p {
 	opacity: 0;
 }
 
-.paused {
-	animation-play-state: paused !important;
-}
-
-@keyframes fadeIn {
-	to {
-		opacity: 1;
-	}
-}
-
 .svg-left circle {
 	stroke-dasharray: 628px;
 	stroke-dashoffset: 314px;
