@@ -46,11 +46,20 @@ function tweenLetters(){
 				opacity: 1,
 				textShadow: '0px 0px 0px var(--black)',
 				delay: Math.random()*2,
-				ease: Power4.easeOut
+				ease: Power4.easeOut,
+				...getRepeat()
 			}, 0
 		);
 	});
 	return lettersTimeline;
+}
+
+function getRepeat(){
+	if(Math.random()<0.5){
+		return {repeat: -1, yoyo: true}
+	} else {
+		return {repeat: 0}
+	};
 }
 
 // =========================HERO SVG TWEENS=============================
