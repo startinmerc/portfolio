@@ -10,22 +10,36 @@ window.onload = function(){
 
 // =========================HERO TITLE ANIMATION=========================
 
-const arr = document.querySelector('#hero-title').innerText.split('')
-var lettersTimeline = new TimelineLite();
+const heroTimeline = new TimelineLite();
+
+function buildHeroTimeline(){
+	heroTimeline.add(drawCircle(),0);
+	heroTimeline.add(drawLines(),0);
+	heroTimeline.add(tweenLetters(),0);
+	heroTimeline.add(getEllipseTimeline(),0);
+	heroTimeline.to(".ellipse-group",1,{opacity: 1},2);
+	heroTimeline.add(fadeIn('.hero-sub'));
+	heroTimeline.add(fadeIn('#prompt'));
+}
+
+// ============================LETTER TWEENS============================
+
+const arr = document.querySelector('#hero-title').innerText.split('');
 
 function replaceLetters(){
 	document.querySelector('#hero-title').innerHTML = '';
 	arr.forEach((letter)=>{
 		if(!letter.match(/[a-z]/i)){
-			document.querySelector('#hero-title').innerHTML += ('<hr>')
+			document.querySelector('#hero-title').innerHTML += ('<hr>');
 		} else {
-			document.querySelector('#hero-title').innerHTML += (generateLetter(letter))}
+			document.querySelector('#hero-title').innerHTML += ('<span class="letter">'+letter+' </span>');
 		}
-	);
+	});
 	tweenLetters();
 }
 
 function tweenLetters(){
+	var lettersTimeline = new TimelineLite();
 	document.querySelectorAll(".letter").forEach((letter)=>{
 		lettersTimeline.to(letter,(Math.random()*3)+0.5,
 			{
@@ -36,28 +50,10 @@ function tweenLetters(){
 			}, 0
 		);
 	});
+	return lettersTimeline;
 }
 
-function generateLetter(char){
-	return (
-		'<span class="letter">'+char+' </span>'
-	)
-}
-
-// SVG
-
-// HERO
-
-const heroTimeline = new TimelineLite();
-
-function buildHeroTimeline(){
-	heroTimeline.add(getEllipseTimeline());
-	heroTimeline.add(drawCircle(),0);
-	heroTimeline.add(drawLines(),0);
-	heroTimeline.to(".ellipse-group",1,{opacity: 1});
-	heroTimeline.add(fadeIn('.hero-sub'));
-	heroTimeline.add(fadeIn('#prompt'));
-}
+// =========================HERO SVG TWEENS=============================
 
 function getEllipseTimeline(){
 	const ellipseTimeline = new TimelineLite();
@@ -94,9 +90,6 @@ function fadeIn(element){
 	fadeInSub.to(element,0.3,{textShadow: "none"},0);
 	return fadeInSub;
 }
-
-// Ghost
-
 
 // ==============Intersection Observer to pause animation==============
 
