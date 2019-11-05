@@ -28,6 +28,7 @@
 * Responsive styling using breakpoints
 * Intersection Observer
 * GSAP animations
+* Prototyping through Codepen
 
 My aim for this site was to code entirely myself with minimal dependencies.
 The hero section contains animation through CSS, manipulating both styles and SVG properties.
@@ -43,4 +44,4 @@ Things to do:
 	* Look at compatibility/webpack fallbacks
 
 * GSAP
- * Globe from [Codepen](https://codepen.io/startinmerc/pen/mddqWmJ)
+ * Use GSAP to animate portfolio?
