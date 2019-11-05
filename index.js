@@ -119,9 +119,9 @@ function createObserver(options) {
 	return new IntersectionObserver((entries, observer)=>{
 		entries.forEach((entry)=>{
 			if (entry.isIntersecting) {
-				ellipses.forEach((v)=>{lettersTimeline.pause()});
+				heroTimeline.pause();
 			} else {
-				ellipses.forEach((v)=>{lettersTimeline.play()});
+				heroTimeline.play();
 			}
 		});
 	}, options);
