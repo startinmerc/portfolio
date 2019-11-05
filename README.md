@@ -44,7 +44,4 @@ Things to do:
 
 * GSAP
  * Add GSAP to ghost animations
- * Change ALL hero animations to tweens
- * Combine hero animations in one timeline
- * Choose a few random letters to loop
  * Globe from [Codepen](https://codepen.io/startinmerc/pen/mddqWmJ)
