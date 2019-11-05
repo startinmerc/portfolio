@@ -14,11 +14,11 @@ window.onload = function(){
 const heroTimeline = new TimelineLite();
 
 function buildHeroTimeline(){
-	heroTimeline.add(drawCircle(),0);
-	heroTimeline.add(drawLines(),0);
 	heroTimeline.add(tweenLetters(),0);
-	heroTimeline.add(getEllipseTimeline(),0);
-	heroTimeline.to(".ellipse-group",1,{opacity: 1},2);
+	heroTimeline.add(rotateVert(),0);
+	heroTimeline.add(drawCircle(),0);
+	heroTimeline.add(drawHorz(),1);
+	heroTimeline.add(showVert(),5);
 	heroTimeline.add(fadeIn('.hero-sub'));
 	heroTimeline.add(fadeIn('#prompt'));
 }
@@ -66,42 +66,45 @@ function getRepeat(){
 	};
 }
 
-// =========================HERO SVG TWEENS=============================
-
-function getEllipseTimeline(){
-	const ellipseTimeline = new TimelineLite();
-	document.querySelectorAll('.hero-ellipse').forEach((v,i)=>{
-		if(i<3){
-			ellipseTimeline.fromTo(v,3,{attr:{rx: '200px'}},{attr:{rx: '0px'},repeat: -1,delay: i,ease:Linear.easeNone},0);
-		} else {
-			ellipseTimeline.fromTo(v,3,{attr:{rx: '0px'}},{attr:{rx: '200px'},repeat: -1,delay: i-3,ease:Linear.easeNone},0);
-		}
-	});
-	return ellipseTimeline;
-}
-
-function drawCircle(){
-	const circleTimeline = new TimelineLite();
-	circleTimeline.to('.svg-left circle',2,{strokeDashoffset: '942px'},0);
-	circleTimeline.to('.svg-right circle',2,{strokeDashoffset: '314px'},0);
-	return drawLines;
-}
-
-function drawLines(){
-	const lineTimeline = new TimelineLite();
-	lineTimeline.fromTo('.h-1',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.3});
-	lineTimeline.fromTo('.h-2',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-	lineTimeline.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-	lineTimeline.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-	lineTimeline.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-	return lineTimeline;
-}
-
 function fadeIn(element){
 	const fadeInSub = new TimelineLite();
 	fadeInSub.to(element,0.4,{opacity: 1},0);
 	fadeInSub.to(element,0.3,{textShadow: "none"},0);
 	return fadeInSub;
+}
+
+// =========================HERO SVG TWEENS=============================
+
+function drawCircle(){
+	let tl = new TimelineLite();
+	tl.to('.hero-globe circle',2,{strokeDashoffset: '0px'});
+	return tl;
+}
+
+function drawHorz(){
+	let tl = new TimelineLite();
+	tl.staggerFromTo('.hero-globe-horz',0.2,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1},0.2);
+	return tl;
+}
+
+function showVert(){
+	let tl = new TimelineLite();
+	tl.fromTo('.hero-globe-vert-group',0.5,{opacity: 0},{opacity: 1});
+	return tl;
+}
+
+function rotateVert(){
+	let tl = new TimelineLite();
+	tl.staggerFromTo('.hero-globe-vert',6,{
+		attr: {d: "M300,5 C-95,35 -95,575 300,605"}
+	},{
+		attr: {d: "M300,5 C705,25 705,585 300,605"},
+		repeat: -1,
+		ease: SlowMo.ease.config(0.1, 0.2,  false),
+		yoyo: false
+	}
+	,1);
+	return tl;
 }
 
 // GHOST
