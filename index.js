@@ -50,7 +50,7 @@ function tweenLetters(){
 				textShadow: '0px 0px 0px var(--black)',
 				delay: Math.random()*2,
 				ease: Power4.easeOut,
-				// ...getRepeat()
+				...getRepeat()
 			}, 0
 		);
 	});
@@ -58,7 +58,7 @@ function tweenLetters(){
 }
 
 function getRepeat(){
-	if(Math.random()<0.5){
+	if(Math.random()<0.3){
 		return {repeat: -1, yoyo: true}
 	} else {
 		return {repeat: 0}
