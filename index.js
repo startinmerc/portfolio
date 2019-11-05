@@ -4,6 +4,7 @@ window.onload = function(){
 	addButtonListeners();
 	addLinkHovers();
 	btns[0].click();
+	buildHeroTimeline();
 }
 
 
@@ -45,41 +46,54 @@ function generateLetter(char){
 
 // SVG
 
-document.querySelectorAll('.hero-ellipse').forEach((v,i)=>{
-	if(i<3){
-		TweenMax.fromTo(v,3,{attr:{rx: '200px'}},{attr:{rx: '0px'},repeat: -1,delay: i,ease:Linear.easeNone})
-	} else {
-		TweenMax.fromTo(v,3,{attr:{rx: '0px'}},{attr:{rx: '200px'},repeat: -1,delay: i-3,ease:Linear.easeNone})
-	}
-})
+// HERO
 
-TweenMax.to('.svg-left circle',2,{
-	strokeDashoffset: '942px'
-})
+const heroTimeline = new TimelineLite();
 
-TweenMax.to('.svg-right circle',2,{
-	strokeDashoffset: '314px'
-})
+function buildHeroTimeline(){
+	heroTimeline.add(getEllipseTimeline());
+	heroTimeline.add(drawCircle(),0);
+	heroTimeline.add(drawLines(),0);
+	heroTimeline.to(".ellipse-group",1,{opacity: 1});
+	heroTimeline.add(fadeIn('.hero-sub'));
+	heroTimeline.add(fadeIn('#prompt'));
+}
 
-var horizontals = new TimelineLite();
+function getEllipseTimeline(){
+	const ellipseTimeline = new TimelineLite();
+	document.querySelectorAll('.hero-ellipse').forEach((v,i)=>{
+		if(i<3){
+			ellipseTimeline.fromTo(v,3,{attr:{rx: '200px'}},{attr:{rx: '0px'},repeat: -1,delay: i,ease:Linear.easeNone},0);
+		} else {
+			ellipseTimeline.fromTo(v,3,{attr:{rx: '0px'}},{attr:{rx: '200px'},repeat: -1,delay: i-3,ease:Linear.easeNone},0);
+		}
+	});
+	return ellipseTimeline;
+}
 
-horizontals.fromTo('.h-1',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.3});
-horizontals.fromTo('.h-2',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-horizontals.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-horizontals.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
-horizontals.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+function drawCircle(){
+	const circleTimeline = new TimelineLite();
+	circleTimeline.to('.svg-left circle',2,{strokeDashoffset: '942px'},0);
+	circleTimeline.to('.svg-right circle',2,{strokeDashoffset: '314px'},0);
+	return drawLines;
+}
 
-TweenMax.to(".ellipse-group",1,{opacity: 1, delay: 2});
+function drawLines(){
+	const lineTimeline = new TimelineLite();
+	lineTimeline.fromTo('.h-1',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.3});
+	lineTimeline.fromTo('.h-2',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+	lineTimeline.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+	lineTimeline.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+	lineTimeline.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
+	return lineTimeline;
+}
 
-var fadeInSub = new TimelineLite({delay: 2});
-
-fadeInSub.to('.hero-sub',0.4,{opacity: 1});
-fadeInSub.to('.hero-sub',0.3,{textShadow: "none"});
-
-var fadeInPrompt = new TimelineLite({delay: 2.3});
-
-fadeInPrompt.to('#prompt',0.4,{opacity: 1});
-fadeInPrompt.to('#prompt',0.3,{textShadow: "none"});
+function fadeIn(element){
+	const fadeInSub = new TimelineLite();
+	fadeInSub.to(element,0.4,{opacity: 1},0);
+	fadeInSub.to(element,0.3,{textShadow: "none"},0);
+	return fadeInSub;
+}
 
 // Ghost
 
