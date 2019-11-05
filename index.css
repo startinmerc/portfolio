@@ -158,39 +158,32 @@ p {
 	color: var(--white);
 }
 
-.svg-left, .svg-right {
+.hero-globe {
 	height: 410px;
-	width: 205px;
+	width: 410px;
 	position: absolute;
 	top: 13.5%;
 }
 
-.svg-left {
-	transform: translateX(-50%);
-}
-
-.svg-right {
-	transform: translateX(50%);
-}
-
-#hero * {
+.hero-globe * {
 	stroke: var(--white);
 	fill: transparent;
 	stroke-width: 5;
 }
 
-.ellipse-group {
+.hero-globe circle {
+	transform-origin: center center;
+	transform: rotate(-90deg);
+	stroke-dashoffset: 1884px;
+	stroke-dasharray: 1884px;
+}
+
+.hero-globe-horz {
+	transform-origin: center center;
+}
+
+.hero-globe-vert-group {
 	opacity: 0;
-}
-
-.svg-left circle {
-	stroke-dasharray: 628px;
-	stroke-dashoffset: 314px;
-}
-
-.svg-right circle {
-	stroke-dasharray: 628px;
-	stroke-dashoffset: -314px;
 }
 
 #hero::after {
