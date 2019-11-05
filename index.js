@@ -54,6 +54,7 @@ function tweenLetters(){
 			}, 0
 		);
 	});
+	lettersTimeline.fromTo('#hero-title hr',1.8,{scaleX: 0},{scaleX: 1, ease: Back.easeOut.config(1.4)},1.5)
 	return lettersTimeline;
 }
 

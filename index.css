@@ -35,12 +35,6 @@ hr {
 	border: none;
 	background-color: var(--red);
 	transform-origin: center;
-	animation: hrShow 1800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes hrShow {
-	0% {transform: scaleX(0)}
-	100% {transform: scaleX(1)}
 }
 
 a {
