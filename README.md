@@ -43,5 +43,4 @@ Things to do:
 	* Look at compatibility/webpack fallbacks
 
 * GSAP
- * Add GSAP to ghost animations
  * Globe from [Codepen](https://codepen.io/startinmerc/pen/mddqWmJ)
