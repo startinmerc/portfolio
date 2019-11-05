@@ -69,6 +69,19 @@ horizontals.fromTo('.h-3',0.1,{scaleX: 0,transformOrigin: 'center center'},{scal
 horizontals.fromTo('.h-4',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
 horizontals.fromTo('.h-5',0.1,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1,delay: 0.2});
 
+var fadeInSub = new TimelineLite({delay: 2});
+
+fadeInSub.to('.hero-sub',0.4,{opacity: 1});
+fadeInSub.to('.hero-sub',0.3,{textShadow: "none"});
+
+var fadeInPrompt = new TimelineLite({delay: 2.3});
+
+fadeInPrompt.to('#prompt',0.4,{opacity: 1});
+fadeInPrompt.to('#prompt',0.3,{textShadow: "none"});
+
+// Ghost
+
+
 // ==============Intersection Observer to pause animation==============
 
 const ellipses = document.querySelectorAll("#hero ellipse");

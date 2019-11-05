@@ -146,7 +146,6 @@ p {
 	font-size: 3rem;
 	color: var(--black);
 	opacity: 0;
-	animation: focusIn 400ms 2000ms ease-in forwards;
 	text-shadow: 0 0 5px var(--black);
 	margin: 5vh 0;
 }
@@ -157,7 +156,6 @@ p {
 	font-size: 4rem;
 	transform: rotate(90deg);
 	text-shadow: 0 0 5px var(--black);
-	animation: focusIn 400ms 2700ms ease-in forwards;
 	color: var(--black);
 	text-decoration: none;
 }
@@ -166,24 +164,11 @@ p {
 	color: var(--white);
 }
 
-@keyframes focusIn {
-	80% {opacity: 0.8; text-shadow: 0 0 5px var(--black);}
-	100% {opacity: 1; text-shadow: none;}
-}
-
-
-
 .svg-left, .svg-right {
 	height: 410px;
 	width: 205px;
 	position: absolute;
 	top: 13.5%;
-}
-
-@keyframes glo {
-	to {
-		height: 410px;
-	}
 }
 
 .svg-left {
@@ -194,7 +179,7 @@ p {
 	transform: translateX(50%);
 }
 
-#hero path,#hero circle,#hero ellipse {
+#hero * {
 	stroke: var(--white);
 	fill: transparent;
 	stroke-width: 5;
@@ -202,7 +187,6 @@ p {
 
 .ellipse-group {
 	opacity: 0;
-	animation: fadeIn 1s 2s linear forwards;
 }
 
 .paused {
