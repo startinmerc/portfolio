@@ -36,7 +36,6 @@ function replaceLetters(){
 			document.querySelector('#hero-title').innerHTML += ('<span class="letter">'+letter+' </span>');
 		}
 	});
-	tweenLetters();
 }
 
 function tweenLetters(){
