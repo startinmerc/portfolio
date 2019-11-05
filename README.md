@@ -21,13 +21,13 @@
 
 #### A site built entirely from scratch using:
 
-* CSS Animations
+* Extensive CSS
 * Inline SVG
 * JavaScript portfolio navigation
-* Pseudo element backgrounds
-* CSS Styling
+* Pseudo elements
 * Responsive styling using breakpoints
 * Intersection Observer
+* GSAP animations
 
 My aim for this site was to code entirely myself with minimal dependencies.
 The hero section contains animation through CSS, manipulating both styles and SVG properties.
