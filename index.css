@@ -417,7 +417,7 @@ section {
 	width: 900px;
 	height: 120%;
 	transform-origin: center;
-	transform: skewY(2deg) translateY(-8%) translateX(-10px);
+	transform: skewY(2deg) translateY(-8%);
 	z-index: -1;
 	background: var(--section-blue);
 	background-image: var( --gradient-lighten);
@@ -476,6 +476,7 @@ section {
 #portfolio .section-content::after {
 	top: 10%;
 	height: 100%;
+	margin-left: -10px;
 }
 
 #portfolio .button-active {
