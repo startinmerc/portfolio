@@ -531,25 +531,6 @@ section {
 		width: 90%;
 	}
 
-	.body-top, .body-low, .tail, .shadow {
-		animation: none;
-	}
-
-	.eye {
-		animation: ghost-blink-mobile 4s ease-in-out infinite;
-	}
-
-	@keyframes ghost-blink-mobile {
-		0% {rY: 12.5;}
-		8% {rY: 12.5;}
-		10% {rY: 0;}
-		12% {rY: 12.5;}
-		18% {rY: 12.5;}
-		20% {rY: 0;}
-		22% {rY: 12.5;}
-		100% {rY: 12.5;}
-	}
-
 	#about .section-text {
 		width: 80%;
 	}
@@ -604,10 +585,6 @@ section {
 	#hero-title {
 		font-size: 4rem;
 	}
-
-	#e1a, #e1d {animation: none; rx: 66;}
-	#e1b, #e1e {animation: none; rx: 132;}
-	#e1c, #e1f {animation: none; rx: 200;}
 
 	.letter {
 		display: inline-block;
