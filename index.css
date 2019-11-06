@@ -715,7 +715,6 @@ section {
 	#e1c, #e1f {animation: none; rx: 200;}
 
 	.letter {
-		margin: 0 -8px;
 		display: inline-block;
 	}
 
@@ -727,7 +726,7 @@ section {
 		border-bottom: 10px solid var(--white);
 	}
 
-	.sectiion-content {
+	.section-content {
 		width: 100%;
 	}
 
