@@ -312,7 +312,7 @@ section {
 	width: 900px;
 	height: 120%;
 	transform-origin: center;
-	transform: skewY(2deg) translateY(-8%) translateX(-10px);
+	transform: skewY(2deg) translateY(-8%);
 	z-index: -1;
 	background: var(--section-blue);
 	background-image: var( --gradient-lighten);
@@ -371,6 +371,7 @@ section {
 #portfolio .section-content::after {
 	top: 10%;
 	height: 100%;
+	margin-left: -10px;
 }
 
 #portfolio .button-active {
@@ -609,7 +610,6 @@ section {
 	#e1c, #e1f {animation: none; rx: 200;}
 
 	.letter {
-		margin: 0 -8px;
 		display: inline-block;
 	}
 
@@ -621,7 +621,7 @@ section {
 		border-bottom: 10px solid var(--white);
 	}
 
-	.sectiion-content {
+	.section-content {
 		width: 100%;
 	}
 
