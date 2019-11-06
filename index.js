@@ -158,7 +158,7 @@ function checkAndAddObserver(){
 function createObserver(options) {
 	return new IntersectionObserver((entries, observer)=>{
 		entries.forEach((entry)=>{
-			if (entry.isIntersecting) {
+			if (entry.intersectionRatio > 0.3) {
 				heroTimeline.pause();
 			} else {
 				heroTimeline.play();
