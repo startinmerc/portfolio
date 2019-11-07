@@ -114,7 +114,7 @@ p {
 	text-shadow: 0 0 5px var(--black);
 }
 
-.hero-sub {
+#hero-sub {
 	font-size: 3rem;
 	color: var(--black);
 	opacity: 0;
@@ -467,8 +467,8 @@ section {
 		font-size: 4.5rem;
 	}
 
-	.hero-sub {
-		font-size: 2rem;
+	#hero-sub {
+		font-size: 2.5rem;
 	}
 
 	/*Nav Styling*/
