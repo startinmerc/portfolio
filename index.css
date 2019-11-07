@@ -121,16 +121,19 @@ p {
 	opacity: 0;
 	text-shadow: 0 0 5px var(--black);
 	margin: 5vh 0;
+	z-index: 1;
 }
 
 #prompt {
 	margin: 0 0 5vh 0;
 	opacity: 0;
 	font-size: 4rem;
+	transform-origin: center;
 	transform: rotate(90deg);
 	text-shadow: 0 0 5px var(--black);
 	color: var(--black);
 	text-decoration: none;
+	font-family: "Josefin Sans", sans-serif;
 }
 
 #prompt:hover {
@@ -267,6 +270,7 @@ nav li:focus-within a {
 	background: var(--white);
 	background-image: var(--gradient-darken);
 	position: relative;
+	z-index: 2;
 }
 
 section {
