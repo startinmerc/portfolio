@@ -1,3 +1,5 @@
+// ==============================ON LOAD===============================
+
 window.onload = function(){
 	replaceLetters();
 	checkAndAddObserver();
@@ -8,8 +10,7 @@ window.onload = function(){
 	buildGhostTimeline();
 }
 
-
-// =========================HERO TITLE ANIMATION=========================
+// ========================HERO TITLE ANIMATION========================
 
 const heroTimeline = new TimelineLite();
 
@@ -23,13 +24,13 @@ function buildHeroTimeline(){
 	heroTimeline.add(showVert(),2);
 }
 
-// ============================LETTER TWEENS============================
+// ============================LETTER TWEENS===========================
 
-const arr = document.querySelector('#hero-title').innerText.split('');
+const letters = document.querySelector('#hero-title').innerText.split('');
 
 function replaceLetters(){
 	document.querySelector('#hero-title').innerHTML = '';
-	arr.forEach((letter)=>{
+	letters.forEach((letter)=>{
 		if(!letter.match(/[a-z]/i)){
 			document.querySelector('#hero-title').innerHTML += ('<hr>');
 		} else {
@@ -73,7 +74,7 @@ function fadeIn(element){
 	return fadeInSub;
 }
 
-// =========================HERO SVG TWEENS=============================
+// =======================HERO SVG TIMELINES===========================
 
 function drawCircle(){
 	let tl = new TimelineLite();
@@ -106,7 +107,7 @@ function rotateVert(){
 	return tl;
 }
 
-// GHOST
+// ==========================GHOST TIMELINES===========================
 
 const ghostTimeline = new TimelineLite();
 
@@ -138,8 +139,6 @@ function getFloatTimeline(timeline){
 }
 
 // ==============Intersection Observer to pause animation==============
-
-const ellipses = document.querySelectorAll("#hero ellipse");
 
 function checkAndAddObserver(){
 	if (
@@ -204,11 +203,11 @@ function portClick(evt) {
 }
 
 function clearAll() {
-	btns.forEach((v,i)=>{
-		v.classList.remove("button-active");
+	btns.forEach((btn)=>{
+		btn.classList.remove("button-active");
 	});
-	pjts.forEach((v,i)=>{
-		toMin(v);
+	pjts.forEach((pjt)=>{
+		toMin(pjt);
 	});
 }
 
