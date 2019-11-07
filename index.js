@@ -100,8 +100,7 @@ function rotateVert(){
 	},{
 		attr: {d: "M300,5 C705,25 705,585 300,605"},
 		repeat: -1,
-		ease: SlowMo.ease.config(0.1, 0.2,  false),
-		yoyo: false
+		ease: SlowMo.ease.config(0.1, 0.2,  false)
 	}
 	,1);
 	return tl;
@@ -118,9 +117,9 @@ function buildGhostTimeline(){
 }
 
 function getShadowTimeline(){
-	let shadowTimeline = new TimelineLite();
-	shadowTimeline.to('.shadow',1,{attr: {rx: '30px', ry: '5px'}, repeat: -1, yoyo: true,ease: Power1.easeInOut})
-	return shadowTimeline;
+	let tl = new TimelineLite();
+	tl.to('.shadow',1,{attr: {rx: '30px', ry: '5px'}, repeat: -1, yoyo: true,ease: Power1.easeInOut})
+	return tl;
 }
 
 function getBlinkTimeline(){
