@@ -148,10 +148,17 @@ function checkAndAddObserver(){
 	"intersectionRatio" in window.IntersectionObserverEntry.prototype
 ) {
 		let options = {threshold: 0.3},
-		observer = createObserver(options);
-
-		observer.observe(document.querySelector(".container"));
-	};
+		heroObserver = createObserver(options);
+		heroObserver.observe(document.querySelector(".container"));
+		let sObserver = sectionObserver(options);
+		document.querySelectorAll(".section-content").forEach((section)=>{
+			sObserver.observe(section);
+		});
+	} else {
+		document.querySelectorAll(".section-content").forEach((section)=>{
+			section.classList.remove('split');
+		})
+	}
 }
 
 function createObserver(options) {
@@ -165,6 +172,18 @@ function createObserver(options) {
 		});
 	}, options);
 }
+
+function sectionObserver(options) {
+	return new IntersectionObserver((entries, observer)=>{
+		entries.forEach((entry)=>{
+			if (entry.intersectionRatio > 0.3) {
+				entry.target.classList.remove("split");
+				observer.unobserve(entry.target);
+			}
+		});
+	}, options);
+}
+
 
 // ========================PORTFOLIO NAVIGATION========================
 

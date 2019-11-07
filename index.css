@@ -282,6 +282,8 @@ section {
 	display: flex;
 	z-index: 1;
 	position: relative;
+	opacity: 1;
+	transition: all 350ms linear;
 }
 
 .section-content::after {
@@ -296,6 +298,17 @@ section {
 	background-image: var( --gradient-lighten);
 	box-shadow: -20px -20px var(--section-red);
 	border: 10px solid black;
+	transition: all 250ms linear;
+}
+
+.split {
+	opacity: 0;
+}
+
+.section-content.split::after {
+	opacity: 0;
+	transform: skewY(2deg) translateY(-8%) translateX(100vw);
+	box-shadow: -200vw -20px var(--section-red);
 }
 
 /*about Section*/
