@@ -53,6 +53,7 @@ button {
 	transition: all 200ms ease-in;
 	margin: 10px;
 	cursor: pointer;
+	outline: none;
 }
 
 button:hover, button:focus {
