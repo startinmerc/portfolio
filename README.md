@@ -36,12 +36,3 @@ As this can be CPU intensive, an intersection observer pauses animation when not
 As with my other main project, [Strange Estates](https://github.com/startinmerc/strange-estates), the site will change as I learn and reflect my abilities as a developer.
 
 The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
-
-Things to do:
-* Parallax red shadow
-* CSS review
-	* Refactor classes, some not needed
-	* Look at compatibility/webpack fallbacks
-
-* GSAP
- * Use GSAP to animate portfolio?
