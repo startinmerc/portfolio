@@ -15,12 +15,12 @@ const heroTimeline = new TimelineLite();
 
 function buildHeroTimeline(){
 	heroTimeline.add(tweenLetters(),0);
-	heroTimeline.add(rotateVert(),0);
+	heroTimeline.add(rotateVert(),2);
 	heroTimeline.add(drawCircle(),0);
 	heroTimeline.add(drawHorz(),1);
 	heroTimeline.add(fadeIn('#hero-sub'));
 	heroTimeline.add(fadeIn('#prompt'));
-	heroTimeline.add(showVert(),3);
+	heroTimeline.add(showVert(),2);
 }
 
 // ============================LETTER TWEENS============================
