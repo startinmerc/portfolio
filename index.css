@@ -18,7 +18,7 @@ body {
 	color: var(--black);
 	display: flex;
 	flex-direction: column;
-		overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -80,6 +80,14 @@ button:active {
 
 p {
 	font-size: 1rem;
+}
+
+::selection {
+	background: var(--white);
+}
+
+::-moz-selection {
+	background: var(--white);
 }
 
 /*Hero Content*/
@@ -425,7 +433,7 @@ section {
 	transform: translateX(-50%);
 	border-radius: 20px;
 	filter: grayscale(50%);
-	opacity: 0.1;
+	opacity: 0.4;
 	width: 100%;
 	height: auto;
 	z-index: -1;
