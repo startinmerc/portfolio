@@ -33,6 +33,6 @@
 My aim for this site was to code entirely myself with minimal dependencies.
 The hero section contains animation through CSS, manipulating both styles and SVG properties.
 As this can be CPU intensive, an intersection observer pauses animation when not visible, and is not animated at all on smaller devices.
-As with my other main project, [Strange Estates](https://github.com/startinmerc/strange-estates), the site will change as I learn and reflect my abilities as a developer.
+As with my other projects, [Strange Flora](https://github.com/startinmerc/strange-flora) and [Strange Estates](https://github.com/startinmerc/strange-estates), the site changes as I learn and reflect my abilities as a developer.
 
-The site is currently hosted on GitHub Pages, with an intention to move to serverless in the future as I learn.
+The site is currently hosted on GitHub Pages.
