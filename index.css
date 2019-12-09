@@ -183,15 +183,22 @@ p {
 	width: 100%;
 	transform-origin: center;
 	left: 0;
-	transform: skewY(2deg) translateY(-50px);
+	transform: skewY(2deg);
 	z-index: -1;
-	opacity: 0.5;
-	background: var(--blue);
-	background-image: var(--gradient-lighten);
-	height: 510px;
-	top: 13.5%;
+	height: 50%;
+	top: 10%;
+	background: var(--section-blue);
+	background-image: var( --gradient-lighten);
+	border-top: 10px solid var(--black);
+	border-bottom: 10px solid var(--black);
+	animation: heroPseudo 1800ms ease-in-out forwards;
 }
 
+@keyframes heroPseudo {
+	0% {transform: skewY(0deg) scaleY(0);}
+	50% {transform: skewY(2deg) scaleY(1.2);}
+	100% {transform: skewY(2deg) scaleY(1);}
+}
 
 /*NAVBAR*/
 
