@@ -78,7 +78,7 @@ function fadeIn(element){
 
 function drawCircle(){
 	let tl = new TimelineLite();
-	tl.to('.hero-globe circle',2,{strokeDashoffset: '0px'});
+	tl.fromTo('.hero-globe circle',2,{strokeDashoffset: '1884px'},{strokeDashoffset: '0px'});
 	return tl;
 }
 
