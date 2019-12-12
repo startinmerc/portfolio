@@ -573,7 +573,7 @@ section {
 	}
 
 	section {
-		height: auto;
+		min-height: auto;
 		margin: 10% 0;
 		background-color: var(--section-blue);
 		border-top: 10px solid var(--white);
