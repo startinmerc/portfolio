@@ -180,6 +180,7 @@ p {
 	transform: skewY(2deg);
 	z-index: -1;
 	height: 50%;
+	min-height: 430px;
 	top: 10%;
 	background: var(--section-blue);
 	background-image: var( --gradient-lighten);
@@ -289,7 +290,7 @@ section {
 	justify-content: center;
 	max-width: 900px;
 	margin: 0 auto;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 }
 
