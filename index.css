@@ -397,7 +397,7 @@ section {
 .portfolio-entry {
 	background-color: var(--black);
 	border-radius: 20px;
-	margin: 10px;
+	margin: 10px 10px 10px 0px;
 	overflow: hidden;
 	color: var(--white);
 	text-align: center;
@@ -540,17 +540,14 @@ section {
 		padding-top: 10px;
 	}
 
-	#portfolio .section-feature {
-		height: auto;
-	}
-
 	#portfolio button {
 		margin: 3px;
 	}
 
-	.max {
-		width: 100%;
+	.portfolio-entry {
+		width: calc(100% - 20px);
 		overflow-x: scroll;
+		height: auto;
 	}
 
 	#contact .section-content::after {
@@ -611,7 +608,4 @@ section {
 		display: none;
 	}
 
-	.max {
-		height: auto;
-	}
 }
