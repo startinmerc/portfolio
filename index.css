@@ -533,10 +533,6 @@ section {
 		margin: -35px -15px 0px 20px;
 	}
 
-	#portfolio {
-		height: auto;
-	}
-
 	#portfolio .section-content {
 		padding-top: 10px;
 	}
@@ -599,10 +595,6 @@ section {
 
 	nav ul li {
 		padding: 5px;
-	}
-
-	#about {
-		margin-top: 200px;
 	}
 
 	.circle::before {
