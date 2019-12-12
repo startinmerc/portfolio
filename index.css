@@ -390,6 +390,7 @@ section {
 	justify-content: center;
 	flex-wrap: wrap;
 	height: 540px;
+	position: relative;
 }
 
 .portfolio-entry {
@@ -399,7 +400,7 @@ section {
 	overflow: hidden;
 	color: var(--white);
 	text-align: center;
-	position: relative;
+	position: absolute;
 	height: 500px;
 	width: 790px;
 	transform-origin: top;
