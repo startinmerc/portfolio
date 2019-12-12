@@ -69,8 +69,8 @@ function getRepeat(){
 
 function fadeIn(element){
 	const fadeInSub = new TimelineLite();
-	fadeInSub.to(element,0.4,{opacity: 1},0);
-	fadeInSub.to(element,0.3,{textShadow: "none"},0);
+	fadeInSub.fromTo(element,0.4,{opacity: 0},{opacity: 1},0);
+	fadeInSub.fromTo(element,0.3,{textShadow: "0 0 5px var(--black)"},{textShadow: "none"},0);
 	return fadeInSub;
 }
 
