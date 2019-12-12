@@ -282,6 +282,7 @@ nav li:focus-within a {
 	background-image: var(--gradient-darken);
 	position: relative;
 	z-index: 2;
+	overflow-y: hidden;
 }
 
 section {
