@@ -572,10 +572,15 @@ section {
 		display: inline-block;
 	}
 
+	#hero-sub, #prompt {
+		margin: 0;
+	}
+
 	section {
 		min-height: auto;
 		margin: 10% 0;
-		background-color: var(--section-blue);
+		background: var(--section-blue);
+		background-image: var( --gradient-lighten);
 		border-top: 10px solid var(--white);
 		border-bottom: 10px solid var(--white);
 	}
