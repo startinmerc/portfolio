@@ -590,7 +590,8 @@ section {
 
 	nav ul:nth-of-type(2){
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
+		width: 100%;
 	}
 
 	nav ul li {
