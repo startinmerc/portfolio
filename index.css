@@ -8,7 +8,7 @@
 	--section-blue: #83acd5;
 	--section-red: #E35050;
 
-	--gradient-lighten: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
+	--gradient-lighten: linear-gradient(130deg, rgba(255,255,255,0), rgba(255,255,255,0.2));
 	--gradient-darken: linear-gradient(130deg, rgba(0,0,0,0), rgba(0,0,0,0.45));
 }
 
@@ -282,7 +282,6 @@ nav li:focus-within a {
 	background-image: var(--gradient-darken);
 	position: relative;
 	z-index: 2;
-	overflow-y: hidden;
 }
 
 section {
@@ -543,8 +542,7 @@ section {
 
 	.portfolio-entry {
 		width: calc(100% - 20px);
-		overflow-x: scroll;
-		height: auto;
+		overflow-y: scroll;
 	}
 
 	#contact .section-content::after {
