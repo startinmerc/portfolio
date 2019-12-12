@@ -151,6 +151,7 @@ function checkAndAddObserver(){
 		heroObserver.observe(document.querySelector(".container"));
 		let sObserver = sectionObserver(options);
 		document.querySelectorAll(".section-content").forEach((section)=>{
+			section.classList.add("split");
 			sObserver.observe(section);
 		});
 	} else {
