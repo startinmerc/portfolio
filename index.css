@@ -83,11 +83,11 @@ p {
 }
 
 ::selection {
-	background: var(--white);
+	background-color: var(--white);
 }
 
 ::-moz-selection {
-	background: var(--white);
+	background-color: var(--white);
 }
 
 /*Hero Content*/
@@ -440,6 +440,10 @@ section {
 	width: 100%;
 	height: auto;
 	z-index: -1;
+}
+
+.portfolio-entry *::selection {
+	background-color: var(--black);
 }
 
 .entry-title {
