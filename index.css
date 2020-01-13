@@ -447,11 +447,10 @@ section {
 
 .entry-title {
 	font-size: 1.3rem;
-	margin-top: 125px;
 	font-weight: bold;
 	text-transform: uppercase;
 	transform: translateY(-50%);
-	margin: 2.5rem auto 0 auto;
+	margin: 1.5rem auto 0 auto;
 	width: 100%;
 }
 
