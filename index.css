@@ -430,7 +430,6 @@ section {
 
 .portfolio-entry img  {
 	box-sizing: border-box;
-	vertical-align: top;
 	transition: filter, opacity, transform 150ms ease-in;
 	position: absolute;
 	transform: translateX(-50%);
@@ -547,6 +546,12 @@ section {
 	.portfolio-entry {
 		width: calc(100% - 20px);
 		overflow-y: scroll;
+		margin: 10px 0px;
+	}
+
+	.portfolio-entry img {
+		width: auto;
+		height: 100%;
 	}
 
 	#contact .section-content::after {
@@ -609,4 +614,10 @@ section {
 		display: none;
 	}
 
+	.portfolio-entry img {
+		position: sticky;
+		transform: translateX(-25%);
+		top: 0;
+		margin-bottom: -485px;
+	}
 }
