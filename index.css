@@ -70,7 +70,7 @@ button:active {
 	color: var(--white);
 }
 
-.link-light:hover {
+.link-light:hover, .link-light:focus {
 	color: var(--black);
 }
 
@@ -140,7 +140,7 @@ p {
 	font-family: "Josefin Sans", sans-serif;
 }
 
-#prompt:hover {
+#prompt:hover, #prompt:focus {
 	color: var(--white);
 }
 
