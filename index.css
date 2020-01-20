@@ -41,6 +41,7 @@ hr {
 a {
 	-webkit-appearance: none;
 	transition-duration: 400ms;
+	border-collapse: separate;
 }
 
 button {
@@ -206,6 +207,7 @@ nav {
 	background-color: var(--white);
 	display: flex;
 	justify-content: space-between;
+	border-collapse: separate;
 	box-shadow: 0 0px 5px 1px var(--black);
 	z-index: 2;
 	font-family: "Josefin Sans", sans-serif;
@@ -312,6 +314,7 @@ section {
 	z-index: -1;
 	background: var(--section-blue);
 	background-image: var( --gradient-lighten);
+	border-collapse: separate;
 	box-shadow: -20px -20px var(--section-red);
 	border: 10px solid var(--black);
 	transition: all 250ms linear;
@@ -323,6 +326,7 @@ section {
 
 .section-content.split::after {
 	transform: skewY(2deg) translateY(-8%) translateX(100vw);
+	border-collapse: separate;
 	box-shadow: -200vw -20px var(--section-red);
 }
 
