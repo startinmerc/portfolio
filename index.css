@@ -58,7 +58,7 @@ button {
 	outline: none;
 }
 
-button:hover, button:focus {
+button:hover, button:focus, button:focus-within {
 	border: 3px solid var(--black);
 }
 
@@ -384,6 +384,10 @@ section {
 	margin-left: -10px;
 }
 
+#portfolio h2 {
+	margin-bottom: 0;
+}
+
 #portfolio .button-active {
 	background-color: var(--red);
 	color: var(--white);
@@ -518,7 +522,6 @@ section {
 	section {
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: center;
 	}
 
 	.section-content::after {
