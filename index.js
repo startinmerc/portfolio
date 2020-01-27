@@ -5,7 +5,6 @@ window.onload = function(){
 	checkAndAddObserver();
 	addButtonListeners();
 	addLinkHovers();
-	btns[0].click();
 	buildHeroTimeline();
 	buildGhostTimeline();
 }
@@ -200,28 +199,14 @@ function addButtonListeners(){
 function portClick(evt) {
 	clearAll();
 	btns[evt.target.param].classList.add("button-active");
-	toMax(pjts[evt.target.param]);
+	pjts[evt.target.param].scrollIntoView();
+	document.querySelector("#portfolio").scrollIntoView();
 }
 
 function clearAll() {
 	btns.forEach((btn)=>{
 		btn.classList.remove("button-active");
 	});
-	pjts.forEach((pjt)=>{
-		toMin(pjt);
-	});
-}
-
-function toMin(project) {
-	project.classList.remove("max");
-	project.classList.add("min");
-	project.style.display = "none";
-}
-
-function toMax(project) {
-	project.style.display = "initial";
-	project.classList.remove("min");
-	project.classList.add("max")
 }
 
 // ============================LINK STYLING============================
