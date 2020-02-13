@@ -200,7 +200,7 @@ function portClick(evt) {
 	clearAll();
 	btns[evt.target.param].classList.add("button-active");
 	pjts[evt.target.param].scrollIntoView();
-	document.querySelector("#portfolio").scrollIntoView();
+	document.querySelector("#portfolio").scrollIntoView({block:"center"});
 }
 
 function clearAll() {
