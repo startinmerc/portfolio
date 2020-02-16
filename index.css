@@ -427,6 +427,11 @@ section {
 	margin-right: 0;
 }
 
+.tech {
+	text-align: center;
+	font-weight: bold;
+}
+
 .portfolio-entry img  {
 	box-sizing: border-box;
 	transition: filter, opacity, transform 150ms ease-in;
