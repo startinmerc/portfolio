@@ -15,44 +15,60 @@
 </head>
 <body>
 <header id="hero">
-	<svg class="hero-globe" viewbox="0 0 610 610">
-		<circle cx="305" cy="305" r="300"/>
-		<g class="hero-globe-vert-group">
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
-			<path class="hero-globe-vert" d="M300,5 C-95,35 -95,575 300,605" />
+	<svg class="hero__globe" viewbox="0 0 610 610">
+		<circle class="hero__globe__circle" cx="305" cy="305" r="300"/>
+		<g class="hero__globe__line-group">
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
+			<path class="hero__globe__line--vert" d="M300,5 C-95,35 -95,575 300,605" />
 		</g>
-		<path class="hero-globe-horz" d="M 80 105 h 450"/>
-		<path class="hero-globe-horz" d="M 20 205 h 570"/>
-		<path class="hero-globe-horz" d="M 5 305 h 600"/>
-		<path class="hero-globe-horz" d="M 20 405 h 570"/>
-		<path class="hero-globe-horz" d="M 80 505 h 450"/>
+		<path class="hero__globe__line--horz" d="M 80 105 h 450"/>
+		<path class="hero__globe__line--horz" d="M 20 205 h 570"/>
+		<path class="hero__globe__line--horz" d="M 5 305 h 600"/>
+		<path class="hero__globe__line--horz" d="M 20 405 h 570"/>
+		<path class="hero__globe__line--horz" d="M 80 505 h 450"/>
 	</svg>
-	<h1 id="hero-title">Strange<hr>Industries</h1>
-	<h3 id="hero-sub">Web Design</h3>
-	<a href="#about" id="prompt">></a>
+	<h1 id="hero__title">Strange<hr>Industries</h1>
+	<h3 id="hero__sub">Web Design</h3>
+	<a href="#about" id="hero__prompt">></a>
 </header>
 
 <main class="container">
 
-<nav role="navigation">
-	<ul>
-		<li id="brand"><a href="#">Strange Industries</a></li>
+<nav class="nav" role="navigation">
+	<ul class="nav__list">
+		<li class="nav__list__item nav__list__item--brand">
+			<a class="nav__list__item__link" href="#">
+				Strange Industries
+			</a>
+		</li>
 	</ul>
-	<ul>
-		<li><a href="#about">About</a></li>
-		<li><a href="#portfolio">Portfolio</a></li>
-		<li><a href="#contact">Contact</a></li>
+	<ul class="nav__list">
+		<li class="nav__list__item">
+			<a class="nav__list__item__link" href="#about">
+				About
+			</a>
+		</li>
+		<li class="nav__list__item">
+			<a class="nav__list__item__link" href="#portfolio">
+				Portfolio
+			</a>
+		</li>
+		<li class="nav__list__item">
+			<a class="nav__list__item__link" href="#contact">
+				Contact
+			</a>
+		</li>
 	</ul>
 </nav>
 
-	<section id="about">
-		<div class="section-content">
-			<div class="section-text">
-				<aside class="circle"></aside>
+	<section class="section section--about" id="about">
+		<div class="section__content section--about__section__content">
+			<div class="section__content__text section--about__section__content__text">
+				<aside class="section--about__circle"></aside>
 				<h2>Hello!</h2>
 				<p>
 					I'm Martyn, a front end web developer from the UK, currently based in Bergamo, Italy.
@@ -66,29 +82,29 @@
 				</p>
 				<p>
 					I'm currently looking for front end work, and am willing to relocate for the right role.<br/>
-					<a class="link-dark" href="#portfolio">Take a look below for my most recent projects</a>,
+					<a class="link--dark" href="#portfolio">Take a look below for my most recent projects</a>,
 					and
-					<a class="link-dark" href="#contact">feel free get in touch with me!</a>
+					<a class="link--dark" href="#contact">feel free get in touch with me!</a>
 				</p>
 			</div>
 		</div>
 	</section>
 
-	<section id="portfolio">
-		<div class="section-content">
-			<div class="section-text">
+	<section class="section section--portfolio" id="portfolio">
+		<div class="section__content section--portfolio__section__content">
+			<div class="section__content__text">
 				<h2>Portfolio</h2>
-				<button class="button-active">Strange Flora</button>
-				<button>Strange Estates</button>
-				<button>Codepen</button>
-				<button>Strange Industries</button>
+				<button class="btn btn--active">Strange Flora</button>
+				<button class="btn">Strange Estates</button>
+				<button class="btn">Codepen</button>
+				<button class="btn">Strange Industries</button>
 			</div>
-			<div class="section-feature">
+			<div class="section__content__feature section--portfolio__section__content__feature">
 				<div class="portfolio-entry" id="flora">
-					<img src="https://images.unsplash.com/photo-1528518290605-1fcc8dcca204?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="">
-					<h4 class="entry-title">Strange Flora</h4>
-					<div class="entry-blurb">
-						<p class="tech">
+					<img src="https://images.unsplash.com/photo-1528518290605-1fcc8dcca204?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="" class="portfolio-entry__img">
+					<h4 class="portfolio-entry__title">Strange Flora</h4>
+					<div class="portfolio-entry__blurb">
+						<p class="portfolio-entry__tech">
 							React / Redux / React-Router / CSS / Codepen / Heroku / Git
 						</p>
 						<p>
@@ -99,24 +115,24 @@
 							The site uses reusable components and responsive component rendering, with React-Router for navigation. Redux manages state through the app for data such as wishlist and cart management, storing locally.
 						</p>
 						<p>
-							Created while learning React, this site grows as I learn more, with a current work to do list in the <a href="https://github.com/startinmerc/strange-flora#todo" class="link-light" target="_blank" rel="noopener">repo readme.</a>
+							Created while learning React, this site grows as I learn more, with a current work to do list in the <a href="https://github.com/startinmerc/strange-flora#todo" class="link--light" target="_blank" rel="noopener">repo readme.</a>
 						</p>
 						<p>
 							As a Strange Industries site, the client is a fictional company with questionable practices. In this instance, Strange Flora is an eCommerce site selling various plants and potions not recommended for human consumption.
 						</p>
-						<div class="entry-links">
-							<a class="link-light" href="https://strange-flora.herokuapp.com/" 
+						<div class="portfolio-entry__links">
+							<a class="link--light" href="https://strange-flora.herokuapp.com/" 
 							 target="_blank" rel="noopener">Visit Website</a>
-							<a class="link-light" href="https://github.com/startinmerc/strange-fauna"
+							<a class="link--light" href="https://github.com/startinmerc/strange-fauna"
 							 target="_blank" rel="noopener">View Source on Github</a>
 						</div>
 					</div>
 				</div>
 				<div class="portfolio-entry" id="estates">
-					<img src="https://images.unsplash.com/photo-1488650989610-0d7e27dc293c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=crop&ixid=eyJhcHBfaWQiOjF9" alt="">
-					<h4 class="entry-title">Strange Estates</h4>
-					<div class="entry-blurb">
-						<p class="tech">
+					<img src="https://images.unsplash.com/photo-1488650989610-0d7e27dc293c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=crop&ixid=eyJhcHBfaWQiOjF9" alt="" class="portfolio-entry__img">
+					<h4 class="portfolio-entry__title">Strange Estates</h4>
+					<div class="portfolio-entry__blurb">
+						<p class="portfolio-entry__tech">
 							Bootstrap 4 / GSAP / Mongoose / MongoDB Atlas / Express / Node / Passport / Heroku / Git
 						</p>
 						<p>
@@ -134,19 +150,19 @@
 						<p>
 							As a Strange Industries site, the client is a fictional company with questionable practices. In this instance, Strange Estates is a shady lettings agency with user interactions for listing reviews and administration roles.
 						</p>
-						<div class="entry-links">
-							<a class="link-light" href="https://strange-estates.herokuapp.com/" 
+						<div class="portfolio-entry__links">
+							<a class="link--light" href="https://strange-estates.herokuapp.com/" 
 							 target="_blank" rel="noopener">Visit Website</a>
-							<a class="link-light" href="https://github.com/startinmerc/strange-estates"
+							<a class="link--light" href="https://github.com/startinmerc/strange-estates"
 							 target="_blank" rel="noopener">View Source on Github</a>
 						</div>
 					</div>
 				</div>
 				<div class="portfolio-entry" id="codepen">
-					<img src="https://images.unsplash.com/photo-1547190027-9156686aa2f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="">
-					<h4 class="entry-title">Codepen</h4>
-					<div class="entry-blurb">
-						<p class="tech">
+					<img src="https://images.unsplash.com/photo-1547190027-9156686aa2f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="" class="portfolio-entry__img">
+					<h4 class="portfolio-entry__title">Codepen</h4>
+					<div class="portfolio-entry__blurb">
+						<p class="portfolio-entry__tech">
 							GSAP / SASS / API interaction / Anime.js / CSS Animation / JavaScript Animation
 						</p>
 						<p>
@@ -158,23 +174,23 @@
 						<p>
 							My portfolio there also contains online course excercises and FCC projects, along with API projects using AJAX, JSON & AXIOS requests
 						</p>
-						<div class="entry-links">
-							<a href="https://codepen.io/startinmerc/" class="link-light"
+						<div class="portfolio-entry__links">
+							<a href="https://codepen.io/startinmerc/" class="link--light"
 							 target="_blank" rel="noopener">View Profile</a>
-							<a href="https://codepen.io/collection/AxLZBj/" class="link-light"
+							<a href="https://codepen.io/collection/AxLZBj/" class="link--light"
 							 target="_blank" rel="noopener">View Codepen Challenge Collection</a>
-							<a href="https://codepen.io/collection/nMvjxz/" class="link-light"
+							<a href="https://codepen.io/collection/nMvjxz/" class="link--light"
 							 target="_blank" rel="noopener">View GSAP Animation Collection</a>
-							<a href="https://codepen.io/startinmerc/collections/public" class="link-light"
+							<a href="https://codepen.io/startinmerc/collections/public" class="link--light"
 							 target="_blank" rel="noopener">View All Collections</a>
 						</div>
 					</div>
 				</div>
 				<div class="portfolio-entry" id="thisPage">
-					<img src="https://images.unsplash.com/photo-1530819568329-97653eafbbfa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="">
-					<h4 class="entry-title">Strange Industries</h4>
-					<div class="entry-blurb">
-						<p class="tech">
+					<img src="https://images.unsplash.com/photo-1530819568329-97653eafbbfa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=790&h=527&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="" class="portfolio-entry__img">
+					<h4 class="portfolio-entry__title">Strange Industries</h4>
+					<div class="portfolio-entry__blurb">
+						<p class="portfolio-entry__tech">
 							GSAP / Extensive CSS / JavaScript / Intersection Observer / HTML / Git
 						</p>
 						<p>
@@ -183,12 +199,12 @@
 						<p>
 							The hero section makes extensive use of the GSAP JavaScript library to run complex CSS and SVG animation. The header title animation is randomly generated, so every page load gives a different sequence of letter animations. Other sections use GSAP and CSS animations, combined with Intersection Observer to play or stop animations on  scroll.
 						</p>
-						<div class="entry-links">
+						<div class="portfolio-entry__links">
 							<a href="https://github.com/startinmerc/startinmerc.github.io"
-							 class="link-light" 
+							 class="link--light" 
 							 target="_blank" rel="noopener">View Source on Github</a>
 							<a href="https://codepen.io/collection/XqjaGg/"
-							 class="link-light" 
+							 class="link--light" 
 							 target="_blank" rel="noopener">View Development Pens on Codepen</a>
 						</div>
 					</div>
@@ -198,23 +214,23 @@
 
 	</section>
 
-	<section id="contact">
-		<div class="section-content">
-			<div class="section-text">
+	<section class="section section--contact" id="contact">
+		<div class="section__content section--contact__section__content">
+			<div class="section__content__text section--contact__section__content__text">
 				<h2>Let's talk.</h2>
 				<p>
 					Email me at
-					<a class="link-dark"
+					<a class="link--dark"
 					 href="mailto:startinmerc@gmail.com">
 					startinmerc@gmail.com</a>.
 				</p>
 				<p>
 					You can find me on
-					<a class="link-dark" 
+					<a class="link--dark" 
 					 href="https://github.com/startinmerc"
 					 target="_blank" rel="noopener">Github</a>
 					and  
-					<a class="link-dark"
+					<a class="link--dark"
 					 href="https://www.linkedin.com/in/martynstirk/"
 						target="_blank" rel="noopener">LinkedIn</a>.
 				</p>
@@ -222,24 +238,24 @@
 					I'm also on  
 					<a href="https://www.instagram.com/startinmerc/"
 					 target="_blank" rel="noopener"
-					 class="link-dark">Instagram</a> and sometimes throw
+					 class="link--dark">Instagram</a> and sometimes throw
 					<a href="https://twitter.com/StarTinMerc"
 					 target="_blank" rel="noopener"
-					 class="link-dark">Twitter</a> a bone.
+					 class="link--dark">Twitter</a> a bone.
 			</div>
-			<div class="section-feature">
+			<div class="section__content__feature">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
 				 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="139px" height="200px" viewBox="0 0 139 170" 
 				 enable-background="new 0 0 139 150" xml:space="preserve">
 					<g id="ghost">
-						<path class="body-top" d="M19,60C19,26.836,45.836,0,79,0s60,26.836,60,60"/>
-						<path class="body-low" d="M19,120c0,16.568,13.432,30,30,30h60c16.568,0,30-13.432,30-30V60c0-16.568-13.432-30-30-30 H49c-16.568,0-30,13.432-30,30V120z"/>
-						<path class="tail" d="M0,133.5c0,9.113,7.387,16.5,16.5,16.5h32c9.113,0,16.5-7.387,16.5-16.5l0,0 c0-9.113-7.387-16.5-16.5-16.5h-32C7.387,117,0,124.387,0,133.5L0,133.5z"/>
-						<ellipse class="eye" cx="84" cy="55" rx="12.5px" ry="12.5px"/>
-						<ellipse class="eye" cx="119" cy="55" rx="12.5px" ry="12.5px"/>
+						<path class="ghost__body-top" d="M19,60C19,26.836,45.836,0,79,0s60,26.836,60,60"/>
+						<path class="ghost__body-low" d="M19,120c0,16.568,13.432,30,30,30h60c16.568,0,30-13.432,30-30V60c0-16.568-13.432-30-30-30 H49c-16.568,0-30,13.432-30,30V120z"/>
+						<path class="ghost__tail" d="M0,133.5c0,9.113,7.387,16.5,16.5,16.5h32c9.113,0,16.5-7.387,16.5-16.5l0,0 c0-9.113-7.387-16.5-16.5-16.5h-32C7.387,117,0,124.387,0,133.5L0,133.5z"/>
+						<ellipse class="ghost__eye" cx="84" cy="55" rx="12.5px" ry="12.5px"/>
+						<ellipse class="ghost__eye" cx="119" cy="55" rx="12.5px" ry="12.5px"/>
 					</g>
-					<ellipse class="shadow" cx="75" cy="180" rx="15px" ry="2.5px"/>
+					<ellipse class="ghost__shadow" cx="75" cy="180" rx="15px" ry="2.5px"/>
 				</svg>
 			</div>
 		</div>

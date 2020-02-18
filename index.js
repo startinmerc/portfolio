@@ -18,29 +18,29 @@ function buildHeroTimeline(){
 	heroTimeline.add(rotateVert(),2);
 	heroTimeline.add(drawCircle(),0);
 	heroTimeline.add(drawHorz(),1);
-	heroTimeline.add(fadeIn('#hero-sub'));
-	heroTimeline.add(fadeIn('#prompt'));
+	heroTimeline.add(fadeIn('#hero__sub'));
+	heroTimeline.add(fadeIn('#hero__prompt'));
 	heroTimeline.add(showVert(),2);
 }
 
 // ============================LETTER TWEENS===========================
 
-const letters = document.querySelector('#hero-title').innerText.split('');
+const letters = document.querySelector('#hero__title').innerText.split('');
 
 function replaceLetters(){
-	document.querySelector('#hero-title').innerHTML = '';
+	document.querySelector('#hero__title').innerHTML = '';
 	letters.forEach((letter)=>{
 		if(!letter.match(/[a-z]/i)){
-			document.querySelector('#hero-title').innerHTML += ('<hr>');
+			document.querySelector('#hero__title').innerHTML += ('<hr>');
 		} else {
-			document.querySelector('#hero-title').innerHTML += ('<span class="letter">'+letter+' </span>');
+			document.querySelector('#hero__title').innerHTML += ('<span class="hero__title__letter">'+letter+' </span>');
 		}
 	});
 }
 
 function tweenLetters(){
 	const lettersTimeline = new TimelineLite();
-	document.querySelectorAll(".letter").forEach((letter)=>{
+	document.querySelectorAll(".hero__title__letter").forEach((letter)=>{
 		lettersTimeline.fromTo(letter,(Math.random()*3)+0.5,
 			{
 				opacity: 0
@@ -54,7 +54,7 @@ function tweenLetters(){
 			}, 0
 		);
 	});
-	lettersTimeline.fromTo('#hero-title hr',1.8,{scaleX: 0},{scaleX: 1, ease: Back.easeOut.config(1.4)},1.5)
+	lettersTimeline.fromTo('#hero__title hr',1.8,{scaleX: 0},{scaleX: 1, ease: Back.easeOut.config(1.4)},1.5)
 	return lettersTimeline;
 }
 
@@ -77,25 +77,25 @@ function fadeIn(element){
 
 function drawCircle(){
 	let tl = new TimelineLite();
-	tl.fromTo('.hero-globe circle',2,{strokeDashoffset: '1884px'},{strokeDashoffset: '0px'});
+	tl.fromTo('.hero__globe__circle',2,{strokeDashoffset: '1884px'},{strokeDashoffset: '0px'});
 	return tl;
 }
 
 function drawHorz(){
 	let tl = new TimelineLite();
-	tl.staggerFromTo('.hero-globe-horz',0.2,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1},0.2);
+	tl.staggerFromTo('.hero__globe__line--horz',0.2,{scaleX: 0,transformOrigin: 'center center'},{scaleX: 1},0.2);
 	return tl;
 }
 
 function showVert(){
 	let tl = new TimelineLite();
-	tl.fromTo('.hero-globe-vert-group',0.5,{opacity: 0},{opacity: 1});
+	tl.fromTo('.hero__globe__line-group',0.5,{opacity: 0},{opacity: 1});
 	return tl;
 }
 
 function rotateVert(){
 	let tl = new TimelineLite();
-	tl.staggerFromTo('.hero-globe-vert',6,{
+	tl.staggerFromTo('.hero__globe__line--vert',6,{
 		attr: {d: "M300,5 C-95,35 -95,575 300,605"}
 	},{
 		attr: {d: "M300,5 C705,25 705,585 300,605"},
@@ -118,16 +118,16 @@ function buildGhostTimeline(){
 
 function getShadowTimeline(){
 	let tl = new TimelineLite();
-	tl.to('.shadow',1,{attr: {rx: '30px', ry: '5px'}, repeat: -1, yoyo: true,ease: Power1.easeInOut})
+	tl.to('.ghost__shadow',1,{attr: {rx: '30px', ry: '5px'}, repeat: -1, yoyo: true,ease: Power1.easeInOut})
 	return tl;
 }
 
 function getBlinkTimeline(){
 	let tl = new TimelineMax({repeat: -1, repeatDelay: 2});
-	tl.to('.eye',0.18,{attr: {ry: '0px'}});
-	tl.to('.eye',0.18,{attr: {ry: '12.5px'}});
-	tl.to('.eye',0.18,{attr: {ry: '0px'}});
-	tl.to('.eye',0.18,{attr: {ry: '12.5px'}});
+	tl.to('.ghost__eye',0.18,{attr: {ry: '0px'}});
+	tl.to('.ghost__eye',0.18,{attr: {ry: '12.5px'}});
+	tl.to('.ghost__eye',0.18,{attr: {ry: '0px'}});
+	tl.to('.ghost__eye',0.18,{attr: {ry: '12.5px'}});
 	return tl;
 }
 
@@ -149,13 +149,13 @@ function checkAndAddObserver(){
 		heroObserver = createObserver(options);
 		heroObserver.observe(document.querySelector(".container"));
 		let sObserver = sectionObserver(options);
-		document.querySelectorAll(".section-content").forEach((section)=>{
-			section.classList.add("split");
+		document.querySelectorAll(".section__content").forEach((section)=>{
+			section.classList.add("section__content--split");
 			sObserver.observe(section);
 		});
 	} else {
-		document.querySelectorAll(".section-content").forEach((section)=>{
-			section.classList.remove('split');
+		document.querySelectorAll(".section__content").forEach((section)=>{
+			section.classList.remove('section__content--split');
 		})
 	}
 }
@@ -176,7 +176,7 @@ function sectionObserver(options) {
 	return new IntersectionObserver((entries, observer)=>{
 		entries.forEach((entry)=>{
 			if (entry.intersectionRatio > 0.3) {
-				entry.target.classList.remove("split");
+				entry.target.classList.remove("section__content--split");
 				observer.unobserve(entry.target);
 			}
 		});
@@ -186,7 +186,7 @@ function sectionObserver(options) {
 
 // ========================PORTFOLIO NAVIGATION========================
 
-const btns = document.querySelectorAll("#portfolio .section-text button");
+const btns = document.querySelectorAll(".section--portfolio .btn");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
 function addButtonListeners(){
@@ -198,21 +198,21 @@ function addButtonListeners(){
 
 function portClick(evt) {
 	clearAll();
-	btns[evt.target.param].classList.add("button-active");
+	btns[evt.target.param].classList.add("btn--active");
 	pjts[evt.target.param].scrollIntoView();
 	document.querySelector("#portfolio").scrollIntoView({block:"center"});
 }
 
 function clearAll() {
 	btns.forEach((btn)=>{
-		btn.classList.remove("button-active");
+		btn.classList.remove("btn--active");
 	});
 }
 
 // ============================LINK STYLING============================
 
 function addLinkHovers(){
-	document.querySelectorAll('.link-light, .link-dark').forEach((a)=>{
+	document.querySelectorAll('.link--light, .link--dark').forEach((a)=>{
 		a.onmouseenter = function() {
 			this.style.boxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
 			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
