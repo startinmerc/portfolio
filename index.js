@@ -217,12 +217,23 @@ function addLinkHovers(){
 			this.style.boxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
 			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
 			this.style.mozBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-		}
+		};
 		a.onmouseleave = function() {
 			this.style.boxShadow = `0px 0 #EDEBE9 `;
 			this.style.boxShadow = `0px 0 #EDEBE9 inset`;
 			this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
 			this.style.mozBoxShadow = `0px 0 #EDEBE9 inset`;
-		}
+		};
+		a.onfocus = function() {
+			this.style.boxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
+			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
+			this.style.mozBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
+		};
+		a.onblur = function() {
+			this.style.boxShadow = `0px 0 #EDEBE9 `;
+			this.style.boxShadow = `0px 0 #EDEBE9 inset`;
+			this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
+			this.style.mozBoxShadow = `0px 0 #EDEBE9 inset`;
+		};
 	});
 }
