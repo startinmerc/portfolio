@@ -401,6 +401,10 @@ p {
 	scroll-behavior: smooth;
 }
 
+.btn--download a {
+	color: var(--black);
+}
+
 .portfolio-entry {
 	background-color: var(--black);
 	border-radius: 20px;

@@ -186,7 +186,7 @@ function sectionObserver(options) {
 
 // ========================PORTFOLIO NAVIGATION========================
 
-const btns = document.querySelectorAll(".section--portfolio .btn");
+const btns = document.querySelectorAll(".btn--portfolio");
 const pjts = document.querySelectorAll(".portfolio-entry");
 
 function addButtonListeners(){
