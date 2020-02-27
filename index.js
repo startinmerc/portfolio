@@ -213,27 +213,22 @@ function clearAll() {
 
 function addLinkHovers(){
 	document.querySelectorAll('.link--light, .link--dark').forEach((a)=>{
-		a.onmouseenter = function() {
-			this.style.boxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-			this.style.mozBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-		};
-		a.onmouseleave = function() {
-			this.style.boxShadow = `0px 0 #EDEBE9 `;
-			this.style.boxShadow = `0px 0 #EDEBE9 inset`;
-			this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
-			this.style.mozBoxShadow = `0px 0 #EDEBE9 inset`;
-		};
-		a.onfocus = function() {
-			this.style.boxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-			this.style.webkitBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-			this.style.mozBoxShadow = `${this.offsetWidth}px 0 #EDEBE9 inset`;
-		};
-		a.onblur = function() {
-			this.style.boxShadow = `0px 0 #EDEBE9 `;
-			this.style.boxShadow = `0px 0 #EDEBE9 inset`;
-			this.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
-			this.style.mozBoxShadow = `0px 0 #EDEBE9 inset`;
-		};
+		a.onmouseenter = ()=> linkSelect(a);
+		a.onmouseleave = ()=> linkLeave(a);
+		a.onfocus = ()=> linkSelect(a);
+		a.onblur = ()=> linkLeave(a);
 	});
+}
+
+function linkSelect(element){
+	element.style.boxShadow = `${element.offsetWidth}px 0 #EDEBE9 inset`;
+	element.style.webkitBoxShadow = `${element.offsetWidth}px 0 #EDEBE9 inset`;
+	element.style.mozBoxShadow = `${element.offsetWidth}px 0 #EDEBE9 inset`;
+}
+
+function linkLeave(element){
+	element.style.boxShadow = `0px 0 #EDEBE9 `;
+	element.style.boxShadow = `0px 0 #EDEBE9 inset`;
+	element.style.webkitBoxShadow = `0px 0 #EDEBE9 inset`;
+	element.style.mozBoxShadow = `0px 0 #EDEBE9 inset`;	
 }
