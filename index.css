@@ -401,6 +401,19 @@ p {
 	scroll-behavior: smooth;
 }
 
+.btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 790px;
+	margin: 0 auto 10px auto;
+}
+
+.btn--portfolio {
+	margin: 0;
+}
+
 .btn--download a {
 	color: var(--black);
 }
@@ -539,10 +552,6 @@ p {
 
 	.section--portfolio__section__content {
 		padding-top: 10px;
-	}
-
-	.btn {
-		margin: 3px;
 	}
 
 	.section--portfolio__section__content__feature {
