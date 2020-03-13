@@ -302,6 +302,7 @@ p {
 	margin: 0 auto;
 	min-height: 75vh;
 	position: relative;
+	scroll-margin-top: 5rem;
 }
 
 .section__content {
@@ -339,6 +340,10 @@ p {
 }
 
 /*==========================About Section=========================*/
+
+#about {
+	scroll-margin-top: 1rem;
+}
 
 .section--about__section__content {
 	flex-direction: row;
